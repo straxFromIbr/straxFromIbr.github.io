@@ -7,7 +7,6 @@ categories:
 tags:
 - 授業メモ
 - 人間と世界IV
-thumbnailImagePosition: "buttom"
 summary: 『今昔物語集』の天竺編　冒頭の話を知ろう
 
 ---

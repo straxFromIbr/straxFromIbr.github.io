@@ -7,7 +7,6 @@ categories:
 tags:
 - 授業メモ
 - 人間と世界IV
-thumbnailImagePosition: "buttom"
 summary: 民話から仏教説話への転換 
 
 ---

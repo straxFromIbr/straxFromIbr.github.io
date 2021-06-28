@@ -7,7 +7,6 @@ categories:
 tags:
 - 授業メモ
 - 人間と世界IV
-thumbnailImagePosition: "buttom"
 summary: 日本霊異記『日本国現報善悪霊異記』序文 資料2
 
 ---

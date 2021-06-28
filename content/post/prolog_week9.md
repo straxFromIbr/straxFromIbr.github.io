@@ -10,7 +10,6 @@ tags:
 - 授業メモ
 
 summary: 知識情報処理 9週
-thumbnailImagePosition: "buttom"
 
 ---
 

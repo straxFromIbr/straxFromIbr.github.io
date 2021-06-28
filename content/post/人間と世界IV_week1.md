@@ -7,7 +7,6 @@ categories:
 tags:
 - 授業メモ
 - 人間と世界IV
-thumbnailImagePosition: "buttom"
 summary: 説話とは
 
 ---

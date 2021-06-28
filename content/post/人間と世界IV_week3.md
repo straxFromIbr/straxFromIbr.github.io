@@ -7,7 +7,6 @@ categories:
 tags:
 - 授業メモ
 - 人間と世界IV
-thumbnailImagePosition: "buttom"
 summary: 『日本霊異記』上巻第5 資料3 仏教の受容
 
 ---

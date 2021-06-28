@@ -8,7 +8,6 @@ tags:
 - 授業メモ
 - 人間と世界IV
 
-thumbnailImagePosition: "buttom"
 summary: 亀の報恩譚 上巻
 
 ---

@@ -7,7 +7,6 @@ categories:
 tags:
 - 授業メモ
 - 人間と世界IV
-thumbnailImagePosition: "buttom"
 summary: 『日本霊異記』における輪廻転生話と地獄の話(中巻) 資料5巻
 
 ---
