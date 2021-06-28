@@ -10,7 +10,6 @@ tags:
 - hammerspoon
 
 summary: URLエンコーディングのショートカットを作成
-thumbnailImagePosition: "buttom"
 
 ---
 
