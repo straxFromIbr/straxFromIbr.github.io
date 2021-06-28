@@ -1,0 +1,21 @@
+#sidebar .sidebar-profile .sidebar-profile-name {
+    color: #000000;
+    background-color: rgba(249, 249, 249, 0.75);
+    font-weight: 450;
+}
+
+#sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-link {
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.74);
+    font-weight: 450;
+}
+
+@media only screen and (min-width: 1280px) {
+    #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-bio,
+    #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-job,
+    #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-location {
+        color: #000000;
+        background-color: rgba(255, 255, 255, 0.75);
+        font-weight: 450;
+    }
+}
