@@ -115,7 +115,7 @@ weight = 8
 [params]
 dateFormat = "2006 January月 2日"
 syntaxHighlighter = "highlight.js"
-clearReading = true
+clearReading = false
 hierarchicalCategories = true
 description = "気になったこととを自分用にメモ"
 sidebarBehavior = 1
