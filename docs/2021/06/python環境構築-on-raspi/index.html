@@ -8,22 +8,18 @@
 <meta name="generator" content="Hugo 0.84.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="tech">
-<meta name="description" content="RaspberryPi4上にTensorflowなど一手間かかるライブラリをインストールする方法を記載．ほとんどはWeb上の資料を参考にした．リンクは適宜貼っているので詳しくはそちらを参照．
-pi@raspberrypi:~ $ uname -a Linux raspberrypi 5.10.17-v7l&#43; #1421 SMP Thu May 27 14:00:13 BST 2021 armv7l GNU/Linux Edge TPU runtime  公式チュートリアルGet started with the USB Acceleratorに従う．Coral Edge TPUは取り外した状態で操作を行うこと！全てインストールが完了したら接続しテストする．  echo &#34;deb https://packages.cloud.google.com/apt coral-edgetpu-stable main&#34; | sudo tee /etc/apt/sources.list.d/$ coral-edgetpu.list curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - sudo apt-get update sudo apt-get install libedgetpu1-std # sudo apt-get install libedgetpu1-max #高速化を図りたい時．熱に注意 sudo apt-get install python3-pycoral OpenCV RaspberryPiへのOpenCVインストール手順と【Raspberry Pi】Raspberry Pi Zero WにOpenCVの環境を構築するを参考にした．ありがとうございます．">
+<meta name="description" content="RaspberryPi4上にTensorflowなど各種ライブラリをインストールする．">
 
 
-<meta property="og:description" content="RaspberryPi4上にTensorflowなど一手間かかるライブラリをインストールする方法を記載．ほとんどはWeb上の資料を参考にした．リンクは適宜貼っているので詳しくはそちらを参照．
-pi@raspberrypi:~ $ uname -a Linux raspberrypi 5.10.17-v7l&#43; #1421 SMP Thu May 27 14:00:13 BST 2021 armv7l GNU/Linux Edge TPU runtime  公式チュートリアルGet started with the USB Acceleratorに従う．Coral Edge TPUは取り外した状態で操作を行うこと！全てインストールが完了したら接続しテストする．  echo &#34;deb https://packages.cloud.google.com/apt coral-edgetpu-stable main&#34; | sudo tee /etc/apt/sources.list.d/$ coral-edgetpu.list curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - sudo apt-get update sudo apt-get install libedgetpu1-std # sudo apt-get install libedgetpu1-max #高速化を図りたい時．熱に注意 sudo apt-get install python3-pycoral OpenCV RaspberryPiへのOpenCVインストール手順と【Raspberry Pi】Raspberry Pi Zero WにOpenCVの環境を構築するを参考にした．ありがとうございます．">
+<meta property="og:description" content="RaspberryPi4上にTensorflowなど各種ライブラリをインストールする．">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python環境構築 on RasPi">
 <meta name="twitter:title" content="Python環境構築 on RasPi">
 <meta property="og:url" content="https://straxfromibr.github.io/2021/06/python%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89-on-raspi/">
 <meta property="twitter:url" content="https://straxfromibr.github.io/2021/06/python%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89-on-raspi/">
 <meta property="og:site_name" content="メモおきば">
-<meta property="og:description" content="RaspberryPi4上にTensorflowなど一手間かかるライブラリをインストールする方法を記載．ほとんどはWeb上の資料を参考にした．リンクは適宜貼っているので詳しくはそちらを参照．
-pi@raspberrypi:~ $ uname -a Linux raspberrypi 5.10.17-v7l&#43; #1421 SMP Thu May 27 14:00:13 BST 2021 armv7l GNU/Linux Edge TPU runtime  公式チュートリアルGet started with the USB Acceleratorに従う．Coral Edge TPUは取り外した状態で操作を行うこと！全てインストールが完了したら接続しテストする．  echo &#34;deb https://packages.cloud.google.com/apt coral-edgetpu-stable main&#34; | sudo tee /etc/apt/sources.list.d/$ coral-edgetpu.list curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - sudo apt-get update sudo apt-get install libedgetpu1-std # sudo apt-get install libedgetpu1-max #高速化を図りたい時．熱に注意 sudo apt-get install python3-pycoral OpenCV RaspberryPiへのOpenCVインストール手順と【Raspberry Pi】Raspberry Pi Zero WにOpenCVの環境を構築するを参考にした．ありがとうございます．">
-<meta name="twitter:description" content="RaspberryPi4上にTensorflowなど一手間かかるライブラリをインストールする方法を記載．ほとんどはWeb上の資料を参考にした．リンクは適宜貼っているので詳しくはそちらを参照．
-pi@raspberrypi:~ $ uname -a Linux raspberrypi 5.10.17-v7l&#43; #1421 SMP Thu May 27 14:00:13 BST 2021 armv7l GNU/Linux Edge TPU runtime  公式チュートリアルGet started with the USB Acceleratorに従う．Coral Edge TPUは取り外した状態で操作を行うこと！全てインストールが完了したら接続しテストする．  echo &#34;deb https://packages.cloud.google.com/apt coral-edgetpu-stable main&#34; | sudo tee /etc/apt/sources.list.d/$ coral-edgetpu.list curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - sudo apt-get update sudo apt-get install libedgetpu1-std # sudo apt-get install libedgetpu1-max #高速化を図りたい時．熱に注意 sudo apt-get install python3-pycoral OpenCV RaspberryPiへのOpenCVインストール手順と【Raspberry Pi】Raspberry Pi Zero WにOpenCVの環境を構築するを参考にした．ありがとうございます．">
+<meta property="og:description" content="RaspberryPi4上にTensorflowなど各種ライブラリをインストールする．">
+<meta name="twitter:description" content="RaspberryPi4上にTensorflowなど各種ライブラリをインストールする．">
 <meta property="og:locale" content="ja">
 
   

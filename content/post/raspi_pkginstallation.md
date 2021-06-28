@@ -14,7 +14,7 @@ tags:
 keywords:
 - tech
 #thumbnailImage: //example.com/image.jpg
-summery: RaspberryPi4上にTensorflowなど各種ライブラリをインストールする．
+summary: RaspberryPi4上にTensorflowなど各種ライブラリをインストールする．
 ---
 RaspberryPi4上にTensorflowなど一手間かかるライブラリをインストールする方法を記載．ほとんどはWeb上の資料を参考にした．リンクは適宜貼っているので詳しくはそちらを参照．
 
