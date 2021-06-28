@@ -255,6 +255,72 @@
 
   
 
+<article class="postShorten postShorten--thumbnailimg-left" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://straxfromibr.github.io/2021/06/python%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89-on-raspi/">
+          Python環境構築 on RasPi
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-06-28T20:53:20&#43;09:00">
+        
+  
+  
+  
+  
+    2021 6月 28日
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://straxfromibr.github.io/categories/%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0">プログラミング</a>, 
+    
+      <a class="category-link" href="https://straxfromibr.github.io/categories/raspberrypi">RaspberryPi</a>, 
+    
+      <a class="category-link" href="https://straxfromibr.github.io/categories/python">Python</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        RaspberryPi4上にTensorflowなど一手間かかるライブラリをインストールする方法を記載．ほとんどはWeb上の資料を参考にした．リンクは適宜貼っているので詳しくはそちらを参照．
+pi@raspberrypi:~ $ uname -a Linux raspberrypi 5.10.17-v7l+ #1421 SMP Thu May 27 14:00:13 BST 2021 armv7l GNU/Linux Edge TPU runtime  公式チュートリアルGet started with the USB Acceleratorに従う．Coral Edge TPUは取り外した状態で操作を行うこと！全てインストールが完了したら接続しテストする．  echo &#34;deb https://packages.cloud.google.com/apt coral-edgetpu-stable main&#34; | sudo tee /etc/apt/sources.list.d/$ coral-edgetpu.list curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - sudo apt-get update sudo apt-get install libedgetpu1-std # sudo apt-get install libedgetpu1-max #高速化を図りたい時．熱に注意 sudo apt-get install python3-pycoral OpenCV RaspberryPiへのOpenCVインストール手順と【Raspberry Pi】Raspberry Pi Zero WにOpenCVの環境を構築するを参考にした．ありがとうございます．
+      
+      <p>
+        <a href="https://straxfromibr.github.io/2021/06/python%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89-on-raspi/" class="postShorten-excerpt_link link">続きを読む</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+
 <article class="postShorten postShorten--thumbnailimg-buttom" itemscope itemType="http://schema.org/BlogPosting">
   <div class="postShorten-wrap">
     
@@ -554,69 +620,6 @@
       
       <p>
         <a href="https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ-1%E9%80%B1/" class="postShorten-excerpt_link link">続きを読む</a>
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-            
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-buttom" itemscope itemType="http://schema.org/BlogPosting">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title" itemprop="headline">
-        <a class="link-unstyled" href="https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ-2%E9%80%B1/">
-          人間と世界IV 2週
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time itemprop="datePublished" datetime="2021-06-23T11:43:32&#43;09:00">
-        
-  
-  
-  
-  
-    2021 6月 23日
-  
-
-      </time>
-    
-    
-  
-  
-    <span>カテゴリー</span>
-    
-      <a class="category-link" href="https://straxfromibr.github.io/categories/lecturenote">LectureNote</a>, 
-    
-      <a class="category-link" href="https://straxfromibr.github.io/categories/%e4%ba%ba%e9%96%93%e3%81%a8%e4%b8%96%e7%95%8civ">人間と世界IV</a>
-    
-  
-
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt" itemprop="articleBody">
-      
-        日本霊異記『日本国現報善悪霊異記』序文 資料2
-      
-      <p>
-        <a href="https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ-2%E9%80%B1/" class="postShorten-excerpt_link link">続きを読む</a>
         
       </p>
     </div>
