@@ -19,7 +19,7 @@ keywords: cartoon
 summary: "アバターシリーズのコミックやポッドキャスト"
 thumbnailImage: /images/Avatar-in-other-media/jacket.jpg
 # coverImage: /images/Avatar-in-other-media/jacket.jpg
-coverImage: https://lh3.googleusercontent.com/pw/AM-JKLUUCN78ifFa8wE-bY12tmVXZoUtPHSlIlDKdaHzysUbuXmkVSKOoDTV6kRJB1HotBlmOr_oCRxIsN43XHi6Jyo9kcc7XnAnThW8s-QTUMGTmebNqMUGwe0HtIFaSO-uYT8jWMPZ8Y9yFbJBQWTxaIeIvA=s0
+#coverImage: https://lh3.googleusercontent.com/pw/AM-JKLUUCN78ifFa8wE-bY12tmVXZoUtPHSlIlDKdaHzysUbuXmkVSKOoDTV6kRJB1HotBlmOr_oCRxIsN43XHi6Jyo9kcc7XnAnThW8s-QTUMGTmebNqMUGwe0HtIFaSO-uYT8jWMPZ8Y9yFbJBQWTxaIeIvA=s0
 clearReading: true
 ---
 
