@@ -16,7 +16,7 @@ category = "categories"
 tag = "tags"
 
 [author]
-bio = "メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate) <br>Build:2021/07/01 23:38"
+bio = "メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate) <br> _Latest Build:2021/07/02 08:46_"
 job = "学生"
 location = "茨城県"
 name = "PotatoHotate"
@@ -99,16 +99,13 @@ icon = "fa-facebook-official"
 name = "Facebook"
 url = "https://www.facebook.com/sharer/sharer.php?u=%s"
 
+[params.footer]
+copyright = "<a href='https://github.com/straxFromIbr'>straxFromIbr</a>"
+
 [markup.tableOfContents]
 endLevel = 3
 orderd = true
 startLevel = 1
-
-[params.footer]
-copyright = "<a href='https://github.com/straxFromIbr'>straxFromIbr</a>"
-
-[markup.goldmark.renderer]
-unsafe = true
 
 [params.header.rightLink]
 class = ""
@@ -117,3 +114,6 @@ url = "/#about"
 
 [params.sidebar.profile]
 url = "/#about"
+
+[markup.goldmark.renderer]
+unsafe = true

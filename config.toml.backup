@@ -1,40 +1,12 @@
-# added at editing
-
-# Tranquilpeak
-# Version : 0.4.8-BETA
-# Author : Thibaud Leprêtre
-
-# I STRONGLY recommend you to use a CDN to speed up loading of pages.
-# There is many free CDN like Cloudinary or you can also use indirectly
-# by using services like Google Photos.
-
-# If you want to store images yourself, please read this guidelines:
-# For users, if you only use this theme, put your images directly in `source/assets/images` folder
-# But if you want to add local images, you can put your images directly in `source/assets/images` folder
-# For developpers, if you modify this theme, put your images in `source/images` folder and
-# use grunt task `build` to synchronize assets
-
 baseURL = "https://straxfromibr.github.io/"
 defaultContentLanguage = "ja"
 publishDir = "docs"
-#disqusShortname = "hugo-tranquilpeak-theme"
-# disqusShortname = "メモ置き場"
 languageCode = "ja"
 theme = "hugo-tranquilpeak-theme"
 title = "メモおきば"
-# googleAnalytics = "UA-123-45"
 canonifyurls = true
 paginate = 7
 
-# https://github.com/kakawait/hugo-tranquilpeak-theme/issues/395
-[markup]
-[markup.goldmark]
-[markup.goldmark.renderer]
-unsafe = true
-[markup.tableOfContents]
-endLevel = 3
-orderd = true
-startLevel = 1
 [permalinks]
 post = "/:year/:month/:slug/"
 
@@ -44,45 +16,41 @@ category = "categories"
 tag = "tags"
 
 [author]
-bio = 'メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate) Build:'
+bio = "メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate) <br> _Latest Build:2021/07/02 08:46_"
 job = "学生"
 location = "茨城県"
 name = "PotatoHotate"
-
 picture = "https://lh3.googleusercontent.com/pw/AM-JKLU3kE3TXypRMX2GntJm1Wt9NvPbfDqgNjcBFB7qAkFFhtVukFMsy1uOQQ78e9voUXXtx1yWzrih6jByQYYhlOR2dHYBpYelawtMOfCm2sw1j5V1Eb4K-BQmHC3LnQGnEZZGlWB5nnWlo7hbxrnPT0hY8Q"
 twitter = "PotatoHotate"
 
-# Menu Configuration
+[menu]
 [[menu.main]]
 identifier = "home"
 name = "Home"
 pre = "<i class='sidebar-button-icon fa fa-lg fa-home'></i>"
 url = "/"
 weight = 1
+
 [[menu.main]]
 identifier = "categories"
 name = "Categories"
 pre = "<i class='sidebar-button-icon fa fa-lg fa-bookmark'></i>"
 url = "/categories"
 weight = 2
+
 [[menu.main]]
 identifier = "tags"
 name = "Tags"
 pre = "<i class='sidebar-button-icon fa fa-lg fa-tags'></i>"
 url = "/tags"
 weight = 3
+
 [[menu.main]]
 identifier = "archives"
 name = "Archives"
 pre = "<i class='sidebar-button-icon fa fa-lg fa-archive'></i>"
 url = "/archives"
 weight = 4
-# [[menu.main]]
-# identifier = "about"
-# name = "About"
-# pre = "<i class='sidebar-button-icon fa fa-lg fa-question'></i>"
-# url = "/3001/11/about/"
-# weight = 5
 
 [[menu.main]]
 identifier = "school"
@@ -105,13 +73,6 @@ pre = "<i class='sidebar-button-icon fa fa-lg fa-github'></i>"
 url = "https://github.com/straxFromIbr"
 weight = 8
 
-# [[menu.misc]]
-# identifier = "rss"
-# name = "RSS"
-# pre = "<i class='sidebar-button-icon fa fa-lg fa-rss'></i>"
-# url = "/index.xml"
-# weight = 1
-
 [params]
 dateFormat = "2006 January月 2日"
 syntaxHighlighter = "highlight.js"
@@ -124,39 +85,35 @@ imageGallery = true
 thumbnailImage = true
 thumbnailImagePosition = "left"
 autoThumbnailImage = true
-
 favicon = "https://pbs.twimg.com/profile_images/1377448543921709060/F6rVF1vn_400x400.jpg"
-
 [[params.customCSS]]
 href = "css/iconbgcolor.css"
-
-
-
-
 
 [[params.sharingOptions]]
 icon = "fa-twitter"
 name = "Twitter"
 url = "https://twitter.com/intent/tweet?url=%s&via=PotatoHotate"
+
 [[params.sharingOptions]]
 icon = "fa-facebook-official"
 name = "Facebook"
 url = "https://www.facebook.com/sharer/sharer.php?u=%s"
+
+[params.footer]
+copyright = "<a href='https://github.com/straxFromIbr'>straxFromIbr</a>"
+
+[markup.tableOfContents]
+endLevel = 3
+orderd = true
+startLevel = 1
 
 [params.header.rightLink]
 class = ""
 icon = ""
 url = "/#about"
 
-# Customize link of author avatar in sidebar
 [params.sidebar.profile]
-  url = "/#about"
+url = "/#about"
 
-# Customize copyright value "© 2017 <CUSTOMIZATION>. All Rights Reserved"
-[params.footer]
-copyright = "<a href='https://github.com/straxFromIbr'>straxFromIbr</a>"
-
-
-
-
-
+[markup.goldmark.renderer]
+unsafe = true
