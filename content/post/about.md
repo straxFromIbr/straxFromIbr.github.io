@@ -10,6 +10,7 @@ showMeta:       false
 showActions:    false
 ---
 
+
 - 講義メモのディレクトリ：[LectureNote](/categories/lecturenote)  
   各科目
   - [知識情報処理](/categories/知識情報処理)
