@@ -44,7 +44,7 @@ category = "categories"
 tag = "tags"
 
 [author]
-bio = "メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate)"
+bio = 'メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate)'
 job = "学生"
 location = "茨城県"
 name = "PotatoHotate"
