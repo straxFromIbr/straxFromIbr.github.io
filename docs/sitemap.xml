@@ -12,15 +12,30 @@
     <lastmod>3001-11-23T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/categories/</loc>
-    <lastmod>2021-06-29T22:56:22+09:00</lastmod>
+    <lastmod>2021-07-02T20:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/tags/linux/</loc>
+    <lastmod>2021-07-02T20:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/tags/raspberrypi/</loc>
+    <lastmod>2021-07-02T20:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/categories/raspberrypi/</loc>
+    <lastmod>2021-07-02T20:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/2021/07/systemd%E3%81%A7gui%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E8%87%AA%E5%8B%95%E5%AE%9F%E5%8B%95/</loc>
+    <lastmod>2021-07-02T20:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/tags/</loc>
+    <lastmod>2021-07-02T20:44:03+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</loc>
+    <lastmod>2021-07-02T20:44:03+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/fish/</loc>
     <lastmod>2021-06-29T22:56:22+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/2021/06/fish-tide%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E8%BF%BD%E5%8A%A0/</loc>
-    <lastmod>2021-06-29T22:56:22+09:00</lastmod>
-  </url><url>
-    <loc>https://straxfromibr.github.io/tags/</loc>
     <lastmod>2021-06-29T22:56:22+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/tide/</loc>
@@ -30,9 +45,6 @@
     <lastmod>2021-06-29T22:56:22+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/categories/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/</loc>
-    <lastmod>2021-06-29T22:56:22+09:00</lastmod>
-  </url><url>
-    <loc>https://straxfromibr.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</loc>
     <lastmod>2021-06-29T22:56:22+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/atla/</loc>
@@ -78,12 +90,6 @@
     <lastmod>2021-06-28T20:53:20+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/2021/06/python%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89-on-raspi/</loc>
-    <lastmod>2021-06-28T20:53:20+09:00</lastmod>
-  </url><url>
-    <loc>https://straxfromibr.github.io/tags/raspberrypi/</loc>
-    <lastmod>2021-06-28T20:53:20+09:00</lastmod>
-  </url><url>
-    <loc>https://straxfromibr.github.io/categories/raspberrypi/</loc>
     <lastmod>2021-06-28T20:53:20+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/tensorflow/</loc>
