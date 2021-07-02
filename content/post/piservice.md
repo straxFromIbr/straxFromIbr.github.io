@@ -9,9 +9,6 @@ tags:
 - Linux
 keywords:
 - tech
-thumbnailImage: /images/piservice/
-#thumbnailImage: /images/piservice/
-#thumbnailImage: //example.com/image.jp
 summary: "systemdによりRasPiを起動した際にスクリプトを自動実行するようにするための概略メモ"
 
 ---
