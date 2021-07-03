@@ -1,4 +1,4 @@
-jjbaseURL = "https://straxfromibr.github.io/"
+baseURL = "https://straxfromibr.github.io/"
 defaultContentLanguage = "ja"
 publishDir = "docs"
 languageCode = "ja"
@@ -16,7 +16,7 @@ category = "categories"
 tag = "tags"
 
 [author]
-bio = "メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate) <br> _Latest Build:2021/07/03 17:58_"
+bio = "メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate) <br> _Latest Build:2021/07/03 18:15_"
 job = "学生"
 location = "茨城県"
 name = "PotatoHotate"

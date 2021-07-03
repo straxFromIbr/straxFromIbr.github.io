@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Prolog on メモおきば</title>
-    <link>/tags/prolog/</link>
+    <link>https://straxfromibr.github.io/tags/prolog/</link>
     <description>Recent content in Prolog on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 23 Jun 2021 11:43:32 +0900</lastBuildDate><atom:link href="/tags/prolog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Jun 2021 11:43:32 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/prolog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Prolog week9</title>
-      <link>/2021/06/prolog-week9/</link>
+      <link>https://straxfromibr.github.io/2021/06/prolog-week9/</link>
       <pubDate>Wed, 23 Jun 2021 11:43:32 +0900</pubDate>
       
-      <guid>/2021/06/prolog-week9/</guid>
+      <guid>https://straxfromibr.github.io/2021/06/prolog-week9/</guid>
       <description>知識情報処理 9週</description>
     </item>
     

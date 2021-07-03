@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>category on メモおきば</title>
-    <link>/categories/category/</link>
+    <link>https://straxfromibr.github.io/categories/category/</link>
     <description>Recent content in category on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 26 Jun 2021 18:20:50 +0900</lastBuildDate><atom:link href="/categories/category/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Jun 2021 18:20:50 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/categories/category/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LectureNote</title>
-      <link>/page/lecturenote/</link>
+      <link>https://straxfromibr.github.io/page/lecturenote/</link>
       <pubDate>Sat, 26 Jun 2021 18:20:50 +0900</pubDate>
       
-      <guid>/page/lecturenote/</guid>
+      <guid>https://straxfromibr.github.io/page/lecturenote/</guid>
       <description></description>
     </item>
     
