@@ -2,9 +2,11 @@
 title: "HammerSpoon小ネタその1"
 date: 2021-06-27T23:27:45+09:00
 categories:
+- Mac
 - ユーティリティ
-- hammerspoon
 tags:
+- Mac
+- ユーティリティ
 - プログラミング
 - lua
 - hammerspoon
