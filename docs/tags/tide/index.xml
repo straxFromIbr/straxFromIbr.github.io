@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tide on メモおきば</title>
-    <link>https://straxfromibr.github.io/tags/tide/</link>
+    <link>/tags/tide/</link>
     <description>Recent content in tide on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 29 Jun 2021 22:56:22 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/tide/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Jun 2021 22:56:22 +0900</lastBuildDate><atom:link href="/tags/tide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fish tideのアイテム追加</title>
-      <link>https://straxfromibr.github.io/2021/06/fish-tide%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E8%BF%BD%E5%8A%A0/</link>
+      <link>/2021/06/fish-tide%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E8%BF%BD%E5%8A%A0/</link>
       <pubDate>Tue, 29 Jun 2021 22:56:22 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/2021/06/fish-tide%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E8%BF%BD%E5%8A%A0/</guid>
+      <guid>/2021/06/fish-tide%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E8%BF%BD%E5%8A%A0/</guid>
       <description>Fishシェルのプロンプトプラグインtideの設定について</description>
     </item>
     

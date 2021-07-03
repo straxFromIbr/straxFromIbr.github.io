@@ -2,152 +2,152 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on メモおきば</title>
-    <link>https://straxfromibr.github.io/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 03 Jul 2021 17:43:40 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Jul 2021 17:43:40 +0900</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mac</title>
-      <link>https://straxfromibr.github.io/categories/mac/</link>
+      <link>/categories/mac/</link>
       <pubDate>Sat, 03 Jul 2021 17:43:40 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/mac/</guid>
+      <guid>/categories/mac/</guid>
       <description></description>
     </item>
     
     <item>
       <title>環境構築</title>
-      <link>https://straxfromibr.github.io/categories/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</link>
+      <link>/categories/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</link>
       <pubDate>Sat, 03 Jul 2021 17:43:40 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</guid>
+      <guid>/categories/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</guid>
       <description></description>
     </item>
     
     <item>
       <title>RaspberryPi</title>
-      <link>https://straxfromibr.github.io/categories/raspberrypi/</link>
+      <link>/categories/raspberrypi/</link>
       <pubDate>Fri, 02 Jul 2021 20:44:03 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/raspberrypi/</guid>
+      <guid>/categories/raspberrypi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>プログラミング</title>
-      <link>https://straxfromibr.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</link>
+      <link>/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</link>
       <pubDate>Fri, 02 Jul 2021 20:44:03 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</guid>
+      <guid>/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>シェルスクリプト</title>
-      <link>https://straxfromibr.github.io/categories/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/</link>
+      <link>/categories/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/</link>
       <pubDate>Tue, 29 Jun 2021 22:56:22 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/</guid>
+      <guid>/categories/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/</guid>
       <description></description>
     </item>
     
     <item>
       <title>アバター</title>
-      <link>https://straxfromibr.github.io/categories/%E3%82%A2%E3%83%90%E3%82%BF%E3%83%BC/</link>
+      <link>/categories/%E3%82%A2%E3%83%90%E3%82%BF%E3%83%BC/</link>
       <pubDate>Tue, 29 Jun 2021 10:07:59 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/%E3%82%A2%E3%83%90%E3%82%BF%E3%83%BC/</guid>
+      <guid>/categories/%E3%82%A2%E3%83%90%E3%82%BF%E3%83%BC/</guid>
       <description></description>
     </item>
     
     <item>
       <title>海外アニメ</title>
-      <link>https://straxfromibr.github.io/categories/%E6%B5%B7%E5%A4%96%E3%82%A2%E3%83%8B%E3%83%A1/</link>
+      <link>/categories/%E6%B5%B7%E5%A4%96%E3%82%A2%E3%83%8B%E3%83%A1/</link>
       <pubDate>Tue, 29 Jun 2021 10:07:59 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/%E6%B5%B7%E5%A4%96%E3%82%A2%E3%83%8B%E3%83%A1/</guid>
+      <guid>/categories/%E6%B5%B7%E5%A4%96%E3%82%A2%E3%83%8B%E3%83%A1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Python</title>
-      <link>https://straxfromibr.github.io/categories/python/</link>
+      <link>/categories/python/</link>
       <pubDate>Mon, 28 Jun 2021 20:53:20 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/python/</guid>
+      <guid>/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ユーティリティ</title>
-      <link>https://straxfromibr.github.io/categories/%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3/</link>
+      <link>/categories/%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3/</link>
       <pubDate>Sun, 27 Jun 2021 23:27:45 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3/</guid>
+      <guid>/categories/%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>category</title>
-      <link>https://straxfromibr.github.io/categories/category/</link>
+      <link>/categories/category/</link>
       <pubDate>Sat, 26 Jun 2021 18:20:50 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/category/</guid>
+      <guid>/categories/category/</guid>
       <description></description>
     </item>
     
     <item>
       <title>subcategory</title>
-      <link>https://straxfromibr.github.io/categories/subcategory/</link>
+      <link>/categories/subcategory/</link>
       <pubDate>Sat, 26 Jun 2021 18:20:50 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/subcategory/</guid>
+      <guid>/categories/subcategory/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ブログ(hugo)</title>
-      <link>https://straxfromibr.github.io/categories/%E3%83%96%E3%83%AD%E3%82%B0hugo/</link>
+      <link>/categories/%E3%83%96%E3%83%AD%E3%82%B0hugo/</link>
       <pubDate>Wed, 23 Jun 2021 23:05:56 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/%E3%83%96%E3%83%AD%E3%82%B0hugo/</guid>
+      <guid>/categories/%E3%83%96%E3%83%AD%E3%82%B0hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>構築</title>
-      <link>https://straxfromibr.github.io/categories/%E6%A7%8B%E7%AF%89/</link>
+      <link>/categories/%E6%A7%8B%E7%AF%89/</link>
       <pubDate>Wed, 23 Jun 2021 23:05:56 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/%E6%A7%8B%E7%AF%89/</guid>
+      <guid>/categories/%E6%A7%8B%E7%AF%89/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LectureNote</title>
-      <link>https://straxfromibr.github.io/categories/lecturenote/</link>
+      <link>/categories/lecturenote/</link>
       <pubDate>Wed, 23 Jun 2021 11:43:32 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/lecturenote/</guid>
+      <guid>/categories/lecturenote/</guid>
       <description></description>
     </item>
     
     <item>
       <title>人間と世界IV</title>
-      <link>https://straxfromibr.github.io/categories/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ/</link>
+      <link>/categories/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ/</link>
       <pubDate>Wed, 23 Jun 2021 11:43:32 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ/</guid>
+      <guid>/categories/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ/</guid>
       <description></description>
     </item>
     
     <item>
       <title>知識情報処理</title>
-      <link>https://straxfromibr.github.io/categories/%E7%9F%A5%E8%AD%98%E6%83%85%E5%A0%B1%E5%87%A6%E7%90%86/</link>
+      <link>/categories/%E7%9F%A5%E8%AD%98%E6%83%85%E5%A0%B1%E5%87%A6%E7%90%86/</link>
       <pubDate>Wed, 23 Jun 2021 11:43:32 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/categories/%E7%9F%A5%E8%AD%98%E6%83%85%E5%A0%B1%E5%87%A6%E7%90%86/</guid>
+      <guid>/categories/%E7%9F%A5%E8%AD%98%E6%83%85%E5%A0%B1%E5%87%A6%E7%90%86/</guid>
       <description></description>
     </item>
     
