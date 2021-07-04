@@ -30,7 +30,7 @@ Arm64用のHomebrewがリリースされるまで使っていたx86系のhomebre
 [Homebrewの公式リポジトリ](https://github.com/homebrew/install#uninstall-homebrew)に記載されてるコマンドは __実行せずに__ 次のコマンドでスクリプトをインストールする．
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh
+curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh > ./uninstall.sh
 ```
 
 # スクリプトの編集
