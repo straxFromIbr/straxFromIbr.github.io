@@ -9,28 +9,28 @@
     <lastBuildDate>Sun, 04 Jul 2021 09:57:22 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/categories/mac/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[m1Mac]/usr/local/bin/brewを削除する</title>
-      <link>https://straxfromibr.github.io/2021/07/m1mac/usr/local/bin/brew%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B/</link>
+      <link>https://straxfromibr.github.io/2021/07/deletebrew/</link>
       <pubDate>Sun, 04 Jul 2021 09:57:22 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/2021/07/m1mac/usr/local/bin/brew%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B/</guid>
+      <guid>https://straxfromibr.github.io/2021/07/deletebrew/</guid>
       <description>Arm64用のHomebrewがリリースされるまで使っていたx86系のhomebrewを削除したのでメモ</description>
     </item>
     
     <item>
       <title>[Mac]キーボードのアクセントメニューを無効化</title>
-      <link>https://straxfromibr.github.io/2021/07/mac%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%92%E7%84%A1%E5%8A%B9%E5%8C%96/</link>
+      <link>https://straxfromibr.github.io/2021/07/mac-accent-disable/</link>
       <pubDate>Sat, 03 Jul 2021 17:43:40 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/2021/07/mac%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%92%E7%84%A1%E5%8A%B9%E5%8C%96/</guid>
+      <guid>https://straxfromibr.github.io/2021/07/mac-accent-disable/</guid>
       <description>キーボードのアクセントメニューを無効にするためのコマンド．備忘録．</description>
     </item>
     
     <item>
       <title>HammerSpoon小ネタその1</title>
-      <link>https://straxfromibr.github.io/2021/06/hammerspoon%E5%B0%8F%E3%83%8D%E3%82%BF%E3%81%9D%E3%81%AE1/</link>
+      <link>https://straxfromibr.github.io/2021/06/hmurlutil/</link>
       <pubDate>Sun, 27 Jun 2021 23:27:45 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/2021/06/hammerspoon%E5%B0%8F%E3%83%8D%E3%82%BF%E3%81%9D%E3%81%AE1/</guid>
+      <guid>https://straxfromibr.github.io/2021/06/hmurlutil/</guid>
       <description>URLエンコーディングのショートカットを作成</description>
     </item>
     

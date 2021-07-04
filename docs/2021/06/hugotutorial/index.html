@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.84.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="PotatoHotate">
+<meta name="keywords" content="">
+<meta name="description" content="hugoでブログの作成とGitHub Pagesへのアップロード">
+
+
+<meta property="og:description" content="hugoでブログの作成とGitHub Pagesへのアップロード">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hugoとGithub Pagesでブログ作成">
+<meta name="twitter:title" content="hugoとGithub Pagesでブログ作成">
+<meta property="og:url" content="https://straxfromibr.github.io/2021/06/hugotutorial/">
+<meta property="twitter:url" content="https://straxfromibr.github.io/2021/06/hugotutorial/">
+<meta property="og:site_name" content="メモおきば">
+<meta property="og:description" content="hugoでブログの作成とGitHub Pagesへのアップロード">
+<meta name="twitter:description" content="hugoでブログの作成とGitHub Pagesへのアップロード">
+<meta property="og:locale" content="ja">
+
+  
+    <meta property="article:published_time" content="2021-06-23T23:05:56">
+  
+  
+    <meta property="article:modified_time" content="2021-06-23T23:05:56">
+  
+  
+  
+    
+      <meta property="article:section" content="ブログ(hugo)">
+    
+      <meta property="article:section" content="構築">
+    
+  
+  
+    
+      <meta property="article:tag" content="hugo">
+    
+      <meta property="article:tag" content="ブログ構築">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@PotatoHotate">
+
+
+  <meta name="twitter:creator" content="@PotatoHotate">
+
+
+
+
+
+
+  <meta property="og:image" content="https://straxfromibr.github.io/images/hugo.jpg">
+  <meta property="twitter:image" content="https://straxfromibr.github.io/images/hugo.jpg">
+
+
+
+
+
+  <meta property="og:image" content="https://lh3.googleusercontent.com/pw/AM-JKLU3kE3TXypRMX2GntJm1Wt9NvPbfDqgNjcBFB7qAkFFhtVukFMsy1uOQQ78e9voUXXtx1yWzrih6jByQYYhlOR2dHYBpYelawtMOfCm2sw1j5V1Eb4K-BQmHC3LnQGnEZZGlWB5nnWlo7hbxrnPT0hY8Q">
+  <meta property="twitter:image" content="https://lh3.googleusercontent.com/pw/AM-JKLU3kE3TXypRMX2GntJm1Wt9NvPbfDqgNjcBFB7qAkFFhtVukFMsy1uOQQ78e9voUXXtx1yWzrih6jByQYYhlOR2dHYBpYelawtMOfCm2sw1j5V1Eb4K-BQmHC3LnQGnEZZGlWB5nnWlo7hbxrnPT0hY8Q">
+
+
+    <title>hugoとGithub Pagesでブログ作成</title>
+
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/1377448543921709060/F6rVF1vn_400x400.jpg">
+    
+
+    
+
+    <link rel="canonical" href="https://straxfromibr.github.io/2021/06/hugotutorial/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://straxfromibr.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="https://straxfromibr.github.io/css/iconbgcolor.css">
+      
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://straxfromibr.github.io/">メモおきば</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://straxfromibr.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://lh3.googleusercontent.com/pw/AM-JKLU3kE3TXypRMX2GntJm1Wt9NvPbfDqgNjcBFB7qAkFFhtVukFMsy1uOQQ78e9voUXXtx1yWzrih6jByQYYhlOR2dHYBpYelawtMOfCm2sw1j5V1Eb4K-BQmHC3LnQGnEZZGlWB5nnWlo7hbxrnPT0hY8Q" alt="プロフィール画像" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://straxfromibr.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://lh3.googleusercontent.com/pw/AM-JKLU3kE3TXypRMX2GntJm1Wt9NvPbfDqgNjcBFB7qAkFFhtVukFMsy1uOQQ78e9voUXXtx1yWzrih6jByQYYhlOR2dHYBpYelawtMOfCm2sw1j5V1Eb4K-BQmHC3LnQGnEZZGlWB5nnWlo7hbxrnPT0hY8Q" alt="プロフィール画像" />
+        </a>
+        <h4 class="sidebar-profile-name">PotatoHotate</h4>
+        
+          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/07/04 16:56</em></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-home'></i>
+      
+      <span class="sidebar-button-desc">ホーム</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/categories">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-bookmark'></i>
+      
+      <span class="sidebar-button-desc">カテゴリー</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/tags">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-tags'></i>
+      
+      <span class="sidebar-button-desc">タグ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/archives">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-archive'></i>
+      
+      <span class="sidebar-button-desc">アーカイブ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/categories/lecturenote/">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-pencil'></i>
+      
+      <span class="sidebar-button-desc">講義メモ</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/PotatoHotate" target="_blank" rel="noopener">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-twitter'></i>
+      
+      <span class="sidebar-button-desc">@PotatoHotate</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/straxFromIbr/straxFromIbr.github.io" target="_blank" rel="noopener">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-github'></i>
+      
+      <span class="sidebar-button-desc">straxFromIbr</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      hugoとGithub Pagesでブログ作成
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-06-23T23:05:56&#43;09:00">
+        
+  
+  
+  
+  
+    2021年 6月 23日
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://straxfromibr.github.io/categories/%e3%83%96%e3%83%ad%e3%82%b0hugo">ブログ(hugo)</a>, 
+    
+      <a class="category-link" href="https://straxfromibr.github.io/categories/%e6%a7%8b%e7%af%89">構築</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>この数ヶ月間，ちょっとしたメモのうち有用だと思われるものは<a href="https://note.com/straxfromibr">note</a>で公開していたのだが，なんだか痒いところに手が届かないというか使いづらかったので移行を検討中．</p>
+<h1 id="table-of-contents">目次</h1><nav id="TableOfContents">
+  <ul>
+    <li><a href="#現在の環境">現在の環境</a></li>
+    <li><a href="#1-hugoのインストール">1. hugoのインストール</a></li>
+    <li><a href="#2-ブログページをローカルに作成">2. ブログページをローカルに作成．</a></li>
+    <li><a href="#3-テーマの選定とインストール">3. テーマの選定とインストール．</a></li>
+    <li><a href="#4-configtomlの編集">4. config.tomlの編集</a></li>
+    <li><a href="#5-記事の作成">5. 記事の作成</a></li>
+    <li><a href="#6-github-pagesへのアップロード">6. Github Pagesへのアップロード</a></li>
+    <li><a href="#7補足">7.補足</a>
+      <ul>
+        <li><a href="#画像の扱い">画像の扱い</a></li>
+        <li><a href="#目次の表示table-of-contents">目次の表示(Table of contents)</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<p>公式の手順に沿って進めればなんの問題もないが，今後のためにメモ．</p>
+<h1 id="現在の環境">現在の環境</h1>
+<ul>
+<li>hugo v0.84.0+extended darwin/arm64 BuildDate=unknown</li>
+</ul>
+<h1 id="1-hugoのインストール">1. hugoのインストール</h1>
+<p><code> $ brew install hugo</code></p>
+<h1 id="2-ブログページをローカルに作成">2. ブログページをローカルに作成．</h1>
+<p>MyBlogという名前でブログのルートディレクトリを作成．
+適当なディレクトリで次を実行．以降，ルートディレクトリ(<code>/</code>)を<code>MyBlog/</code>とする．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo new site MyBlog <span style="color:#f92672">&amp;&amp;</span> cd MyBlog
+$ git init
+</code></pre></div><h1 id="3-テーマの選定とインストール">3. テーマの選定とインストール．</h1>
+<p>ここでは<a href="https://github.com/kakawait/hugo-tranquilpeak-theme">Tranquilpeak</a>を選択したことを前提にする．<br>
+submoduleとしてテーマをインストールする．またテーマに同梱されるconfigファイルを叩き台に設定ファイルを作成
+ディレクトリ<code>/</code>で次を実行．この段階でビルドし開発サーバーを起動できるはず．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ mkdir themes <span style="color:#f92672">&amp;&amp;</span> cd themes
+$ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git 
+$ cd ..
+$ cp themes/tranquilpeak/exampleSite/config.toml .
+$ hugo -D server
+</code></pre></div><h1 id="4-configtomlの編集">4. config.tomlの編集</h1>
+<p><a href="https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md">公式のチュートリアル</a>を見て進める．長いので割愛．<br>
+当ブログの設定ファイルはこちらの<a href="https://github.com/straxFromIbr/straxFromIbr.github.io/blob/main/config.toml">リンク</a>．</p>
+<h1 id="5-記事の作成">5. 記事の作成</h1>
+<p>hugoのコマンドでタイムスタンプなどのメタデータ（Front Matter)が記述されたMarkDownが生成される．それを直接編集する．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ mkdir content
+$ hugo new post/hugotutorial.md
+$ cd content/post
+$ vi hugotutorial.md
+</code></pre></div><h1 id="6-github-pagesへのアップロード">6. Github Pagesへのアップロード</h1>
+<p>hugoでブログを出力するディレクトリを<code>MyBlog/docs</code>にし，それを公開することにする．</p>
+<ol>
+<li>
+<p>Github Pagesを設定したリポジトリを作成する．そのドキュメントルートを<code>docs</code>としMyBlogのリモートオリジンに紐付ける．</p>
+<pre><code>$ git remote add origin https://github.com/&lt;yourname&gt;/&lt;reponame&gt;.git
+</code></pre></li>
+<li>
+<p><code>MyBlog/config.toml</code>を書き換え，次の行を追加．このブログの場合はbaseURLは<code>https://straxfromibt.github.io</code>である．</p>
+<pre><code>baseURL = &quot;https://&lt;username&gt;.github.io/{&lt;reponame&gt;}&quot;
+publishDir = &quot;docs
+</code></pre></li>
+<li>
+<p>ブログをビルドし，変更内容をプッシュする．</p>
+<pre><code>$ hugo -D
+$ git add -A
+$ git commit -m &quot;ブログ始めました&quot;
+$ git push origin main
+</code></pre></li>
+</ol>
+<p>しばらくすると公開されてるハズ．</p>
+<h1 id="7補足">7.補足</h1>
+<h2 id="画像の扱い">画像の扱い</h2>
+<p>このテーマの製作者は記事内で画像を扱うときはCloudinaryなどのCDNサービスを使うことを推奨している．一方同一のリポジトリ内で保存した画像を使用する時には，<code>content/imgaes</code>ディレクトリを作成し記事ファイル内で<code>/images/img.jpg</code>などのように相対ぱすで指定する．</p>
+<h2 id="目次の表示table-of-contents">目次の表示(Table of contents)</h2>
+<p><a href="https://github.com/kakawait/hugo-tranquilpeak-theme/issues/395">このissue</a>を参考に，次の記述を<code>config.toml</code>に追加．</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>]
+  [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
+    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
+      <span style="color:#a6e22e">unsafe</span> = <span style="color:#66d9ef">true</span>
+    [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">tableOfContents</span>]
+      <span style="color:#a6e22e">endLevel</span> = <span style="color:#ae81ff">3</span>
+      <span style="color:#a6e22e">orderd</span> = <span style="color:#66d9ef">true</span>
+      <span style="color:#a6e22e">startLevel</span> = <span style="color:#ae81ff">1</span>
+</code></pre></div><p>そしてブログ記事内で目次を表示したい部分に<code>&lt;!-- toc --&gt;</code>を挿入する．
+当記事の<a href="https://raw.githubusercontent.com/straxFromIbr/straxFromIbr.github.io/main/content/post/hugotutorial.md">ソースコード</a>も参考になるかも．
+
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+<div class="figure fig-100 center" >
+  
+    <a class="fancybox" href="https://straxfromibr.github.io/images/hugo.jpg" title="hugoによるブログの外観" data-fancybox-group="group:bike">
+  
+    <img class="fig-img" src="https://straxfromibr.github.io/images/hugo.jpg"  alt="hugoによるブログの外観">
+  
+    </a>
+  
+   
+    <span class="caption">hugoによるブログの外観</span>
+  
+</div>
+
+  <div style="clear:both;"></div>
+</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">タグ</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/hugo/">hugo</a>
+
+  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/%E3%83%96%E3%83%AD%E3%82%B0%E6%A7%8B%E7%AF%89/">ブログ構築</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/06/fishintro/" data-tooltip="Fish環境構築">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/06/prolog_week9/" data-tooltip="Prolog week9">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/06/hugotutorial/&amp;via=PotatoHotate">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/06/hugotutorial/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 <a href='https://github.com/straxFromIbr/straxFromIbr.github.io'>straxFromIbr</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/06/fishintro/" data-tooltip="Fish環境構築">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/06/prolog_week9/" data-tooltip="Prolog week9">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/06/hugotutorial/&amp;via=PotatoHotate">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/06/hugotutorial/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F06%2Fhugotutorial%2F&amp;via=PotatoHotate">
+          <i class="fa fa-twitter"></i><span>Twitterで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F06%2Fhugotutorial%2F">
+          <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://lh3.googleusercontent.com/pw/AM-JKLU3kE3TXypRMX2GntJm1Wt9NvPbfDqgNjcBFB7qAkFFhtVukFMsy1uOQQ78e9voUXXtx1yWzrih6jByQYYhlOR2dHYBpYelawtMOfCm2sw1j5V1Eb4K-BQmHC3LnQGnEZZGlWB5nnWlo7hbxrnPT0hY8Q" alt="プロフィール画像" />
+    
+    <h4 id="about-card-name">PotatoHotate</h4>
+    
+      <div id="about-card-bio">メモ置き場です．自転車が趣味．<a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/07/04 16:56</em></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        学生
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        茨城県
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    <div id="cover" style="background-image:url('https://res.cloudinary.com/potatohotate/image/upload/c_crop,h_1243,w_2292,x_1150,y_760/v1624454976/blogbase/IMG_20210317_151747_pxxddm.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://straxfromibr.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

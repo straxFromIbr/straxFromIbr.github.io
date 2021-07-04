@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 02 Jul 2021 20:44:03 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>systemdでGUIアプリケーションを自動実動</title>
-      <link>https://straxfromibr.github.io/2021/07/systemd%E3%81%A7gui%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E8%87%AA%E5%8B%95%E5%AE%9F%E5%8B%95/</link>
+      <link>https://straxfromibr.github.io/2021/07/piservice/</link>
       <pubDate>Fri, 02 Jul 2021 20:44:03 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/2021/07/systemd%E3%81%A7gui%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E8%87%AA%E5%8B%95%E5%AE%9F%E5%8B%95/</guid>
+      <guid>https://straxfromibr.github.io/2021/07/piservice/</guid>
       <description>systemdによりRasPiを起動した際にスクリプトを自動実行するようにするための概略メモ</description>
     </item>
     

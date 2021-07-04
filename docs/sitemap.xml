@@ -11,7 +11,7 @@
     <loc>https://straxfromibr.github.io/</loc>
     <lastmod>3001-11-23T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/07/m1mac/usr/local/bin/brew%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B/</loc>
+    <loc>https://straxfromibr.github.io/2021/07/deletebrew/</loc>
     <lastmod>2021-07-04T09:57:22+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/categories/</loc>
@@ -38,7 +38,7 @@
     <loc>https://straxfromibr.github.io/categories/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</loc>
     <lastmod>2021-07-04T09:57:22+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/07/mac%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%92%E7%84%A1%E5%8A%B9%E5%8C%96/</loc>
+    <loc>https://straxfromibr.github.io/2021/07/mac-accent-disable/</loc>
     <lastmod>2021-07-03T17:43:40+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/%E5%82%99%E5%BF%98%E9%8C%B2/</loc>
@@ -53,7 +53,7 @@
     <loc>https://straxfromibr.github.io/categories/raspberrypi/</loc>
     <lastmod>2021-07-02T20:44:03+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/07/systemd%E3%81%A7gui%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E8%87%AA%E5%8B%95%E5%AE%9F%E5%8B%95/</loc>
+    <loc>https://straxfromibr.github.io/2021/07/piservice/</loc>
     <lastmod>2021-07-02T20:44:03+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</loc>
@@ -62,7 +62,7 @@
     <loc>https://straxfromibr.github.io/tags/fish/</loc>
     <lastmod>2021-06-29T22:56:22+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/fish-tide%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0%E8%BF%BD%E5%8A%A0/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/fishtip1/</loc>
     <lastmod>2021-06-29T22:56:22+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/tide/</loc>
@@ -89,7 +89,7 @@
     <loc>https://straxfromibr.github.io/tags/tlok/</loc>
     <lastmod>2021-06-29T10:07:59+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/%E3%82%A2%E3%83%90%E3%82%BF%E3%83%BC%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%83%9F%E3%83%83%E3%82%AF%E3%82%B9%E3%81%BE%E3%81%A8%E3%82%81/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/avatar-in-other-media/</loc>
     <lastmod>2021-06-29T10:07:59+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/categories/%E3%82%A2%E3%83%90%E3%82%BF%E3%83%BC/</loc>
@@ -116,7 +116,7 @@
     <loc>https://straxfromibr.github.io/categories/python/</loc>
     <lastmod>2021-06-28T20:53:20+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/python%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89-on-raspi/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/raspi_pkginstallation/</loc>
     <lastmod>2021-06-28T20:53:20+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/tensorflow/</loc>
@@ -125,7 +125,7 @@
     <loc>https://straxfromibr.github.io/tags/hammerspoon/</loc>
     <lastmod>2021-06-27T23:27:45+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/hammerspoon%E5%B0%8F%E3%83%8D%E3%82%BF%E3%81%9D%E3%81%AE1/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/hmurlutil/</loc>
     <lastmod>2021-06-27T23:27:45+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/lua/</loc>
@@ -152,13 +152,13 @@
     <loc>https://straxfromibr.github.io/categories/subcategory/</loc>
     <lastmod>2021-06-26T18:20:50+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/fish%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/fishintro/</loc>
     <lastmod>2021-06-26T14:30:20+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/hugo/</loc>
     <lastmod>2021-06-23T23:05:56+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/hugo%E3%81%A8github-pages%E3%81%A7%E3%83%96%E3%83%AD%E3%82%B0%E4%BD%9C%E6%88%90/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/hugotutorial/</loc>
     <lastmod>2021-06-23T23:05:56+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/categories/%E3%83%96%E3%83%AD%E3%82%B0hugo/</loc>
@@ -176,7 +176,7 @@
     <loc>https://straxfromibr.github.io/tags/prolog/</loc>
     <lastmod>2021-06-23T11:43:32+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/prolog-week9/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/prolog_week9/</loc>
     <lastmod>2021-06-23T11:43:32+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ/</loc>
@@ -185,31 +185,31 @@
     <loc>https://straxfromibr.github.io/categories/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ/</loc>
     <lastmod>2021-06-23T11:43:32+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ-10%E9%80%B1/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ_week10/</loc>
     <lastmod>2021-06-23T11:43:32+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ-1%E9%80%B1/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ_week1/</loc>
     <lastmod>2021-06-23T11:43:32+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ-2%E9%80%B1/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ_week2/</loc>
     <lastmod>2021-06-23T11:43:32+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ-3%E9%80%B1/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ_week3/</loc>
     <lastmod>2021-06-23T11:43:32+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ-4%E9%80%B1/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ_week4/</loc>
     <lastmod>2021-06-23T11:43:32+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ-5%E9%80%B1/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ_week5/</loc>
     <lastmod>2021-06-23T11:43:32+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ-6%E9%80%B1/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ_week6/</loc>
     <lastmod>2021-06-23T11:43:32+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ-7%E9%80%B1/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ_week8/</loc>
     <lastmod>2021-06-23T11:43:32+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ-9%E9%80%B1/</loc>
+    <loc>https://straxfromibr.github.io/2021/06/%E4%BA%BA%E9%96%93%E3%81%A8%E4%B8%96%E7%95%8Civ_week9/</loc>
     <lastmod>2021-06-23T11:43:32+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/%E6%8E%88%E6%A5%AD%E3%83%A1%E3%83%A2/</loc>
