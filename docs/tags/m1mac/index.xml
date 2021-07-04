@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>m1Mac on メモおきば</title>
+    <link>https://straxfromibr.github.io/tags/m1mac/</link>
+    <description>Recent content in m1Mac on メモおきば</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 04 Jul 2021 09:57:22 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/m1mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[m1Mac]/usr/local/bin/brewを削除する</title>
+      <link>https://straxfromibr.github.io/2021/07/m1mac/usr/local/bin/brew%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B/</link>
+      <pubDate>Sun, 04 Jul 2021 09:57:22 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/07/m1mac/usr/local/bin/brew%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B/</guid>
+      <description>Arm64用のHomebrewがリリースされるまで使っていたx86系のhomebrewを削除したのでメモ</description>
+    </item>
+    
+  </channel>
+</rss>
