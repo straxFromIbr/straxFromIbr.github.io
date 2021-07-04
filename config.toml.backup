@@ -6,6 +6,7 @@ theme = "hugo-tranquilpeak-theme"
 title = "メモおきば"
 canonifyurls = true
 paginate = 7
+enableEmoji = true
 
 [permalinks]
 post = "/:year/:month/:slug/"
@@ -16,7 +17,7 @@ category = "categories"
 tag = "tags"
 
 [author]
-bio = "メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate) <br> _Latest Build:2021/07/04 10:28_"
+bio = "メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate) <br> _Latest Build:2021/07/04 11:23_"
 job = "学生"
 location = "茨城県"
 name = "PotatoHotate"
