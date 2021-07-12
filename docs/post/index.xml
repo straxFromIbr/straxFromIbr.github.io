@@ -6,16 +6,7 @@
     <description>Recent content in Posts on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 23 Nov 3001 00:00:00 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About</title>
-      <link>https://straxfromibr.github.io/3001/11/about/</link>
-      <pubDate>Mon, 23 Nov 3001 00:00:00 +0900</pubDate>
-      
-      <guid>https://straxfromibr.github.io/3001/11/about/</guid>
-      <description>講義メモURL</description>
-    </item>
-    
+    <lastBuildDate>Sun, 04 Jul 2021 09:57:22 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[m1Mac]/usr/local/bin/brewを削除する</title>
       <link>https://straxfromibr.github.io/2021/07/deletebrew/</link>

@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://straxfromibr.github.io/3001/11/about/</loc>
-    <lastmod>3001-11-23T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://straxfromibr.github.io/post/</loc>
-    <lastmod>3001-11-23T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://straxfromibr.github.io/</loc>
-    <lastmod>3001-11-23T00:00:00+09:00</lastmod>
-  </url><url>
     <loc>https://straxfromibr.github.io/2021/07/deletebrew/</loc>
     <lastmod>2021-07-04T09:57:22+09:00</lastmod>
   </url><url>
@@ -29,7 +20,13 @@
     <loc>https://straxfromibr.github.io/categories/mac/</loc>
     <lastmod>2021-07-04T09:57:22+09:00</lastmod>
   </url><url>
+    <loc>https://straxfromibr.github.io/post/</loc>
+    <lastmod>2021-07-04T09:57:22+09:00</lastmod>
+  </url><url>
     <loc>https://straxfromibr.github.io/tags/</loc>
+    <lastmod>2021-07-04T09:57:22+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/</loc>
     <lastmod>2021-07-04T09:57:22+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</loc>
