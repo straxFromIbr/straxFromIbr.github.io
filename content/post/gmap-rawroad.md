@@ -1,5 +1,5 @@
 ---
-title: "Google Maps APIで道路網の抽出"
+title: "Google Maps APIで道路画像取得"
 date: 2021-07-14T18:07:28+09:00
 categories:
 - 卒研
