@@ -46,9 +46,9 @@ url="https://maps.googleapis.com/maps/api/staticmap"\
 | :------------- | :------------------- | :------------ |
 | `lat`          | 緯度                 | `36.5382486`  |
 | `lng`          | 経度                 | `140.5307574` |
-| `size`         | 画像の大きさ         | `670x670`     Ï
+| `size`         | 画像の大きさ         | `670x670`     |
 | `scale`        | 地図の縮尺           | `16`          |
-| `googleapikey` | Google APIのトークン | 略Ï              |
+| `googleapikey` | Google APIのトークン | 略              |
 
 
 ## 衛星写真
