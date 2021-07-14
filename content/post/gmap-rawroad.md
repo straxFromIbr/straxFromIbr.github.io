@@ -64,5 +64,5 @@ url="https://maps.googleapis.com/maps/api/staticmap"\
 "&markers=false"\
 "&key=${googleapikey}"
 ```
-
+ウォーターマークが表示されてしまうがそれはクロップするなどして除去する予定。
 あとはアクセス上限を超えないようにデータをかき集めるだけ。
