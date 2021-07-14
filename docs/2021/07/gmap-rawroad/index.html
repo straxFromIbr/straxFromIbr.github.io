@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.84.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="PotatoHotate">
+<meta name="keywords" content="tech">
+<meta name="description" content="卒研のためのデータセット収集の手段としてGoogle Maps APIの使用を検討している。そのためのテストとして次のような地図の画像を取得した。
+
+
+
+
+  
+    
+  
+  
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+道路画像
+Google Maps APIに登録しAPI Tokenを取得したあと次に示すURLをブラウザなどで開くと道路の画像が取得できる。
+ポイントはstyle変数の設定。地図中のroad要素の色を0xFFFFFFつまり黒に、landscapeの色を一括して0x000000と白にし、そのほかのfeature,elementを全て不可視にしている。詳細は公式ドキュメント:Styled Mapsに詳しい。">
+
+
+<meta property="og:description" content="卒研のためのデータセット収集の手段としてGoogle Maps APIの使用を検討している。そのためのテストとして次のような地図の画像を取得した。
+
+
+
+
+  
+    
+  
+  
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+道路画像
+Google Maps APIに登録しAPI Tokenを取得したあと次に示すURLをブラウザなどで開くと道路の画像が取得できる。
+ポイントはstyle変数の設定。地図中のroad要素の色を0xFFFFFFつまり黒に、landscapeの色を一括して0x000000と白にし、そのほかのfeature,elementを全て不可視にしている。詳細は公式ドキュメント:Styled Mapsに詳しい。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google Maps APIで道路網の抽出">
+<meta name="twitter:title" content="Google Maps APIで道路網の抽出">
+<meta property="og:url" content="https://straxfromibr.github.io/2021/07/gmap-rawroad/">
+<meta property="twitter:url" content="https://straxfromibr.github.io/2021/07/gmap-rawroad/">
+<meta property="og:site_name" content="メモおきば">
+<meta property="og:description" content="卒研のためのデータセット収集の手段としてGoogle Maps APIの使用を検討している。そのためのテストとして次のような地図の画像を取得した。
+
+
+
+
+  
+    
+  
+  
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+道路画像
+Google Maps APIに登録しAPI Tokenを取得したあと次に示すURLをブラウザなどで開くと道路の画像が取得できる。
+ポイントはstyle変数の設定。地図中のroad要素の色を0xFFFFFFつまり黒に、landscapeの色を一括して0x000000と白にし、そのほかのfeature,elementを全て不可視にしている。詳細は公式ドキュメント:Styled Mapsに詳しい。">
+<meta name="twitter:description" content="卒研のためのデータセット収集の手段としてGoogle Maps APIの使用を検討している。そのためのテストとして次のような地図の画像を取得した。
+
+
+
+
+  
+    
+  
+  
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+道路画像
+Google Maps APIに登録しAPI Tokenを取得したあと次に示すURLをブラウザなどで開くと道路の画像が取得できる。
+ポイントはstyle変数の設定。地図中のroad要素の色を0xFFFFFFつまり黒に、landscapeの色を一括して0x000000と白にし、そのほかのfeature,elementを全て不可視にしている。詳細は公式ドキュメント:Styled Mapsに詳しい。">
+<meta property="og:locale" content="ja">
+
+  
+    <meta property="article:published_time" content="2021-07-14T18:07:28">
+  
+  
+    <meta property="article:modified_time" content="2021-07-14T18:07:28">
+  
+  
+  
+    
+      <meta property="article:section" content="卒研">
+    
+      <meta property="article:section" content="データセット作成">
+    
+  
+  
+    
+      <meta property="article:tag" content="プログラミング">
+    
+      <meta property="article:tag" content="GoogleMapsAPI">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@PotatoHotate">
+
+
+  <meta name="twitter:creator" content="@PotatoHotate">
+
+
+
+
+
+
+  <meta property="og:image" content="https://straxfromibr.github.io/images/gmap-rawroad/staticmap.png">
+  <meta property="twitter:image" content="https://straxfromibr.github.io/images/gmap-rawroad/staticmap.png">
+
+
+
+
+
+  <meta property="og:image" content="https://lh3.googleusercontent.com/pw/AM-JKLU3kE3TXypRMX2GntJm1Wt9NvPbfDqgNjcBFB7qAkFFhtVukFMsy1uOQQ78e9voUXXtx1yWzrih6jByQYYhlOR2dHYBpYelawtMOfCm2sw1j5V1Eb4K-BQmHC3LnQGnEZZGlWB5nnWlo7hbxrnPT0hY8Q">
+  <meta property="twitter:image" content="https://lh3.googleusercontent.com/pw/AM-JKLU3kE3TXypRMX2GntJm1Wt9NvPbfDqgNjcBFB7qAkFFhtVukFMsy1uOQQ78e9voUXXtx1yWzrih6jByQYYhlOR2dHYBpYelawtMOfCm2sw1j5V1Eb4K-BQmHC3LnQGnEZZGlWB5nnWlo7hbxrnPT0hY8Q">
+
+
+    <title>Google Maps APIで道路網の抽出</title>
+
+    <link rel="icon" href="https://pbs.twimg.com/profile_images/1377448543921709060/F6rVF1vn_400x400.jpg">
+    
+
+    
+
+    <link rel="canonical" href="https://straxfromibr.github.io/2021/07/gmap-rawroad/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://straxfromibr.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="https://straxfromibr.github.io/css/iconbgcolor.css">
+      
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="1">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://straxfromibr.github.io/">メモおきば</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://straxfromibr.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://lh3.googleusercontent.com/pw/AM-JKLU3kE3TXypRMX2GntJm1Wt9NvPbfDqgNjcBFB7qAkFFhtVukFMsy1uOQQ78e9voUXXtx1yWzrih6jByQYYhlOR2dHYBpYelawtMOfCm2sw1j5V1Eb4K-BQmHC3LnQGnEZZGlWB5nnWlo7hbxrnPT0hY8Q" alt="プロフィール画像" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="1">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://straxfromibr.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://lh3.googleusercontent.com/pw/AM-JKLU3kE3TXypRMX2GntJm1Wt9NvPbfDqgNjcBFB7qAkFFhtVukFMsy1uOQQ78e9voUXXtx1yWzrih6jByQYYhlOR2dHYBpYelawtMOfCm2sw1j5V1Eb4K-BQmHC3LnQGnEZZGlWB5nnWlo7hbxrnPT0hY8Q" alt="プロフィール画像" />
+        </a>
+        <h4 class="sidebar-profile-name">PotatoHotate</h4>
+        
+          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/07/14 18:43</em></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-home'></i>
+      
+      <span class="sidebar-button-desc">ホーム</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/categories">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-bookmark'></i>
+      
+      <span class="sidebar-button-desc">カテゴリー</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/tags">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-tags'></i>
+      
+      <span class="sidebar-button-desc">タグ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/archives">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-archive'></i>
+      
+      <span class="sidebar-button-desc">アーカイブ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/categories/lecturenote/">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-pencil'></i>
+      
+      <span class="sidebar-button-desc">講義メモ</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/PotatoHotate" target="_blank" rel="noopener">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-twitter'></i>
+      
+      <span class="sidebar-button-desc">@PotatoHotate</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/straxFromIbr/straxFromIbr.github.io" target="_blank" rel="noopener">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-github'></i>
+      
+      <span class="sidebar-button-desc">straxFromIbr</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="1"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Google Maps APIで道路網の抽出
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-07-14T18:07:28&#43;09:00">
+        
+  
+  
+  
+  
+    2021年 7月 14日
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://straxfromibr.github.io/categories/%e5%8d%92%e7%a0%94">卒研</a>, 
+    
+      <a class="category-link" href="https://straxfromibr.github.io/categories/%e3%83%87%e3%83%bc%e3%82%bf%e3%82%bb%e3%83%83%e3%83%88%e4%bd%9c%e6%88%90">データセット作成</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>卒研のためのデータセット収集の手段としてGoogle Maps APIの使用を検討している。そのためのテストとして次のような地図の画像を取得した。</p>
+<p>
+
+
+<div class="figure fig-50" >
+  
+    <img class="fig-img" src="https://straxfromibr.github.io/images/gmap-rawroad/staticmap.png" >
+  
+  
+</div>
+
+
+
+
+<div class="figure fig-50" >
+  
+    <img class="fig-img" src="https://straxfromibr.github.io/images/gmap-rawroad/staticmap-2.png" >
+  
+  
+</div>
+</p>
+<h2 id="道路画像">道路画像</h2>
+<p>Google Maps APIに登録しAPI Tokenを取得したあと次に示すURLをブラウザなどで開くと道路の画像が取得できる。
+ポイントは<code>style</code>変数の設定。地図中の<code>road</code>要素の色を<code>0xFFFFFF</code>つまり黒に、<code>landscape</code>の色を一括して<code>0x000000</code>と白にし、そのほかのfeature,elementを全て不可視にしている。詳細は<a href="https://developers.google.com/maps/documentation/maps-static/styling?hl=ja">公式ドキュメント:Styled Maps</a>に詳しい。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://maps.googleapis.com/maps/api/staticmap&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;?center=</span><span style="color:#e6db74">${</span>lat<span style="color:#e6db74">}</span><span style="color:#e6db74">,</span><span style="color:#e6db74">${</span>lng<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;size=</span><span style="color:#e6db74">${</span>size<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;zoom=</span><span style="color:#e6db74">${</span>scale<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;maptype=roadmap&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;sensor=false&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;markers=null&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;style=feature:road|color:0xFFFFFF&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;style=feature:landscape|color:0x000000&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;style=feature:poi|visibility:off&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;style=feature:transit|visibility:off&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;style=feature:water|visibility:off&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;style=element:labels|visibility:off&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;key=</span><span style="color:#e6db74">${</span>googleapikey<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\
+</span></code></pre></div><p>以下パラメータの概略と上図における設定を記載。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">パラメータ名</th>
+<th style="text-align:left">説明</th>
+<th style="text-align:left">上図での設定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>lat</code></td>
+<td style="text-align:left">緯度</td>
+<td style="text-align:left"><code>36.5382486</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>lng</code></td>
+<td style="text-align:left">経度</td>
+<td style="text-align:left"><code>140.5307574</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>size</code></td>
+<td style="text-align:left">画像の大きさ</td>
+<td style="text-align:left"><code>670x670</code>     Ï</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>scale</code></td>
+<td style="text-align:left">地図の縮尺</td>
+<td style="text-align:left"><code>16</code></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>googleapikey</code></td>
+<td style="text-align:left">Google APIのトークン</td>
+<td style="text-align:left">略Ï</td>
+</tr>
+</tbody>
+</table>
+<h2 id="衛星写真">衛星写真</h2>
+<p>スタイル適用がない点と<code>maptype</code>が<code>satelite</code>となってることを除けば道路画像取得と同じ。またパラメータの設定も同じ。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://maps.googleapis.com/maps/api/staticmap&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;?center=</span><span style="color:#e6db74">${</span>lat<span style="color:#e6db74">}</span><span style="color:#e6db74">,</span><span style="color:#e6db74">${</span>lng<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;size=</span><span style="color:#e6db74">${</span>size<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;zoom=</span><span style="color:#e6db74">${</span>scale<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;sensor=false&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;maptype=satellite&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;markers=false&#34;</span><span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;key=</span><span style="color:#e6db74">${</span>googleapikey<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</code></pre></div><p>あとはアクセス上限を超えないようにデータをかき集めるだけ。</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">タグ</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">プログラミング</a>
+
+  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/googlemapsapi/">GoogleMapsAPI</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/07/deletebrew/" data-tooltip="[m1Mac]/usr/local/bin/brewを削除する">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/07/gmap-rawroad/&amp;via=PotatoHotate">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/07/gmap-rawroad/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 <a href='https://github.com/straxFromIbr/straxFromIbr.github.io'>straxFromIbr</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/07/deletebrew/" data-tooltip="[m1Mac]/usr/local/bin/brewを削除する">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/07/gmap-rawroad/&amp;via=PotatoHotate">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/07/gmap-rawroad/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F07%2Fgmap-rawroad%2F&amp;via=PotatoHotate">
+          <i class="fa fa-twitter"></i><span>Twitterで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F07%2Fgmap-rawroad%2F">
+          <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://lh3.googleusercontent.com/pw/AM-JKLU3kE3TXypRMX2GntJm1Wt9NvPbfDqgNjcBFB7qAkFFhtVukFMsy1uOQQ78e9voUXXtx1yWzrih6jByQYYhlOR2dHYBpYelawtMOfCm2sw1j5V1Eb4K-BQmHC3LnQGnEZZGlWB5nnWlo7hbxrnPT0hY8Q" alt="プロフィール画像" />
+    
+    <h4 id="about-card-name">PotatoHotate</h4>
+    
+      <div id="about-card-bio">メモ置き場です．自転車が趣味．<a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/07/14 18:43</em></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        学生
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        茨城県
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    <div id="cover" style="background-image:url('https://res.cloudinary.com/potatohotate/image/upload/c_crop,h_1243,w_2292,x_1150,y_760/v1624454976/blogbase/IMG_20210317_151747_pxxddm.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://straxfromibr.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
