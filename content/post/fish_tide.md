@@ -15,6 +15,10 @@ thumbnailImage: /images/fishtip1/shlvl.jpg
 # coverImage: /images/fishtip1/mytide_left.jpg
 summary: "Fishシェルのプロンプトプラグインtideの設定について"
 ---
+
+## 追記(2021/07/16 21:38)
+> 関数を定義するファイルは`~/.config/fish/conf.d`内でも`~/.config/fish/functions`内のどちらでもよく、またファイル名も任意で良いみたいです。
+
 fishシェルのオシャレで高機能なプロンプトテーマ[tide](https://github.com/IlanCosman/tide)の設定備忘録です．
 ユーザードキュメントを読んだ方が早いかもしれませんが．
 <!--toc-->
@@ -35,6 +39,8 @@ fishシェルのオシャレで高機能なプロンプトテーマ[tide](https:
 
 ## 1. 関数の作成  
 ここでは`$SHLVL`が2以上の時プロンプト右側に表示するアイテムを作成します．次のような関数`_tide_item_shlvl`を`~/.config/fish/functions/_tide_item_shlvl.fish`に作成します．
+<<追記>>
+ファイル名は*任意で可*
 
 {{< tabbed-codeblock "~/.config/fish/functions/_tide_item_shlvl.fish"   >}}
     <!-- tab fish-->
