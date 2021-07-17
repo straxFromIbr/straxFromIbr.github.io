@@ -17,7 +17,7 @@ category = "categories"
 tag = "tags"
 
 [author]
-bio = "メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate) <br> _Latest Build:2021/07/14 21:41_"
+bio = "メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate) <br> _Latest Build:2021/07/16 21:41_"
 job = "学生"
 location = "茨城県"
 name = "PotatoHotate"
@@ -53,12 +53,6 @@ pre = "<i class='sidebar-button-icon fa fa-lg fa-archive'></i>"
 url = "/archives"
 weight = 4
 
-[[menu.main]]
-identifier = "school"
-name = "講義メモ"
-pre = "<i class='sidebar-button-icon fa fa-lg fa-pencil'></i>"
-url = "/categories/lecturenote/"
-weight = 4
 
 [[menu.links]]
 identifier = "twitter"
