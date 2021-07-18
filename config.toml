@@ -17,7 +17,7 @@ category = "categories"
 tag = "tags"
 
 [author]
-bio = "メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate) <br> _Latest Build:2021/07/18 23:42_"
+bio = "メモ置き場です．自転車が趣味．[Twitter@PotatoHotate](https://twitter.com/PotatoHotate) <br> _Latest Build:2021/07/18 23:43_"
 job = "学生"
 location = "茨城県"
 name = "PotatoHotate"
@@ -70,7 +70,7 @@ weight = 8
 [params]
 dateFormat = "2006年 January月 2日"
 syntaxHighlighter = "highlight.js"
-clearReading = false
+clearReading = true
 hierarchicalCategories = true
 description = "メモ置き場です．自転車が趣味．"
 sidebarBehavior = 1
