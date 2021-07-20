@@ -13,7 +13,15 @@
       <pubDate>Tue, 20 Jul 2021 15:20:15 +0900</pubDate>
       
       <guid>https://straxfromibr.github.io/2021/07/evilinstall/</guid>
-      <description>&lt;p&gt;記号処理プログラミングの授業でLisp処理系としてEmacs Lispを使用しているのだけど、viの便利さにすっかり魅了されてしまったがために何か方法はないかと模索。macOSユーザなのにﾅﾝﾃﾞﾀﾞｲ(Macは標準のキーバインドがemacs風)&lt;/p&gt;
+      <description>&lt;h2 id=&#34;環境&#34;&gt;環境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GNU Emacs 27.2: Mach-O 64-bit executable arm64
+&lt;ul&gt;
+&lt;li&gt;Homebrewでインストールしたもの&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;記号処理プログラミングの授業でLisp処理系としてEmacs Lispを使用しているのだけど、viの便利さにすっかり魅了されてしまったがために何か方法はないかと模索。macOSユーザなのにﾅﾝﾃﾞﾀﾞｲ(Macは標準のキーバインドがemacs風)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/emacs-evil/evil&#34;&gt;&lt;code&gt;EVIL&lt;/code&gt;&lt;/a&gt;というプラグインを見つけたのでインストール方法をメモ。次のコードを&lt;code&gt;~/.emacs.d/init.el&lt;/code&gt;に追記する。ちなみにこの記事は普通にVimで書いてる。パッケージ管理システムとして&lt;a href=&#34;https://melpa.org/#/getting-started&#34;&gt;&lt;code&gt;MELPA&lt;/code&gt;&lt;/a&gt;というのを使用しているらしい。Vimでいうところのvim-plugなのかな？&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-emacs&#34; data-lang=&#34;emacs&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;; Set up package.el to work with MELPA&lt;/span&gt;
 (require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;package&lt;/span&gt;)
