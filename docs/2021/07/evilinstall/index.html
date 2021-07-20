@@ -24,6 +24,31 @@ EVILというプラグインを見つけたのでインストール方法をメ�
 ;; Enable Evil
 (require &#39;evil)
 (evil-mode 1)
+
+ちなみに現在の~/.emacs.d/init.elはこんな感じ。ほとんど素のまま
+;; Initialize MELPA, a package manager
+(require &#39;package)
+(add-to-list &#39;package-archives &#39;(&#34;melpa&#34; . &#34;https://melpa.org/packages/&#34;) t)
+(package-initialize)
+
+;; Set custom vaiables (??) 公式チュートリアルそのまま
+(custom-set-variables
+ &#39;(package-selected-packages &#39;(evil)))
+(custom-set-faces)
+
+;;; Enable EVIL-mode
+(require &#39;evil)
+(evil-mode)
+
+
+;; Display line numbers
+(if (version&lt;= &#34;26.0.50&#34; emacs-version)
+    (progn
+      (global-display-line-numbers-mode)
+      (set-face-attribute &#39;line-number-current-line nil
+                           :foreground &#34;gold&#34;)))
+(setq-default indicate-empty-lines t)
+(setq-default indicate-buffer-boundaries &#39;left)
 ">
 
 
@@ -43,6 +68,31 @@ EVILというプラグインを見つけたのでインストール方法をメ�
 ;; Enable Evil
 (require &#39;evil)
 (evil-mode 1)
+
+ちなみに現在の~/.emacs.d/init.elはこんな感じ。ほとんど素のまま
+;; Initialize MELPA, a package manager
+(require &#39;package)
+(add-to-list &#39;package-archives &#39;(&#34;melpa&#34; . &#34;https://melpa.org/packages/&#34;) t)
+(package-initialize)
+
+;; Set custom vaiables (??) 公式チュートリアルそのまま
+(custom-set-variables
+ &#39;(package-selected-packages &#39;(evil)))
+(custom-set-faces)
+
+;;; Enable EVIL-mode
+(require &#39;evil)
+(evil-mode)
+
+
+;; Display line numbers
+(if (version&lt;= &#34;26.0.50&#34; emacs-version)
+    (progn
+      (global-display-line-numbers-mode)
+      (set-face-attribute &#39;line-number-current-line nil
+                           :foreground &#34;gold&#34;)))
+(setq-default indicate-empty-lines t)
+(setq-default indicate-buffer-boundaries &#39;left)
 ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Emacsでvimキーバインディング">
@@ -66,6 +116,31 @@ EVILというプラグインを見つけたのでインストール方法をメ�
 ;; Enable Evil
 (require &#39;evil)
 (evil-mode 1)
+
+ちなみに現在の~/.emacs.d/init.elはこんな感じ。ほとんど素のまま
+;; Initialize MELPA, a package manager
+(require &#39;package)
+(add-to-list &#39;package-archives &#39;(&#34;melpa&#34; . &#34;https://melpa.org/packages/&#34;) t)
+(package-initialize)
+
+;; Set custom vaiables (??) 公式チュートリアルそのまま
+(custom-set-variables
+ &#39;(package-selected-packages &#39;(evil)))
+(custom-set-faces)
+
+;;; Enable EVIL-mode
+(require &#39;evil)
+(evil-mode)
+
+
+;; Display line numbers
+(if (version&lt;= &#34;26.0.50&#34; emacs-version)
+    (progn
+      (global-display-line-numbers-mode)
+      (set-face-attribute &#39;line-number-current-line nil
+                           :foreground &#34;gold&#34;)))
+(setq-default indicate-empty-lines t)
+(setq-default indicate-buffer-boundaries &#39;left)
 ">
 <meta name="twitter:description" content="記号処理プログラミングの授業でLisp処理系としてEmacs Lispを使用しているのだけど、viの便利さにすっかり魅了されてしまったがために何か方法はないかと模索。macOSユーザなのにﾅﾝﾃﾞﾀﾞｲ(Macは標準のキーバインドがemacs風)
 EVILというプラグインを見つけたのでインストール方法をメモ。次のコードを~/.emacs.d/init.elに追記する。ちなみにこの記事は普通にVimで書いてる。パッケージ管理システムとしてMELPAというのを使用しているらしい。Vimでいうところのvim-plugなのかな？
@@ -83,6 +158,31 @@ EVILというプラグインを見つけたのでインストール方法をメ�
 ;; Enable Evil
 (require &#39;evil)
 (evil-mode 1)
+
+ちなみに現在の~/.emacs.d/init.elはこんな感じ。ほとんど素のまま
+;; Initialize MELPA, a package manager
+(require &#39;package)
+(add-to-list &#39;package-archives &#39;(&#34;melpa&#34; . &#34;https://melpa.org/packages/&#34;) t)
+(package-initialize)
+
+;; Set custom vaiables (??) 公式チュートリアルそのまま
+(custom-set-variables
+ &#39;(package-selected-packages &#39;(evil)))
+(custom-set-faces)
+
+;;; Enable EVIL-mode
+(require &#39;evil)
+(evil-mode)
+
+
+;; Display line numbers
+(if (version&lt;= &#34;26.0.50&#34; emacs-version)
+    (progn
+      (global-display-line-numbers-mode)
+      (set-face-attribute &#39;line-number-current-line nil
+                           :foreground &#34;gold&#34;)))
+(setq-default indicate-empty-lines t)
+(setq-default indicate-buffer-boundaries &#39;left)
 ">
 <meta property="og:locale" content="ja">
 
@@ -198,7 +298,7 @@ EVILというプラグインを見つけたのでインストール方法をメ�
         </a>
         <h4 class="sidebar-profile-name">PotatoHotate</h4>
         
-          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/07/20 15:31</em></h5>
+          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/07/20 15:37</em></h5>
         
       </div>
     
@@ -339,6 +439,31 @@ EVILというプラグインを見つけたのでインストール方法をメ�
 <span style="color:#75715e">;; Enable Evil</span>
 (require <span style="color:#e6db74">&#39;evil</span>)
 (evil-mode <span style="color:#ae81ff">1</span>)
+</code></pre></div><hr>
+<p>ちなみに現在の<code>~/.emacs.d/init.el</code>はこんな感じ。ほとんど素のまま</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs" data-lang="emacs"><span style="color:#75715e">;; Initialize MELPA, a package manager</span>
+(require <span style="color:#e6db74">&#39;package</span>)
+(add-to-list <span style="color:#e6db74">&#39;package-archives</span> <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;melpa&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;https://melpa.org/packages/&#34;</span>) <span style="color:#66d9ef">t</span>)
+(package-initialize)
+
+<span style="color:#75715e">;; Set custom vaiables (??) 公式チュートリアルそのまま</span>
+(custom-set-variables
+ <span style="color:#f92672">&#39;</span>(package-selected-packages <span style="color:#f92672">&#39;</span>(evil)))
+(custom-set-faces)
+
+<span style="color:#75715e">;;; Enable EVIL-mode</span>
+(require <span style="color:#e6db74">&#39;evil</span>)
+(evil-mode)
+
+
+<span style="color:#75715e">;; Display line numbers</span>
+(if (version&lt;= <span style="color:#e6db74">&#34;26.0.50&#34;</span> emacs-version)
+    (progn
+      (global-display-line-numbers-mode)
+      (set-face-attribute <span style="color:#e6db74">&#39;line-number-current-line</span> <span style="color:#66d9ef">nil</span>
+                           :foreground <span style="color:#e6db74">&#34;gold&#34;</span>)))
+(setq-default indicate-empty-lines <span style="color:#66d9ef">t</span>)
+(setq-default indicate-buffer-boundaries <span style="color:#e6db74">&#39;left</span>)
 </code></pre></div>
               
             </div>
@@ -524,7 +649,7 @@ EVILというプラグインを見つけたのでインストール方法をメ�
     
     <h4 id="about-card-name">PotatoHotate</h4>
     
-      <div id="about-card-bio">メモ置き場です．自転車が趣味．<a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/07/20 15:31</em></div>
+      <div id="about-card-bio">メモ置き場です．自転車が趣味．<a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/07/20 15:37</em></div>
     
     
       <div id="about-card-job">

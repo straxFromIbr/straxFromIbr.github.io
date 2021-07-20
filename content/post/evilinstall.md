@@ -36,4 +36,37 @@ summary: Emacsでvimエディタ風のキーバインディングを有効にす
 (evil-mode 1)
 ```
 
+---
+
+ちなみに現在の`~/.emacs.d/init.el`はこんな感じ。ほとんど素のまま
+
+```emacs
+;; Initialize MELPA, a package manager
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
+;; Set custom vaiables (??) 公式チュートリアルそのまま
+(custom-set-variables
+ '(package-selected-packages '(evil)))
+(custom-set-faces)
+
+;;; Enable EVIL-mode
+(require 'evil)
+(evil-mode)
+
+
+;; Display line numbers
+(if (version<= "26.0.50" emacs-version)
+    (progn
+      (global-display-line-numbers-mode)
+      (set-face-attribute 'line-number-current-line nil
+                           :foreground "gold")))
+(setq-default indicate-empty-lines t)
+(setq-default indicate-buffer-boundaries 'left)
+```
+
+
+
+
 <!--more-->

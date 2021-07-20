@@ -29,6 +29,31 @@
 &lt;span style=&#34;color:#75715e&#34;&gt;;; Enable Evil&lt;/span&gt;
 (require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;evil&lt;/span&gt;)
 (evil-mode &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;p&gt;ちなみに現在の&lt;code&gt;~/.emacs.d/init.el&lt;/code&gt;はこんな感じ。ほとんど素のまま&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-emacs&#34; data-lang=&#34;emacs&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;;; Initialize MELPA, a package manager&lt;/span&gt;
+(require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;package&lt;/span&gt;)
+(add-to-list &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;package-archives&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#39;&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;melpa&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://melpa.org/packages/&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;t&lt;/span&gt;)
+(package-initialize)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;;; Set custom vaiables (??) 公式チュートリアルそのまま&lt;/span&gt;
+(custom-set-variables
+ &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#39;&lt;/span&gt;(package-selected-packages &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#39;&lt;/span&gt;(evil)))
+(custom-set-faces)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;;;; Enable EVIL-mode&lt;/span&gt;
+(require &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;evil&lt;/span&gt;)
+(evil-mode)
+
+
+&lt;span style=&#34;color:#75715e&#34;&gt;;; Display line numbers&lt;/span&gt;
+(if (version&amp;lt;= &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;26.0.50&amp;#34;&lt;/span&gt; emacs-version)
+    (progn
+      (global-display-line-numbers-mode)
+      (set-face-attribute &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;line-number-current-line&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;nil&lt;/span&gt;
+                           :foreground &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gold&amp;#34;&lt;/span&gt;)))
+(setq-default indicate-empty-lines &lt;span style=&#34;color:#66d9ef&#34;&gt;t&lt;/span&gt;)
+(setq-default indicate-buffer-boundaries &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;left&lt;/span&gt;)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
