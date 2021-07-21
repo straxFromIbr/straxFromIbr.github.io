@@ -6,7 +6,16 @@
     <description>Recent content in シェルスクリプト on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 29 Jun 2021 22:56:22 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jul 2021 16:04:24 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs Lispのマクロ定義のあの記号はbashでいうアレ</title>
+      <link>https://straxfromibr.github.io/2021/07/emacsmacrobash/</link>
+      <pubDate>Wed, 21 Jul 2021 16:04:24 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/07/emacsmacrobash/</guid>
+      <description>Emacs Lispのマクロ定義の記号とbashのコマンド展開の(無理のある）対応付け。</description>
+    </item>
+    
     <item>
       <title>Fish tideのアイテム追加</title>
       <link>https://straxfromibr.github.io/2021/06/fish_tide/</link>
