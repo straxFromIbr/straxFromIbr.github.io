@@ -16,6 +16,14 @@ summary: "fishのプロンプトにCondaの環境名を表示しないように�
 ---
 fishのオシャレなプロンプトフレームワークである[llanCosman/tide](https://github.com/IlanCosman/tide)でMiniForge[コンダ環境の名前をプロンプトに表示](https://straxfromibr.github.io/2021/06/fish_tide/)するようにした... のだがデフォルトの表示も残ってしまいイマイチダサいプロンプトになってたので修正。
 
+手っ取り早く適用したい人は[jorgebucaran/fisher: A plugin manager for Fish.](https://github.com/jorgebucaran/fisher)をインストールしたあと次のコマンドを実行。
+
+結構手軽にプラグインが作成できてびっくりした。
+
+```
+fisher install straxFromIbr/invisible-conda-name
+```
+
 {{< image classes="fancybox clear fig-100 center" src="/images/tide-erase-condaname/prompt.jpg" title="プロンプト">}}
 
 変数の一覧から次のようにしてconda環境名を設定してそうな変数を調べると・・・

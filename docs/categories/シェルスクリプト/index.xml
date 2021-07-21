@@ -14,7 +14,10 @@
       
       <guid>https://straxfromibr.github.io/2021/07/tide-erase-condaname/</guid>
       <description>&lt;p&gt;fishのオシャレなプロンプトフレームワークである&lt;a href=&#34;https://github.com/IlanCosman/tide&#34;&gt;llanCosman/tide&lt;/a&gt;でMiniForge&lt;a href=&#34;https://straxfromibr.github.io/2021/06/fish_tide/&#34;&gt;コンダ環境の名前をプロンプトに表示&lt;/a&gt;するようにした&amp;hellip; のだがデフォルトの表示も残ってしまいイマイチダサいプロンプトになってたので修正。&lt;/p&gt;
-
+&lt;p&gt;手っ取り早く適用したい人は&lt;a href=&#34;https://github.com/jorgebucaran/fisher&#34;&gt;jorgebucaran/fisher: A plugin manager for Fish.&lt;/a&gt;をインストールしたあと次のコマンドを実行。&lt;/p&gt;
+&lt;p&gt;結構手軽にプラグインが作成できてびっくりした。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;fisher install straxFromIbr/invisible-conda-name
+&lt;/code&gt;&lt;/pre&gt;
  
   
   
