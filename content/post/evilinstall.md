@@ -22,7 +22,9 @@ summary: Emacsでvimエディタ風のキーバインディングを有効にす
 
 記号処理プログラミングの授業でLisp処理系としてEmacs Lispを使用しているのだけど、viの便利さにすっかり魅了されてしまったがために何か方法はないかと模索。macOSユーザなのにﾅﾝﾃﾞﾀﾞｲ(Macは標準のキーバインドがemacs風)
 
-[`EVIL`](https://github.com/emacs-evil/evil)というプラグインを見つけたのでインストール方法をメモ。次のコードを`~/.emacs.d/init.el`に追記する。ちなみにこの記事は普通にVimで書いてる。パッケージ管理システムとして[`MELPA`](https://melpa.org/#/getting-started)というのを使用しているらしい。Vimでいうところのvim-plugなのかな？
+[`EVIL`](https://github.com/emacs-evil/evil)というプラグインを見つけたのでインストール方法をメモ。次のコードを`~/.emacs.d/init.el`に追記する。その後emacsを起動し`M-x package-install RET evil RET`とコマンドを入力。(`M-`はエスケープ(メタキー), `RET`はリターン)
+
+ちなみにこの記事は普通にVimで書いてる。パッケージ管理システムとして[`MELPA`](https://melpa.org/#/getting-started)というのを使用しているらしい。Vimでいうところのvim-plugなのかな？
 
 ```emacs lisp
 ;; Set up package.el to work with MELPA
