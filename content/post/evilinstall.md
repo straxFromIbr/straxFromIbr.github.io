@@ -24,7 +24,7 @@ summary: Emacsでvimエディタ風のキーバインディングを有効にす
 
 [`EVIL`](https://github.com/emacs-evil/evil)というプラグインを見つけたのでインストール方法をメモ。次のコードを`~/.emacs.d/init.el`に追記する。その後emacsを起動し`M-x package-install RET evil RET`とコマンドを入力。(`M-`はエスケープ(メタキー), `RET`はリターン)
 
-ちなみにこの記事は普通にVimで書いてる。パッケージ管理システムとして[`MELPA`](https://melpa.org/#/getting-started)というのを使用しているらしい。Vimでいうところのvim-plugなのかな？
+パッケージ管理システムとして[`MELPA`](https://melpa.org/#/getting-started)というのを使用しているらしい。Vimでいうところのvim-plugなのかな？
 
 ```emacs lisp
 ;; Set up package.el to work with MELPA
