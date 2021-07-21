@@ -6,7 +6,83 @@
     <description>Recent content in プログラミング on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 21 Jul 2021 16:04:24 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Jul 2021 18:02:22 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fishのプロンプトにCondaの環境名を表示しないようにする</title>
+      <link>https://straxfromibr.github.io/2021/07/tide-erase-condaname/</link>
+      <pubDate>Wed, 21 Jul 2021 18:02:22 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/07/tide-erase-condaname/</guid>
+      <description>&lt;p&gt;fishのオシャレなプロンプトフレームワークである&lt;a href=&#34;https://github.com/IlanCosman/tide&#34;&gt;llanCosman/tide&lt;/a&gt;でMiniForge&lt;a href=&#34;https://straxfromibr.github.io/2021/06/fish_tide/&#34;&gt;コンダ環境の名前をプロンプトに表示&lt;/a&gt;するようにした&amp;hellip; のだがデフォルトの表示も残ってしまいイマイチダサいプロンプトになってたので修正。&lt;/p&gt;
+
+ 
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+ 
+  
+  
+  
+  
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+
+&lt;div class=&#34;figure fig-100 center&#34; &gt;
+  
+    &lt;a class=&#34;fancybox&#34; href=&#34;https://straxfromibr.github.io/images/tide-erase-condaname/prompt.jpg&#34; title=&#34;プロンプト&#34; data-fancybox-group=&#34;&#34;&gt;
+  
+    &lt;img class=&#34;fig-img&#34; src=&#34;https://straxfromibr.github.io/images/tide-erase-condaname/prompt.jpg&#34;  alt=&#34;プロンプト&#34;&gt;
+  
+    &lt;/a&gt;
+  
+   
+    &lt;span class=&#34;caption&#34;&gt;プロンプト&lt;/span&gt;
+  
+&lt;/div&gt;
+
+  &lt;div style=&#34;clear:both;&#34;&gt;&lt;/div&gt;
+
+&lt;p&gt;変数の一覧から次のようにしてconda環境名を設定してそうな変数を調べると・・・&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&amp;gt; set | grep base | grep -v history
+CONDA_DEFAULT_ENV base
+CONDA_PROMPT_MODIFIER &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;(base) &amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;表示に関わっていそうなのは&lt;code&gt;$CONDA_PROMPT_MODIFIER&lt;/code&gt;であることがわかる。
+そのためこの変数を次のコマンドで削除する&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;set -e CONDA_PROMPT_MODIFIER
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;するとプロンプト右下の&lt;code&gt;(base)&lt;/code&gt;という表示が消えるはず。&lt;/p&gt;
+&lt;p&gt;このコマンドを毎度打つのも非常に手間なのでfishシェルの機能であるイベントハンドラを用いて解決する。次のような関数を適当な&lt;code&gt;~/.config/fish/*.fish&lt;/code&gt;ファイルに定義する。関数名も適当でいい。&lt;code&gt;_&lt;/code&gt;を先頭につけると&lt;code&gt;functions&lt;/code&gt;コマンドで表示されない不可視関数として定義できる。&lt;/p&gt;
+&lt;p&gt;この関数でキモとなるのは&lt;code&gt;-e fish_prompt&lt;/code&gt;オプションである。これは新たなfishプロンプトが表h時される直前に発生するイベント&lt;code&gt;fish_prompt&lt;/code&gt;時に関数を自動的に実行させるためのオプションである。エンターキーを押すたびに変数を削除するわけですね。&lt;/p&gt;
+&lt;p&gt;参考:&lt;a href=&#34;https://fishshell.com/docs/current/cmds/function.html?highlight=function&#34;&gt;function - create a function — fish-shell 3.3.1 documentation&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; _clear_condaenvname -e fish_prompt
+    set -u CONDA_PROMPT_MODIFIER
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;おしまい&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Emacs Lispのマクロ定義のあの記号はbashでいうアレ</title>
       <link>https://straxfromibr.github.io/2021/07/emacsmacrobash/</link>
