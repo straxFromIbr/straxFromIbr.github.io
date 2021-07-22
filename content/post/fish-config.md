@@ -8,7 +8,7 @@ tags:
 - プログラミング
 - fish
 - シェルスクリプト
--
+
 thumbnailImage: /images/fish-config/terminal.jpg
 summary: 'fishシェルの設定ファイル管理'
 
