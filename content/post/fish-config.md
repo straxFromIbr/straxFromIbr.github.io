@@ -67,7 +67,7 @@ set -U _fish_myconf_dir $HOME/.config/fish/myconf
 function _reload_myconf -e fish_prompt
     if status is-interactive
        set new_sha1sum ( cat $_fish_myconf_dir/.git/refs/heads/main )
-       # set new_sha1sum (sha1sum $_fish_myconf_dir/**/*.fish | sha1sum | awk '{print$1}')
+       # set new_sha1sum (cat $_fish_myconf_dir/**/*.fish | sha1sum | awk '{print$1}')
        if test -z $_myconf_sha1sum
            echo 'config update'
            fisher update $_fish_myconf_dir > /dev/null &
@@ -84,7 +84,7 @@ end
     <!-- endtab -->
 {{< /tabbed-codeblock >}}
 
-プロンプトが更新されるたびに`git`の`main`ブランチのハッシュ値を確認し、新たなコミットがあれば`fisher update`するという寸法である。`$new_sha1sum`を`(sha1sum $_fish_myconf_dir/**/*.fish | sha1sum | awk '{print$1}')`と定義すれば`.fish`ファイルが変更されるたびに設定が更新される。どちらにするかはお好みで。
+プロンプトが更新されるたびに`git`の`main`ブランチのハッシュ値を確認し、新たなコミットがあれば`fisher update`するという寸法である。`$new_sha1sum`を`(cat $_fish_myconf_dir/**/*.fish | sha1sum | awk '{print$1}')`と定義すれば`.fish`ファイルが変更されるたびに設定が更新される。どちらにするかはお好みで。
 
 ----
 以上です。
