@@ -46,10 +46,19 @@ tree -d -I tide ~/.config/fish
 
 ターミナルを再起動すると設定が反映されていないことがわかる。
 
+# 設定ファイルのインストール
+次の`fisher`コマンドで設定ファイルをインストールする。
+
+`~/.config/fish/fish_plugins`にパスが追記され即座に設定が反映される。
+
+```bash
+fisher install ~/.config/fish/myconf
+```
+
 # 設定ファイルの自動再読み込み
+これまで同様に、ファイルを変更するたびに自動で設定が読み込まれるようにしたい。
 次のスクリプトを`~/.config/fish/config.fish`に追記。
 
-プロンプトが更新されるたびに`git`の`main`ブランチのハッシュ値を確認し、新たにコミットされていれば`fisher update`するという寸法である。`$new_sha1sum`を`(sha1sum $_fish_myconf_dir/**/*.fish | sha1sum | awk '{print$1}')`と定義すれば`.fish`ファイルが変更されるたびに設定が更新される。どちらにするかはお好みで。
 
 {{< tabbed-codeblock "~/.config/fish/config.fish"   >}}
     <!-- tab fish -->
@@ -75,6 +84,7 @@ end
     <!-- endtab -->
 {{< /tabbed-codeblock >}}
 
+プロンプトが更新されるたびに`git`の`main`ブランチのハッシュ値を確認し、新たなコミットがあれば`fisher update`するという寸法である。`$new_sha1sum`を`(sha1sum $_fish_myconf_dir/**/*.fish | sha1sum | awk '{print$1}')`と定義すれば`.fish`ファイルが変更されるたびに設定が更新される。どちらにするかはお好みで。
 
 ----
 以上です。
