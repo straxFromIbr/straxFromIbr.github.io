@@ -3,7 +3,7 @@ title: "Emacsでvimキーバインディング"
 date: 2021-07-20T15:20:15+09:00
 categories:
 - プログラミング
-- 環境構築
+- emacs
 tags:
 - プログラミング
 - 環境構築

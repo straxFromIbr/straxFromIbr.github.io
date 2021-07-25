@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.84.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="tech">
 <meta name="description" content="systemdによりRasPiを起動した際にスクリプトを自動実行するようにするための概略メモ">
@@ -264,7 +264,7 @@
 <h1 id="unitファイルの作成">Unitファイルの作成</h1>
 <p>次のようなファイルを<code>/etc/systemd/system/${サービス名}.service</code>として保存する．ここではサービス名を<code>guiapp.service</code>としておく．
 見ての通り<code>Description</code>でサービスの説明，<code>User</code>で実行権限，<code>Environment</code>でディスプレイを使用する旨の設定，<code>ExecStart</code>でアプリケーションの実行に必要なスクリプトファイルのパスを指定する．またこのファイルの実行権限は<code>User</code>で指定したものと同じにしておく．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-service" data-lang="service"><span style="color:#66d9ef">[Unit]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-service" data-lang="service"><span style="color:#66d9ef">[Unit]</span>
 <span style="color:#a6e22e">Description</span><span style="color:#f92672">=</span><span style="color:#e6db74">launch guiapp</span>
 
 <span style="color:#66d9ef">[Service]</span>
@@ -276,9 +276,9 @@
 <span style="color:#a6e22e">WantedBy</span><span style="color:#f92672">=</span><span style="color:#e6db74">user@.service</span>
 </code></pre></div><h1 id="サービスの登録">サービスの登録</h1>
 <p>次のコマンドでサービスを登録する．これでシステムを再起動するとスクリプトが自動で実行されるようになるはず．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl enable guiapp.service
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl enable guiapp.service
 </code></pre></div><p>あるいは次のようにして即時に起動できる．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl start guiapp.service
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl start guiapp.service
 </code></pre></div>
               
             </div>

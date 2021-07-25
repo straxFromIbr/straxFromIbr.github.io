@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.84.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="tech">
 <meta name="description" content="卒研のためのデータセット収集の手段としてGoogle Maps APIの使用を検討している。そのためのテストとして次のような地図の画像を取得した。
@@ -369,7 +369,7 @@ Google Maps APIに登録しAPI Tokenを取得したあと次に示すURLをブ�
 <h2 id="道路画像">道路画像</h2>
 <p>Google Maps APIに登録しAPI Tokenを取得したあと次に示すURLをブラウザなどで開くと道路の画像が取得できる。
 ポイントは<code>style</code>変数の設定。地図中の<code>road</code>要素の色を<code>0xFFFFFF</code>つまり黒に、<code>landscape</code>の色を一括して<code>0x000000</code>と白にし、そのほかのfeature,elementを全て不可視にしている。詳細は<a href="https://developers.google.com/maps/documentation/maps-static/styling?hl=ja">公式ドキュメント:Styled Maps</a>に詳しい。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://maps.googleapis.com/maps/api/staticmap&#34;</span><span style="color:#ae81ff">\
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://maps.googleapis.com/maps/api/staticmap&#34;</span><span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;?center=</span><span style="color:#e6db74">${</span>lat<span style="color:#e6db74">}</span><span style="color:#e6db74">,</span><span style="color:#e6db74">${</span>lng<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;size=</span><span style="color:#e6db74">${</span>size<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;zoom=</span><span style="color:#e6db74">${</span>scale<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\
@@ -422,7 +422,7 @@ Google Maps APIに登録しAPI Tokenを取得したあと次に示すURLをブ�
 </table>
 <h2 id="衛星写真">衛星写真</h2>
 <p>スタイル適用がない点と<code>maptype</code>が<code>satelite</code>となってることを除けば道路画像取得と同じ。またパラメータの設定も同じ。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://maps.googleapis.com/maps/api/staticmap&#34;</span><span style="color:#ae81ff">\
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://maps.googleapis.com/maps/api/staticmap&#34;</span><span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;?center=</span><span style="color:#e6db74">${</span>lat<span style="color:#e6db74">}</span><span style="color:#e6db74">,</span><span style="color:#e6db74">${</span>lng<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;size=</span><span style="color:#e6db74">${</span>size<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\
 </span><span style="color:#ae81ff"></span><span style="color:#e6db74">&#34;&amp;zoom=</span><span style="color:#e6db74">${</span>scale<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\

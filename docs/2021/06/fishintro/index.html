@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.84.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="tech">
 <meta name="description" content="fishシェルへの乗り換え案内">
@@ -290,24 +290,24 @@ Homebrew/homebrew-cask (git revision a14b80214e; last commit 2021-06-25)</li>
 </ul>
 <h1 id="1-fishのインストール">1. fishのインストール</h1>
 <p>Homebrew 経由でインストールする．またデフォルトのシェルをfishにする．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ brew install fish
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ brew install fish
 $ echo <span style="color:#66d9ef">$(</span>which fish<span style="color:#66d9ef">)</span> | sudo tee -a /etc/shells
 $ chsh -s <span style="color:#66d9ef">$(</span>which fish<span style="color:#66d9ef">)</span>
 </code></pre></div><p>完了したらTerminalアプリを再起動．</p>
 <h1 id="2-パスの設定">2. パスの設定</h1>
 <p>この項目は人によっては不要．
 fishはzshなどと違い<code>~/.config/fish/*.fish</code>がログイン時に全て実行されるので，zshやbashのように<code>~/.{bash, zsh}rc</code>で<code>source</code>コマンドで明示的に呼び出さなくてもいい．brewのパスを追加するために<code>~/.config/fish/conf.d/path.fish</code>を作成し次のように書く．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">set -x PATH /opt/homebrew/bin $PATH
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">set -x PATH /opt/homebrew/bin $PATH
 </code></pre></div><h1 id="3-miniforgecondaの設定">3. miniforge(conda)の設定</h1>
 <p>fishシェル内で
 <code>conda init fish</code>を実行．先程の<code>~/.config/fish/conf.d</code>に<code>conda.fish</code>が生成されるはず．</p>
 <h1 id="4-プラグインマネージャーのインストール">4. プラグインマネージャーのインストール</h1>
 <p>fishはデフォルトでもシンタックスハイライトやヒストリ補完をしてくれるのがうまみだが，さらに便利にするためにプラグインマネージャ<a href="https://github.com/jorgebucaran/fisher">fisher</a>をインストール．詳しくはリンク参照．とりあえず次のコマンドを実行し，バージョン確認．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ curl -sL https://git.io/fisher | source <span style="color:#f92672">&amp;&amp;</span> fisher install jorgebucaran/fisher
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ curl -sL https://git.io/fisher | source <span style="color:#f92672">&amp;&amp;</span> fisher install jorgebucaran/fisher
 $ fisher --version <span style="color:#75715e"># fisher, version 4.3.0</span>
 </code></pre></div><h1 id="5-テーマの設定">5. テーマの設定</h1>
 <p>個人的な趣味で<code>Powerline</code>っぽいテーマの<a href="https://github.com/IlanCosman/tide">tide</a>をインストール．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ fisher install IlanCosman/tide
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ fisher install IlanCosman/tide
 $ tide configure
 </code></pre></div><p>こんな具合
 
@@ -369,7 +369,7 @@ $ tide configure
 <li>現状，<code>python3</code>のパスが<code>brew</code>でインストールされたものになってしまう．設定ファイルの読み込まれる順番の調査．
 今はこのように対処．</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">set -x PATH /opt/homebrew/bin $PATH
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">set -x PATH /opt/homebrew/bin $PATH
 
 <span style="color:#75715e"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span>
 <span style="color:#75715e"># !! Contents within this block are managed by &#39;conda init&#39; !!</span>

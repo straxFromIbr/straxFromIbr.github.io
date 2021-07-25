@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.84.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="">
 <meta name="description" content="環境
@@ -233,7 +233,7 @@ EVILというプラグインを見つけたのでインストール方法をメ�
     
       <meta property="article:section" content="プログラミング">
     
-      <meta property="article:section" content="環境構築">
+      <meta property="article:section" content="emacs">
     
   
   
@@ -449,7 +449,7 @@ EVILというプラグインを見つけたのでインストール方法をメ�
     
       <a class="category-link" href="https://straxfromibr.github.io/categories/%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0">プログラミング</a>, 
     
-      <a class="category-link" href="https://straxfromibr.github.io/categories/%e7%92%b0%e5%a2%83%e6%a7%8b%e7%af%89">環境構築</a>
+      <a class="category-link" href="https://straxfromibr.github.io/categories/emacs">emacs</a>
     
   
 
@@ -470,7 +470,7 @@ EVILというプラグインを見つけたのでインストール方法をメ�
 <p>記号処理プログラミングの授業でLisp処理系としてEmacs Lispを使用しているのだけど、viの便利さにすっかり魅了されてしまったがために何か方法はないかと模索。macOSユーザなのにﾅﾝﾃﾞﾀﾞｲ(Macは標準のキーバインドがemacs風)</p>
 <p><a href="https://github.com/emacs-evil/evil">EVIL</a>というプラグインを見つけたのでインストール方法をメモ。</p>
 <p>次のコードを<code>~/.emacs.d/init.el</code>に追記する。その後emacsを起動し<code>M-x package-install RET evil RET</code>とコマンドを入力。(<code>M-</code>はエスケープ(メタキー), <code>RET</code>はリターン)</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs" data-lang="emacs"><span style="color:#75715e">;; Set up package.el to work with MELPA</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs" data-lang="emacs"><span style="color:#75715e">;; Set up package.el to work with MELPA</span>
 (require <span style="color:#e6db74">&#39;package</span>)
 (add-to-list <span style="color:#e6db74">&#39;package-archives</span>
              <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;melpa&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;https://melpa.org/packages/&#34;</span>))
@@ -486,7 +486,7 @@ EVILというプラグインを見つけたのでインストール方法をメ�
 (evil-mode <span style="color:#ae81ff">1</span>)
 </code></pre></div><hr>
 <p>ちなみに現在の<code>~/.emacs.d/init.el</code>はこんな感じ。ほとんど素のまま</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs" data-lang="emacs"><span style="color:#75715e">;; Initialize MELPA, a package manager</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-emacs" data-lang="emacs"><span style="color:#75715e">;; Initialize MELPA, a package manager</span>
 (require <span style="color:#e6db74">&#39;package</span>)
 (add-to-list <span style="color:#e6db74">&#39;package-archives</span> <span style="color:#f92672">&#39;</span>(<span style="color:#e6db74">&#34;melpa&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;https://melpa.org/packages/&#34;</span>) <span style="color:#66d9ef">t</span>)
 (package-initialize)

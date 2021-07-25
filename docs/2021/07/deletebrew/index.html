@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.84.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="tech">
 <meta name="description" content="Arm64用のHomebrewがリリースされるまで使っていたx86系のhomebrewを削除したのでメモ">
@@ -273,17 +273,17 @@
 </nav>
 <h1 id="アンインストールスクリプトのダウンロード">アンインストールスクリプトのダウンロード</h1>
 <p><a href="https://github.com/homebrew/install#uninstall-homebrew">Homebrewの公式リポジトリ</a>に記載されてるコマンドは <strong>実行せずに</strong> 次のコマンドでスクリプトをインストールする．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh &gt; ./uninstall.sh
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh &gt; ./uninstall.sh
 </code></pre></div><h1 id="スクリプトの編集">スクリプトの編集</h1>
 <p>そのまま実行すると<code>/opt/homebrew/bin/</code>のbrewが削除されてしまうので，先ほどインストールしたuninstall.shを編集する．50行目あたりに次のような記述があるはず．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ostype<span style="color:#f92672">=</span>macos
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ostype<span style="color:#f92672">=</span>macos
 <span style="color:#66d9ef">if</span> <span style="color:#f92672">[[</span> <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;arm64&#34;</span> <span style="color:#f92672">]]</span>; <span style="color:#66d9ef">then</span>
     homebrew_prefix_default<span style="color:#f92672">=</span>/opt/homebrew
 <span style="color:#66d9ef">else</span>
     homebrew_prefix_default<span style="color:#f92672">=</span>/usr/local
 <span style="color:#66d9ef">fi</span>
 </code></pre></div><p>この部分を全てコメントアウトし，次のように<code>homebrew_perfix_default</code>の値を固定してしまう．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ostype<span style="color:#f92672">=</span>macos
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ostype<span style="color:#f92672">=</span>macos
 <span style="color:#75715e">#if [[ &#34;$(uname -m)&#34; == &#34;arm64&#34; ]]; then</span>
 <span style="color:#75715e">#   homebrew_prefix_default=/opt/homebrew</span>
 <span style="color:#75715e">#else</span>
@@ -296,11 +296,11 @@ homebrew_prefix_default<span style="color:#f92672">=</span>/usr/local
 <h1 id="実行結果の事前確認">実行結果の事前確認</h1>
 <p>スクリプトuninstall.shには<code>-h</code>オプションで確認できるようにいくつかオプションが用意されている．
 <code>-n</code>(または<code>--dry-run</code>)オプションをつけて実行すると実際には削除せず，どのファイルが削除されるかシミュレートしてくれる．次のようなコマンドを実行する．途中でパスワードの入力を求められる．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/bin/bash ./uninstall.sh -n
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/bin/bash ./uninstall.sh -n
 </code></pre></div><p>必要なファイル<code>/opt/homebrew</code>などが削除対象となっていないことを確認したら次のステップへ．</p>
 <h1 id="削除の実行">削除の実行</h1>
 <p>次を実行するだけ．完了までしばしかかる．またこちらも同様に<code>sudo</code>権限が必要なためパスワードの入力を求められる．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/bin/bash ./uninstall.sh 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/bin/bash ./uninstall.sh 
 </code></pre></div><h1 id="パスの再設定">パスの再設定</h1>
 <p><code>$PATH</code>に再度必要なパスを追加する．</p>
 <p>以上です．</p>

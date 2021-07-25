@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.84.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="">
 <meta name="description" content="Emacs Lispのマクロ定義の記号とbashのコマンド展開の(無理のある）対応付け。">
@@ -256,7 +256,7 @@
             <div class="main-content-wrap">
               <p>Emacs Lispのマクロ定義の記号とbashのコマンド展開の(無理のある）対応付け。正確性を犠牲にして分かりやすさを優先してる。</p>
 <p><code>$ </code>以降が標準入力、<code>&gt; </code>以降が標準出力。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls  <span style="color:#75715e">## ふつうにS式を解釈することと対応</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ls  <span style="color:#75715e">## ふつうにS式を解釈することと対応</span>
 &gt; testfile1 testfile2 testfile3
 $ echo <span style="color:#e6db74">&#39;$(ls)&#39;</span> <span style="color:#75715e">## シングルクオートを先頭につけることと同等。`$(ls)`が文字列として`echo`に渡される。</span>
 &gt; <span style="color:#66d9ef">$(</span>ls<span style="color:#66d9ef">)</span>

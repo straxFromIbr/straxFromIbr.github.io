@@ -56,6 +56,9 @@
     <loc>https://straxfromibr.github.io/tags/emacs/</loc>
     <lastmod>2021-07-20T15:20:15+09:00</lastmod>
   </url><url>
+    <loc>https://straxfromibr.github.io/categories/emacs/</loc>
+    <lastmod>2021-07-20T15:20:15+09:00</lastmod>
+  </url><url>
     <loc>https://straxfromibr.github.io/2021/07/evilinstall/</loc>
     <lastmod>2021-07-20T15:20:15+09:00</lastmod>
   </url><url>
@@ -66,9 +69,6 @@
     <lastmod>2021-07-20T15:20:15+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</loc>
-    <lastmod>2021-07-20T15:20:15+09:00</lastmod>
-  </url><url>
-    <loc>https://straxfromibr.github.io/categories/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</loc>
     <lastmod>2021-07-20T15:20:15+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/%E3%83%AC%E3%83%B4%E3%83%A5%E3%83%BC%E3%82%B9%E3%82%BF%E3%82%A1%E3%83%A9%E3%82%A4%E3%83%88/</loc>
@@ -138,6 +138,9 @@
     <lastmod>2021-07-04T09:57:22+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/categories/mac/</loc>
+    <lastmod>2021-07-04T09:57:22+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/categories/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</loc>
     <lastmod>2021-07-04T09:57:22+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/2021/07/mac-accent-disable/</loc>

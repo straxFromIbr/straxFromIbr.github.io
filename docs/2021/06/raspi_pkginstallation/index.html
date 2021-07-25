@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.84.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="tech">
 <meta name="description" content="RaspberryPi4上にTensorflowなど各種ライブラリをインストールする．">
@@ -275,7 +275,7 @@ Linux raspberrypi 5.10.17-v7l+ #1421 SMP Thu May 27 14:00:13 BST 2021 armv7l GNU
 <ul>
 <li>公式チュートリアル<a href="https://coral.ai/docs/accelerator/get-started/#3-run-a-model-on-the-edge-tpu">Get started with the USB Accelerator</a>に従う．Coral Edge TPUは取り外した状態で操作を行うこと！全てインストールが完了したら接続しテストする．</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;deb https://packages.cloud.google.com/apt coral-edgetpu-stable main&#34;</span> | sudo tee /etc/apt/sources.list.d/$ coral-edgetpu.list
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo <span style="color:#e6db74">&#34;deb https://packages.cloud.google.com/apt coral-edgetpu-stable main&#34;</span> | sudo tee /etc/apt/sources.list.d/$ coral-edgetpu.list
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install libedgetpu1-std
@@ -283,21 +283,21 @@ sudo apt-get install libedgetpu1-std
 sudo apt-get install python3-pycoral
 </code></pre></div><h1 id="opencv">OpenCV</h1>
 <p><a href="https://qiita.com/wk_/items/8db529a6b24a955888db">RaspberryPiへのOpenCVインストール手順</a>と<a href="https://rikoubou.hatenablog.com/entry/2019/05/21/151337">【Raspberry Pi】Raspberry Pi Zero WにOpenCVの環境を構築する</a>を参考にした．ありがとうございます．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update
 sudo apt install libavutil56 libcairo-gobject2 libgtk-3-0 libqtgui4 libpango-1.0-0 libqtcore4 libavcodec58 libcairo2 libswscale5 libtiff5 libqt4-test libatk1.0-0 libavformat58 libgdk-pixbuf2.0-0 libilmbase23 libjasper1 libopenexr23 libpangocairo-1.0-0 libwebp6
 sudo apt-get install libatlas-base-dev libjasper-dev qt4-dev-tools qt4-doc qt4-qtconfig libqt4-test
 pip3 install opencv-python
 echo <span style="color:#e6db74">&#39;export LD_PRELOAD=/usr/lib/arm-linux-gnueabihf/libatomic.so.1&#39;</span> &gt;&gt; ~/.bashrc
 </code></pre></div><p>環境変数<code>LD_PRELOAD</code>の設定が必要．サブシェル内で<code>cv2</code>ライブラリをインポートするPythonファイルを実行するときも同様な記述が必要．例えば次のようになる．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export LD_PRELOAD<span style="color:#f92672">=</span>/usr/lib/arm-linux-gnueabihf/libatomic.so.1
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export LD_PRELOAD<span style="color:#f92672">=</span>/usr/lib/arm-linux-gnueabihf/libatomic.so.1
 /usr/bin/python3 some_scripts_uses_cv2.py
 </code></pre></div><h1 id="pillow">Pillow</h1>
 <p><code>python3 -m pip install Pillow</code>とすることで<code>PIL</code>中の<code>Image</code>は使用できたが<code>ImageTk</code>は使用できなかった．ググると次のを見つけたので愚直に従う．<a href="https://www.raspberrypi.org/forums/viewtopic.php?t=210360#p1299309">Cannot import ImageTk</a>
 元記事では<code>sudo</code>で実行していたがバクゼンとした恐怖があるのでユーザ権限で実行．支障はなかった．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip3 install pillow --upgrade 
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip3 install pillow --upgrade 
 </code></pre></div><h1 id="matplotlib">Matplotlib</h1>
 <p><code>pip</code>経由でインストールしたところインポートでエラーが発生したため調べたところ「<a href="https://karaage.hatenadiary.jp/entry/2018/10/05/073000">Raspberry PiのPythonライブラリはpipよりapt-getで入れるのが断然早い</a>」をはじめ各所で<code>apt</code>でのインストールを推奨していたのでそれで試行．うまくいった．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install python3-matplotlib
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install python3-matplotlib
 </code></pre></div>
               
             </div>

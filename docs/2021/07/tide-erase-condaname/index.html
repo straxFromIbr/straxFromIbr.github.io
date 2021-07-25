@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.84.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="">
 <meta name="description" content="fishのオシャレなプロンプトフレームワークであるllanCosman/tideでMiniForgeコンダ環境の名前をプロンプトに表示するようにした&hellip; のだがデフォルトの表示も残ってしまいイマイチダサいプロンプトになってたので修正。
@@ -594,17 +594,17 @@ end
   <div style="clear:both;"></div>
 
 <p>変数の一覧から次のようにしてconda環境名を設定してそうな変数を調べると・・・</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; set | grep base | grep -v history
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; set | grep base | grep -v history
 CONDA_DEFAULT_ENV base
 CONDA_PROMPT_MODIFIER <span style="color:#e6db74">&#39;(base) &#39;</span>
 </code></pre></div><p>表示に関わっていそうなのは<code>$CONDA_PROMPT_MODIFIER</code>であることがわかる。
 そのためこの変数を次のコマンドで削除する</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">set -e CONDA_PROMPT_MODIFIER
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">set -e CONDA_PROMPT_MODIFIER
 </code></pre></div><p>するとプロンプト右下の<code>(base)</code>という表示が消えるはず。</p>
 <p>このコマンドを毎度打つのも非常に手間なのでfishシェルの機能であるイベントハンドラを用いて解決する。次のような関数を適当な<code>~/.config/fish/*.fish</code>ファイルに定義する。関数名も適当でいい。<code>_</code>を先頭につけると<code>functions</code>コマンドで表示されない不可視関数として定義できる。</p>
 <p>この関数でキモとなるのは<code>-e fish_prompt</code>オプションである。これは新たなfishプロンプトが表h時される直前に発生するイベント<code>fish_prompt</code>時に関数を自動的に実行させるためのオプションである。エンターキーを押すたびに変数を削除するわけですね。</p>
 <p>参考:<a href="https://fishshell.com/docs/current/cmds/function.html?highlight=function">function - create a function — fish-shell 3.3.1 documentation</a></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span> _clear_condaenvname -e fish_prompt
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#66d9ef">function</span> _clear_condaenvname -e fish_prompt
     set -u CONDA_PROMPT_MODIFIER
 end
 </code></pre></div><p>おしまい</p>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.84.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="">
 <meta name="description" content="hugoでブログの作成とGitHub Pagesへのアップロード">
@@ -281,13 +281,13 @@
 <h1 id="2-ブログページをローカルに作成">2. ブログページをローカルに作成．</h1>
 <p>MyBlogという名前でブログのルートディレクトリを作成．
 適当なディレクトリで次を実行．以降，ルートディレクトリ(<code>/</code>)を<code>MyBlog/</code>とする．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo new site MyBlog <span style="color:#f92672">&amp;&amp;</span> cd MyBlog
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ hugo new site MyBlog <span style="color:#f92672">&amp;&amp;</span> cd MyBlog
 $ git init
 </code></pre></div><h1 id="3-テーマの選定とインストール">3. テーマの選定とインストール．</h1>
 <p>ここでは<a href="https://github.com/kakawait/hugo-tranquilpeak-theme">Tranquilpeak</a>を選択したことを前提にする．<br>
 submoduleとしてテーマをインストールする．またテーマに同梱されるconfigファイルを叩き台に設定ファイルを作成
 ディレクトリ<code>/</code>で次を実行．この段階でビルドし開発サーバーを起動できるはず．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ mkdir themes <span style="color:#f92672">&amp;&amp;</span> cd themes
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ mkdir themes <span style="color:#f92672">&amp;&amp;</span> cd themes
 $ git clone https://github.com/kakawait/hugo-tranquilpeak-theme.git 
 $ cd ..
 $ cp themes/tranquilpeak/exampleSite/config.toml .
@@ -297,7 +297,7 @@ $ hugo -D server
 当ブログの設定ファイルはこちらの<a href="https://github.com/straxFromIbr/straxFromIbr.github.io/blob/main/config.toml">リンク</a>．</p>
 <h1 id="5-記事の作成">5. 記事の作成</h1>
 <p>hugoのコマンドでタイムスタンプなどのメタデータ（Front Matter)が記述されたMarkDownが生成される．それを直接編集する．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ mkdir content
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ mkdir content
 $ hugo new post/hugotutorial.md
 $ cd content/post
 $ vi hugotutorial.md
@@ -327,7 +327,7 @@ $ git push origin main
 <p>このテーマの製作者は記事内で画像を扱うときはCloudinaryなどのCDNサービスを使うことを推奨している．一方同一のリポジトリ内で保存した画像を使用する時には，<code>content/imgaes</code>ディレクトリを作成し記事ファイル内で<code>/images/img.jpg</code>などのように相対ぱすで指定する．</p>
 <h2 id="目次の表示table-of-contents">目次の表示(Table of contents)</h2>
 <p><a href="https://github.com/kakawait/hugo-tranquilpeak-theme/issues/395">このissue</a>を参考に，次の記述を<code>config.toml</code>に追加．</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>]
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">markup</span>]
   [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>]
     [<span style="color:#a6e22e">markup</span>.<span style="color:#a6e22e">goldmark</span>.<span style="color:#a6e22e">renderer</span>]
       <span style="color:#a6e22e">unsafe</span> = <span style="color:#66d9ef">true</span>
