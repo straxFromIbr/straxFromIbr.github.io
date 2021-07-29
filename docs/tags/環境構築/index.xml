@@ -13,7 +13,8 @@
       <pubDate>Thu, 29 Jul 2021 21:42:44 +0900</pubDate>
       
       <guid>https://straxfromibr.github.io/2021/07/m1-alacritty/</guid>
-      <description>&lt;p&gt;Alacrittyを使い始めた。YAMLで設定ファイルを管理できるのと動作が軽いのが好ましいのだけどいくつか問題点が。&lt;/p&gt;
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/alacritty/alacritty&#34;&gt;alacritty/alacritty: A cross-platform, OpenGL terminal emulator.&lt;/a&gt;
+Alacrittyを使い始めた。YAMLで設定ファイルを管理できるのと動作が軽いのが好ましいのだけどいくつか問題点が。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;日本語入力に難アリ&lt;/li&gt;
 &lt;li&gt;tmuxのプレフィックスキー(C-Spaceに設定している)が反応しない時がある。(端末を再度立ち上げれば使用できるようになる)&lt;/li&gt;

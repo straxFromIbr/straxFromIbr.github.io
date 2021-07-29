@@ -14,6 +14,7 @@ thumbnailImage: /images/m1-alacritty/icon.jpg
 summary: Alacritty on M1 Mac
 
 ---
+[alacritty/alacritty: A cross-platform, OpenGL terminal emulator.](https://github.com/alacritty/alacritty)
 Alacrittyを使い始めた。YAMLで設定ファイルを管理できるのと動作が軽いのが好ましいのだけどいくつか問題点が。
 - 日本語入力に難アリ
 - tmuxのプレフィックスキー(C-Spaceに設定している)が反応しない時がある。(端末を再度立ち上げれば使用できるようになる)
