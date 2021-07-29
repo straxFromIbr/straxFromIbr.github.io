@@ -6,7 +6,119 @@
     <description>Recent content in Posts on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 22 Jul 2021 14:54:35 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Jul 2021 21:42:44 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alacritty on M1 Mac</title>
+      <link>https://straxfromibr.github.io/2021/07/m1-alacritty/</link>
+      <pubDate>Thu, 29 Jul 2021 21:42:44 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/07/m1-alacritty/</guid>
+      <description>&lt;p&gt;Alacrittyを使い始めた。YAMLで設定ファイルを管理できるのと動作が軽いのが好ましいのだけどいくつか問題点が。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;日本語入力に難アリ&lt;/li&gt;
+&lt;li&gt;tmuxのプレフィックスキー(C-Spaceに設定している)が反応しない時がある。(端末を再度立ち上げれば使用できるようになる)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;まだM1用の公式ビルドがないので自前でビルドした。それが原因なのかも。&lt;br&gt;
+参考までにAlacrittyとtmuxの設定ファイルを&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;alacritty.yml&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;background_opacity&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.9&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;key_bindings&lt;/span&gt;:
+  - { &lt;span style=&#34;color:#f92672&#34;&gt;key: Key0, mods: Command, action&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ResetFontSize }&lt;/span&gt;
+  - { &lt;span style=&#34;color:#f92672&#34;&gt;key: Plus, mods: Command|Shift, action&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;IncreaseFontSize }&lt;/span&gt;
+  - { &lt;span style=&#34;color:#f92672&#34;&gt;key: Minus, mods: Command|Shift, action&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;DecreaseFontSize }&lt;/span&gt;
+  - { &lt;span style=&#34;color:#f92672&#34;&gt;key: 36, mods: Command, action&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;ToggleSimpleFullscreen }&lt;/span&gt;
+
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt;:
+  - &lt;span style=&#34;color:#ae81ff&#34;&gt;~/.config/alacritty/themes/substrata.yml&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;font&lt;/span&gt;:
+  &lt;span style=&#34;color:#f92672&#34;&gt;normal&lt;/span&gt;:
+    &lt;span style=&#34;color:#f92672&#34;&gt;family&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;MesloLGS NF&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;style&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Regular&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;bold&lt;/span&gt;:
+    &lt;span style=&#34;color:#f92672&#34;&gt;family&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;MesloLGS NF&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;style&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Bold&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;italic&lt;/span&gt;:
+    &lt;span style=&#34;color:#f92672&#34;&gt;family&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Meslo LG S for Powerline&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;style&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;Italic&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;size&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;14.5&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;offset&lt;/span&gt;:
+      &lt;span style=&#34;color:#f92672&#34;&gt;y&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;x&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+
+
+&lt;span style=&#34;color:#f92672&#34;&gt;window&lt;/span&gt;:
+  &lt;span style=&#34;color:#f92672&#34;&gt;decolations&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;buttonless &lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;dimensions&lt;/span&gt;:
+    &lt;span style=&#34;color:#f92672&#34;&gt;columns&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;105&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;lines&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;45&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;padding&lt;/span&gt;:
+    &lt;span style=&#34;color:#f92672&#34;&gt;x&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;y&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;.tmux.conf&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;set-option -g default-shell /opt/homebrew/bin/fish
+
+set-option -g default-terminal screen-256color
+set -ga terminal-overrides &amp;quot;,alacritty:Tc&amp;quot;
+
+unbind C-b
+set -g prefix C-Space
+
+set -s escape-time 0
+set-option -g status-position top
+
+set-option -g status-left-length 90
+set-option -g status-right-length 90
+
+set-option -g status-left &#39;#H:[#P]&#39;
+
+set-option -g status-right &#39;#(wifi) #(battery --tmux) [%Y-%m-%d(%a) %H:%M]&#39;
+set-option -g status-interval 1
+set-option -g status-justify centre
+set-option -g status-bg &amp;quot;colour28&amp;quot;
+
+set-option -g status-fg &amp;quot;colour255&amp;quot;
+
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+bind | split-window -h
+
+bind - split-window -v
+
+set-option -g base-index 1
+
+set-option -g mouse on
+bind -n WheelUpPane if-shell -F -t = &amp;quot;#{mouse_any_flag}&amp;quot; &amp;quot;send-keys -M&amp;quot; &amp;quot;if -Ft= &#39;#{pane_in_mode}&#39; &#39;send-keys -M&#39; &#39;copy-mode -e&#39;&amp;quot;
+
+setw -g mode-keys vi
+
+bind -T copy-mode-vi v send -X begin-selection
+
+bind -T copy-mode-vi V send -X select-line
+
+bind -T copy-mode-vi C-v send -X rectangle-toggle
+
+bind -T copy-mode-vi y send -X copy-selection
+
+bind -T copy-mode-vi Y send -X copy-line
+
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
     <item>
       <title>fishシェルの設定ファイル管理</title>
       <link>https://straxfromibr.github.io/2021/07/fish-config/</link>
