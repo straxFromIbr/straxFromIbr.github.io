@@ -6,7 +6,40 @@
     <description>Recent content in シェルスクリプト on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 22 Jul 2021 14:54:35 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Aug 2021 11:01:39 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>シェルコマンドでデータ分割</title>
+      <link>https://straxfromibr.github.io/2021/08/shell-datasplit/</link>
+      <pubDate>Tue, 03 Aug 2021 11:01:39 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/08/shell-datasplit/</guid>
+      <description>&lt;p&gt;次のように&lt;code&gt;concat&lt;/code&gt;ディレクトリにはいってる&lt;code&gt;*.png&lt;/code&gt;を&lt;code&gt;test&lt;/code&gt;,&lt;code&gt;train&lt;/code&gt;ディレクトリに8:2で分割する.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ tree datasets_2108030001 -d
+datasets_2108030001
+├── concat
+├── test
+└── train
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;datasets_2108030001/concat/
+├── concat_0.png
+├── concat_1.png
+~~~省略~~~
+├── concat_9998.png
+└── concat_9999.png
+
+0 directories, 10000 files
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;次のコマンドを&lt;code&gt;datasets_2108030001/concat/&lt;/code&gt;ディレクトリで実行して分割&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ls | head -n8000 | xargs -J% cp % ../train/
+ls | tail -n2000 | xargs -J% cp % ../test/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;次のコマンドで重複がないか確認&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;diff &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ls | sort|psub&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ls ../test/ ../train/| sort |psub&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# こんなような出力になる？&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# 0a1,3&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;gt; ../test/:&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# &amp;gt; ../train/:&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
     <item>
       <title>fishシェルの設定ファイル管理</title>
       <link>https://straxfromibr.github.io/2021/07/fish-config/</link>

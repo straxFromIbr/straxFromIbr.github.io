@@ -8,41 +8,137 @@
 <meta name="generator" content="Hugo 0.86.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="">
-<meta name="description" content="キーボードのアクセントメニューを無効にするためのコマンド．備忘録．">
+<meta name="description" content="次のようにconcatディレクトリにはいってる*.pngをtest,trainディレクトリに8:2で分割する.
+$ tree datasets_2108030001 -d
+datasets_2108030001
+├── concat
+├── test
+└── train
+datasets_2108030001/concat/
+├── concat_0.png
+├── concat_1.png
+~~~省略~~~
+├── concat_9998.png
+└── concat_9999.png
+
+0 directories, 10000 files
+次のコマンドをdatasets_2108030001/concat/ディレクトリで実行して分割
+ls | head -n8000 | xargs -J% cp % ../train/
+ls | tail -n2000 | xargs -J% cp % ../test/
+次のコマンドで重複がないか確認
+diff (ls | sort|psub) (ls ../test/ ../train/| sort |psub)
+# こんなような出力になる？
+# 0a1,3
+# &gt;
+# &gt; ../test/:
+# &gt; ../train/:
+">
 
 
-<meta property="og:description" content="キーボードのアクセントメニューを無効にするためのコマンド．備忘録．">
+<meta property="og:description" content="次のようにconcatディレクトリにはいってる*.pngをtest,trainディレクトリに8:2で分割する.
+$ tree datasets_2108030001 -d
+datasets_2108030001
+├── concat
+├── test
+└── train
+datasets_2108030001/concat/
+├── concat_0.png
+├── concat_1.png
+~~~省略~~~
+├── concat_9998.png
+└── concat_9999.png
+
+0 directories, 10000 files
+次のコマンドをdatasets_2108030001/concat/ディレクトリで実行して分割
+ls | head -n8000 | xargs -J% cp % ../train/
+ls | tail -n2000 | xargs -J% cp % ../test/
+次のコマンドで重複がないか確認
+diff (ls | sort|psub) (ls ../test/ ../train/| sort |psub)
+# こんなような出力になる？
+# 0a1,3
+# &gt;
+# &gt; ../test/:
+# &gt; ../train/:
+">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Mac]キーボードのアクセントメニューを無効化">
-<meta name="twitter:title" content="[Mac]キーボードのアクセントメニューを無効化">
-<meta property="og:url" content="https://straxfromibr.github.io/2021/07/mac-accent-disable/">
-<meta property="twitter:url" content="https://straxfromibr.github.io/2021/07/mac-accent-disable/">
+<meta property="og:title" content="シェルコマンドでデータ分割">
+<meta name="twitter:title" content="シェルコマンドでデータ分割">
+<meta property="og:url" content="https://straxfromibr.github.io/2021/08/shell-datasplit/">
+<meta property="twitter:url" content="https://straxfromibr.github.io/2021/08/shell-datasplit/">
 <meta property="og:site_name" content="メモおきば">
-<meta property="og:description" content="キーボードのアクセントメニューを無効にするためのコマンド．備忘録．">
-<meta name="twitter:description" content="キーボードのアクセントメニューを無効にするためのコマンド．備忘録．">
+<meta property="og:description" content="次のようにconcatディレクトリにはいってる*.pngをtest,trainディレクトリに8:2で分割する.
+$ tree datasets_2108030001 -d
+datasets_2108030001
+├── concat
+├── test
+└── train
+datasets_2108030001/concat/
+├── concat_0.png
+├── concat_1.png
+~~~省略~~~
+├── concat_9998.png
+└── concat_9999.png
+
+0 directories, 10000 files
+次のコマンドをdatasets_2108030001/concat/ディレクトリで実行して分割
+ls | head -n8000 | xargs -J% cp % ../train/
+ls | tail -n2000 | xargs -J% cp % ../test/
+次のコマンドで重複がないか確認
+diff (ls | sort|psub) (ls ../test/ ../train/| sort |psub)
+# こんなような出力になる？
+# 0a1,3
+# &gt;
+# &gt; ../test/:
+# &gt; ../train/:
+">
+<meta name="twitter:description" content="次のようにconcatディレクトリにはいってる*.pngをtest,trainディレクトリに8:2で分割する.
+$ tree datasets_2108030001 -d
+datasets_2108030001
+├── concat
+├── test
+└── train
+datasets_2108030001/concat/
+├── concat_0.png
+├── concat_1.png
+~~~省略~~~
+├── concat_9998.png
+└── concat_9999.png
+
+0 directories, 10000 files
+次のコマンドをdatasets_2108030001/concat/ディレクトリで実行して分割
+ls | head -n8000 | xargs -J% cp % ../train/
+ls | tail -n2000 | xargs -J% cp % ../test/
+次のコマンドで重複がないか確認
+diff (ls | sort|psub) (ls ../test/ ../train/| sort |psub)
+# こんなような出力になる？
+# 0a1,3
+# &gt;
+# &gt; ../test/:
+# &gt; ../train/:
+">
 <meta property="og:locale" content="ja">
 
   
-    <meta property="article:published_time" content="2021-07-03T17:43:40">
+    <meta property="article:published_time" content="2021-08-03T11:01:39">
   
   
-    <meta property="article:modified_time" content="2021-07-03T17:43:40">
+    <meta property="article:modified_time" content="2021-08-03T11:01:39">
   
-  
-  
-    
-      <meta property="article:section" content="Mac">
-    
-      <meta property="article:section" content="環境構築">
-    
   
   
     
-      <meta property="article:tag" content="Mac">
+      <meta property="article:section" content="プログラミング">
     
-      <meta property="article:tag" content="環境構築">
+      <meta property="article:section" content="シェルスクリプト">
     
-      <meta property="article:tag" content="備忘録">
+  
+  
+    
+      <meta property="article:tag" content="プログラミング">
+    
+      <meta property="article:tag" content="シェルスクリプト">
+    
+      <meta property="article:tag" content="fish">
     
   
 
@@ -59,9 +155,6 @@
 
 
 
-  <meta property="og:image" content="https://straxfromibr.github.io/images/mac-accent-disable/accmenu.jpg">
-  <meta property="twitter:image" content="https://straxfromibr.github.io/images/mac-accent-disable/accmenu.jpg">
-
 
 
 
@@ -70,14 +163,14 @@
   <meta property="twitter:image" content="https://lh3.googleusercontent.com/pw/AM-JKLU3kE3TXypRMX2GntJm1Wt9NvPbfDqgNjcBFB7qAkFFhtVukFMsy1uOQQ78e9voUXXtx1yWzrih6jByQYYhlOR2dHYBpYelawtMOfCm2sw1j5V1Eb4K-BQmHC3LnQGnEZZGlWB5nnWlo7hbxrnPT0hY8Q">
 
 
-    <title>[Mac]キーボードのアクセントメニューを無効化</title>
+    <title>シェルコマンドでデータ分割</title>
 
     <link rel="icon" href="https://pbs.twimg.com/profile_images/1377448543921709060/F6rVF1vn_400x400.jpg">
     
 
     
 
-    <link rel="canonical" href="https://straxfromibr.github.io/2021/07/mac-accent-disable/">
+    <link rel="canonical" href="https://straxfromibr.github.io/2021/08/shell-datasplit/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -221,19 +314,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      [Mac]キーボードのアクセントメニューを無効化
+      シェルコマンドでデータ分割
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-07-03T17:43:40&#43;09:00">
+      <time itemprop="datePublished" datetime="2021-08-03T11:01:39&#43;09:00">
         
   
   
   
   
-    2021年 7月 3日
+    2021年 8月 3日
   
 
       </time>
@@ -243,9 +336,9 @@
   
     <span>カテゴリー</span>
     
-      <a class="category-link" href="https://straxfromibr.github.io/categories/mac">Mac</a>, 
+      <a class="category-link" href="https://straxfromibr.github.io/categories/%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0">プログラミング</a>, 
     
-      <a class="category-link" href="https://straxfromibr.github.io/categories/%e7%92%b0%e5%a2%83%e6%a7%8b%e7%af%89">環境構築</a>
+      <a class="category-link" href="https://straxfromibr.github.io/categories/%e3%82%b7%e3%82%a7%e3%83%ab%e3%82%b9%e3%82%af%e3%83%aa%e3%83%97%e3%83%88">シェルスクリプト</a>
     
   
 
@@ -255,8 +348,31 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><code>i</code>などのようにアクセント記号やティルデがつくアルファベットを長押しした時，次のようなアクセントメニューが表示されてしまう．Vim系のキーバインドのアプリケーションを使う時とてもとても不便なのでなんとか無効にしたい(iTermでは表示されない)．
+              <p>次のように<code>concat</code>ディレクトリにはいってる<code>*.png</code>を<code>test</code>,<code>train</code>ディレクトリに8:2で分割する.</p>
+<pre><code>$ tree datasets_2108030001 -d
+datasets_2108030001
+├── concat
+├── test
+└── train
+</code></pre><pre><code>datasets_2108030001/concat/
+├── concat_0.png
+├── concat_1.png
+~~~省略~~~
+├── concat_9998.png
+└── concat_9999.png
 
+0 directories, 10000 files
+</code></pre><p>次のコマンドを<code>datasets_2108030001/concat/</code>ディレクトリで実行して分割</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls | head -n8000 | xargs -J% cp % ../train/
+ls | tail -n2000 | xargs -J% cp % ../test/
+</code></pre></div><p>次のコマンドで重複がないか確認</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">diff <span style="color:#f92672">(</span>ls | sort|psub<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>ls ../test/ ../train/| sort |psub<span style="color:#f92672">)</span>
+<span style="color:#75715e"># こんなような出力になる？</span>
+<span style="color:#75715e"># 0a1,3</span>
+<span style="color:#75715e"># &gt;</span>
+<span style="color:#75715e"># &gt; ../test/:</span>
+<span style="color:#75715e"># &gt; ../train/:</span>
+</code></pre></div><!--
  
   
   
@@ -295,26 +411,17 @@
 
 <div class="figure fig-100 center" >
   
-    <a class="fancybox" href="https://straxfromibr.github.io/images/mac-accent-disable/accmenu.jpg" title="アクセントメニュー" data-fancybox-group="">
+    <a class="fancybox" href="https://straxfromibr.github.io/images/shell-datasplit/" data-fancybox-group="">
   
-    <img class="fig-img" src="https://straxfromibr.github.io/images/mac-accent-disable/accmenu.jpg"  alt="アクセントメニュー">
+    <img class="fig-img" src="https://straxfromibr.github.io/images/shell-datasplit/" >
   
     </a>
   
-   
-    <span class="caption">アクセントメニュー</span>
   
 </div>
 
   <div style="clear:both;"></div>
-</p>
-<p>ググると次の記事を見つけたので試してみたらうまくいった．</p>
-<p><a href="https://yasuharu519.hatenablog.com/entry/2016/05/02/085639">Mac で 英語入力時にアクセント文字のポップアップを非表示にする方法</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">defaults write -g ApplePressAndHoldEnabled -bool false
-</code></pre></div><p>端末アプリ(ターミナルなど)で上記のコマンドを実行したあと， 再起動または再ログインで適用する．
-なんで設定.appで設定できないの&hellip;?</p>
-<p>以上です．相変わらず中身のないブログだ．</p>
-
+-->
               
             </div>
           </div>
@@ -326,11 +433,11 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">タグ</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/mac/">Mac</a>
+  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">プログラミング</a>
 
-  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/">環境構築</a>
+  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/">シェルスクリプト</a>
 
-  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/%E5%82%99%E5%BF%98%E9%8C%B2/">備忘録</a>
+  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/fish/">fish</a>
 
                   </div>
                 
@@ -343,7 +450,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/07/deletebrew/" data-tooltip="[m1Mac]/usr/local/bin/brewを削除する">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -351,7 +458,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/07/piservice/" data-tooltip="systemdでGUIアプリケーションを自動実動">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/07/m1-alacritty/" data-tooltip="Alacritty on M1 Mac">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -369,13 +476,13 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/07/mac-accent-disable/&amp;via=PotatoHotate">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/08/shell-datasplit/&amp;via=PotatoHotate">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/07/mac-accent-disable/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/08/shell-datasplit/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
@@ -413,7 +520,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/07/deletebrew/" data-tooltip="[m1Mac]/usr/local/bin/brewを削除する">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -421,7 +528,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/07/piservice/" data-tooltip="systemdでGUIアプリケーションを自動実動">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/07/m1-alacritty/" data-tooltip="Alacritty on M1 Mac">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -439,13 +546,13 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/07/mac-accent-disable/&amp;via=PotatoHotate">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/08/shell-datasplit/&amp;via=PotatoHotate">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/07/mac-accent-disable/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/08/shell-datasplit/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
@@ -469,13 +576,13 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F07%2Fmac-accent-disable%2F&amp;via=PotatoHotate">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F08%2Fshell-datasplit%2F&amp;via=PotatoHotate">
           <i class="fa fa-twitter"></i><span>Twitterで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F07%2Fmac-accent-disable%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F08%2Fshell-datasplit%2F">
           <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
         </a>
       </li>
