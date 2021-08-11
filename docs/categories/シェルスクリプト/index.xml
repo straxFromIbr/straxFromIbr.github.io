@@ -111,10 +111,10 @@ CONDA_PROMPT_MODIFIER &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;(base) 
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;set -e CONDA_PROMPT_MODIFIER
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;するとプロンプト右下の&lt;code&gt;(base)&lt;/code&gt;という表示が消えるはず。&lt;/p&gt;
 &lt;p&gt;このコマンドを毎度打つのも非常に手間なのでfishシェルの機能であるイベントハンドラを用いて解決する。次のような関数を適当な&lt;code&gt;~/.config/fish/*.fish&lt;/code&gt;ファイルに定義する。関数名も適当でいい。&lt;code&gt;_&lt;/code&gt;を先頭につけると&lt;code&gt;functions&lt;/code&gt;コマンドで表示されない不可視関数として定義できる。&lt;/p&gt;
-&lt;p&gt;この関数でキモとなるのは&lt;code&gt;-e fish_prompt&lt;/code&gt;オプションである。これは新たなfishプロンプトが表h時される直前に発生するイベント&lt;code&gt;fish_prompt&lt;/code&gt;時に関数を自動的に実行させるためのオプションである。エンターキーを押すたびに変数を削除するわけですね。&lt;/p&gt;
+&lt;p&gt;この関数でキモとなるのは&lt;code&gt;-e fish_prompt&lt;/code&gt;オプションである。これは新たなfishプロンプトが表時される直前に発生するイベント&lt;code&gt;fish_prompt&lt;/code&gt;時に関数を自動的に実行させるためのオプションである。エンターキーを押すたびに変数を削除するわけですね。&lt;/p&gt;
 &lt;p&gt;参考:&lt;a href=&#34;https://fishshell.com/docs/current/cmds/function.html?highlight=function&#34;&gt;function - create a function — fish-shell 3.3.1 documentation&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; _clear_condaenvname -e fish_prompt
-    set -u CONDA_PROMPT_MODIFIER
+    set -e CONDA_PROMPT_MODIFIER
 end
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;おしまい&lt;/p&gt;</description>
     </item>
