@@ -6,7 +6,16 @@
     <description>Recent content in プログラミング on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 03 Aug 2021 11:01:39 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Aug 2021 22:47:22 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fisher/tide@v5の変更点</title>
+      <link>https://straxfromibr.github.io/2021/08/tide-v5-change/</link>
+      <pubDate>Thu, 12 Aug 2021 22:47:22 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/08/tide-v5-change/</guid>
+      <description>&lt;p&gt;本日8月12日にリリースされた&lt;a href=&#34;https://github.com/IlanCosman/tide/releases/tag/v5.0.0&#34;&gt;IlanCosman/tide v5.0.0&lt;/a&gt;でアップデート時の注意点と変更点をメモ&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>シェルコマンドでデータ分割</title>
       <link>https://straxfromibr.github.io/2021/08/shell-datasplit/</link>

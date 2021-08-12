@@ -8,45 +8,43 @@
 <meta name="generator" content="Hugo 0.87.0 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="">
-<meta name="description" content="URLエンコーディングのショートカットを作成">
+<meta name="description" content="本日8月12日にリリースされたIlanCosman/tide v5.0.0でアップデート時の注意点と変更点をメモ">
 
 
-<meta property="og:description" content="URLエンコーディングのショートカットを作成">
+<meta property="og:description" content="本日8月12日にリリースされたIlanCosman/tide v5.0.0でアップデート時の注意点と変更点をメモ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HammerSpoon小ネタその1">
-<meta name="twitter:title" content="HammerSpoon小ネタその1">
-<meta property="og:url" content="https://straxfromibr.github.io/2021/06/hmurlutil/">
-<meta property="twitter:url" content="https://straxfromibr.github.io/2021/06/hmurlutil/">
+<meta property="og:title" content="fisher/tide@v5の変更点">
+<meta name="twitter:title" content="fisher/tide@v5の変更点">
+<meta property="og:url" content="https://straxfromibr.github.io/2021/08/tide-v5-change/">
+<meta property="twitter:url" content="https://straxfromibr.github.io/2021/08/tide-v5-change/">
 <meta property="og:site_name" content="メモおきば">
-<meta property="og:description" content="URLエンコーディングのショートカットを作成">
-<meta name="twitter:description" content="URLエンコーディングのショートカットを作成">
+<meta property="og:description" content="本日8月12日にリリースされたIlanCosman/tide v5.0.0でアップデート時の注意点と変更点をメモ">
+<meta name="twitter:description" content="本日8月12日にリリースされたIlanCosman/tide v5.0.0でアップデート時の注意点と変更点をメモ">
 <meta property="og:locale" content="ja">
 
   
-    <meta property="article:published_time" content="2021-06-27T23:27:45">
+    <meta property="article:published_time" content="2021-08-12T22:47:22">
   
   
-    <meta property="article:modified_time" content="2021-06-27T23:27:45">
+    <meta property="article:modified_time" content="2021-08-12T22:47:22">
   
-  
-  
-    
-      <meta property="article:section" content="Mac">
-    
-      <meta property="article:section" content="ユーティリティ">
-    
   
   
     
-      <meta property="article:tag" content="Mac">
+      <meta property="article:section" content="プログラミング">
     
-      <meta property="article:tag" content="ユーティリティ">
+      <meta property="article:section" content="fish">
+    
+  
+  
     
       <meta property="article:tag" content="プログラミング">
     
-      <meta property="article:tag" content="lua">
+      <meta property="article:tag" content="fish">
     
-      <meta property="article:tag" content="hammerspoon">
+      <meta property="article:tag" content="シェルスクリプト">
+    
+      <meta property="article:tag" content="環境構築">
     
   
 
@@ -71,14 +69,14 @@
   <meta property="twitter:image" content="https://lh3.googleusercontent.com/pw/AM-JKLU3kE3TXypRMX2GntJm1Wt9NvPbfDqgNjcBFB7qAkFFhtVukFMsy1uOQQ78e9voUXXtx1yWzrih6jByQYYhlOR2dHYBpYelawtMOfCm2sw1j5V1Eb4K-BQmHC3LnQGnEZZGlWB5nnWlo7hbxrnPT0hY8Q">
 
 
-    <title>HammerSpoon小ネタその1</title>
+    <title>fisher/tide@v5の変更点</title>
 
     <link rel="icon" href="https://pbs.twimg.com/profile_images/1377448543921709060/F6rVF1vn_400x400.jpg">
     
 
     
 
-    <link rel="canonical" href="https://straxfromibr.github.io/2021/06/hmurlutil/">
+    <link rel="canonical" href="https://straxfromibr.github.io/2021/08/tide-v5-change/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -222,19 +220,19 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      HammerSpoon小ネタその1
+      fisher/tide@v5の変更点
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-06-27T23:27:45&#43;09:00">
+      <time itemprop="datePublished" datetime="2021-08-12T22:47:22&#43;09:00">
         
   
   
   
   
-    2021年 6月 27日
+    2021年 8月 12日
   
 
       </time>
@@ -244,9 +242,9 @@
   
     <span>カテゴリー</span>
     
-      <a class="category-link" href="https://straxfromibr.github.io/categories/mac">Mac</a>, 
+      <a class="category-link" href="https://straxfromibr.github.io/categories/%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%9f%e3%83%b3%e3%82%b0">プログラミング</a>, 
     
-      <a class="category-link" href="https://straxfromibr.github.io/categories/%e3%83%a6%e3%83%bc%e3%83%86%e3%82%a3%e3%83%aa%e3%83%86%e3%82%a3">ユーティリティ</a>
+      <a class="category-link" href="https://straxfromibr.github.io/categories/fish">fish</a>
     
   
 
@@ -256,80 +254,29 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>日本語など非ASCII文字を含むURLをTwitterで共有するとき，非ASCII文字はURLとして認識されない．
-Webにはブラウザ経由で使用できる<a href="https://tech-unlimited.com/urlencode.html">ツール</a>があるがわざわざアクセスするのも至極面倒なので，<a href="https://www.hammerspoon.org">hammerspoon</a>でショートカットキーを作成した．hammerspoonは便利．Lua言語必須だけど．</p>
-<p>作成には次の資料を参考にした.</p>
+              <p>本日8月12日にリリースされた<a href="https://github.com/IlanCosman/tide/releases/tag/v5.0.0">IlanCosman/tide v5.0.0</a>でアップデート時の注意点と変更点をメモ</p>
+<h1 id="注意点">注意点</h1>
 <ul>
-<li><a href="https://www.hammerspoon.org/docs/hs.pasteboard.html#setContents">HammerSpoon API documentation hs.pasteboard</a></li>
-<li><a href="https://note.nkmk.me/python-urllib-parse-quote-unquote/">PythonでURLエンコード・デコード</a></li>
-<li><a href="https://qiita.com/hidetzu/items/623cec2ec171db57c246">luaでlinuxのコマンドを実行する</a></li>
+<li>今後は<code>main</code>ブランチが開発ブランチになるため<code>fisher</code>でインストールする際には次のようにタグを指定する。またアップデートする際にはアイコンや背景色、プロンプトアイテムリストなどの各種ユニバーサル変数は保存しておきましょう。アップデートする直前に<code>_tide</code>で始まる変数が全て消去されることを後から知り泣いた。</li>
 </ul>
-<p>次のように使用する</p>
-<ol>
-<li>⌘C で変換対象URLをコピー</li>
-<li>⌥⌃U (Opt-Ctrl-U)でコピーしたURLをエンコードしクリップボードに保存</li>
-<li>⌘V でペースト</li>
-</ol>
-<p>例えば次のように変換される．
-<code>https://straxfromibr.github.io/2021/06/fish環境構築/</code> -&gt; <code>https://straxfromibr.github.io/2021/06/fish%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/</code></p>
-<p>実際のエンコードの処理はPythonの標準ライブラリ<code>urllib</code>を使用してる．
-Python万歳．Luaが分かればLuaで書いてた．</p>
-<p>以下がスクリプト．<code>~/.hammerspoon/init.lua</code>に追記する．詳しくは<a href="https://www.hammerspoon.org">公式ドキュメント</a>を参照のこと．</p>
+<pre><code>fisher install IlanCosman/tide@v5
+</code></pre><h1 id="変更点">変更点</h1>
+<ul>
+<li>
+<p>アップデートされた<code>_tide_item_vi_mode</code>は挿入モードの時に何も表示しません。モード切り替えのたびにプロンプトの長さが変わるのが嫌な人は(ワタシ)は書き換えましょう。その際一度ファイルのコピーを<code>fisher</code>の管理外のディレクトリに置き、<code>fish/functions</code>下にはリンクを貼るとアップデートの影響を受けないでしょう。または<a href="https://github.com/straxFromIbr/autoload-fish-config">straxFromIbr/autoload-fish-config</a>プラグインで管理するのもアリアリのアリです(宣伝</p>
+</li>
+<li>
+<p>従来はプロンプトに表示するためにtideアイテムの定義内でビルトインの<code>printf</code>コマンドを使用していましたが新たに<code>_tide_print_item</code>関数を使用するようになったみたいです。第一引数にアイテム名、第二引数に表示する内容を渡すことで、文字色、背景色の設定などを内部で処理してくれるようです。<code>set_color</code>入らず！</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># Defined in ~/.config/fish/functions/_tide_item_conda_env.fish @ line 1</span>
+<span style="color:#66d9ef">function</span> _tide_item_conda_env
+	<span style="color:#66d9ef">if</span> test $CONDA_DEFAULT_ENV
+        _tide_print_item conda_env $tide_virtual_env_icon<span style="color:#e6db74">&#39; &#39;</span>$CONDA_DEFAULT_ENV 
+	end
+end
 
-
-  
-  
-  
-  
-  
-
-
-  
-    
-  
-  
-
-<figure class="codeblock codeblock--tabbed">
-  <figcaption>
-    
-      <span>~/.hammerspoon/init.lua</span>
-    
-    <ul class="tabs">
-      
-        <li class="tab active">lua</li>
-      
-    </ul>
-  </figcaption> 
-  <div class="tabs-content">
-    
-      
-      <figure class="highlight language-lua" style="display: block;">   
-        <table>
-          <tbody>
-            <tr>
-              <td class="gutter">
-                <pre><span>1</span><br><span>2</span><br><span>3</span><br><span>4</span><br><span>5</span><br><span>6</span><br><span>7</span><br><span>8</span><br><span>9</span><br><span>10</span><br></pre>
-              </td>
-              <td class="code">
-                <pre class="code-highlight language-lua"><code class="lua"> -- URL encoding
- hs.hotkey.bind({&#34;alt&#34;, &#34;ctrl&#34;}, &#34;U&#34;, function()
-	 local url= hs.pasteboard.readString()
-	 local cmd = &#34;/usr/bin/python3 -c \&#34;import urllib.parse as p; print(p.quote(&#39;&#34; .. url .. &#34;&#39;, safe=&#39;:/&#39;))\&#34;&#34;
-	 local handle = io.popen(cmd)
-	 local result = handle:read(&#34;*a&#34;)
-	 hs.pasteboard.setContents(result)
- end)
-
-    </code></pre>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </figure>
-    
-  </div>
-</figure>
-
+</code></pre></div><p>ちなみにコレも<code>fisher install straxFromIbr/invisible-conda-name</code>でインストールできるのでAnaconda/MiniForgeなど使っている方々はぜひ！(また宣伝)</p>
               
             </div>
           </div>
@@ -341,15 +288,13 @@ Python万歳．Luaが分かればLuaで書いてた．</p>
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">タグ</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/mac/">Mac</a>
-
-  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3/">ユーティリティ</a>
-
   <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">プログラミング</a>
 
-  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/lua/">lua</a>
+  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/fish/">fish</a>
 
-  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/hammerspoon/">hammerspoon</a>
+  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/%E3%82%B7%E3%82%A7%E3%83%AB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/">シェルスクリプト</a>
+
+  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/">環境構築</a>
 
                   </div>
                 
@@ -362,7 +307,7 @@ Python万歳．Luaが分かればLuaで書いてた．</p>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/06/raspi_pkginstallation/" data-tooltip="Python環境構築 on RasPi">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -370,7 +315,7 @@ Python万歳．Luaが分かればLuaで書いてた．</p>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/06/fishintro/" data-tooltip="Fish環境構築">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/08/shell-datasplit/" data-tooltip="シェルコマンドでデータ分割">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -388,13 +333,13 @@ Python万歳．Luaが分かればLuaで書いてた．</p>
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/06/hmurlutil/&amp;via=PotatoHotate">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/08/tide-v5-change/&amp;via=PotatoHotate">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/06/hmurlutil/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/08/tide-v5-change/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
@@ -432,7 +377,7 @@ Python万歳．Luaが分かればLuaで書いてた．</p>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/06/raspi_pkginstallation/" data-tooltip="Python環境構築 on RasPi">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">次</span>
@@ -440,7 +385,7 @@ Python万歳．Luaが分かればLuaで書いてた．</p>
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/06/fishintro/" data-tooltip="Fish環境構築">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/08/shell-datasplit/" data-tooltip="シェルコマンドでデータ分割">
               
                   <span class="hide-xs hide-sm text-small icon-mr">前</span>
                   <i class="fa fa-angle-right"></i>
@@ -458,13 +403,13 @@ Python万歳．Luaが分かればLuaで書いてた．</p>
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/06/hmurlutil/&amp;via=PotatoHotate">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/08/tide-v5-change/&amp;via=PotatoHotate">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/06/hmurlutil/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/08/tide-v5-change/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
@@ -488,13 +433,13 @@ Python万歳．Luaが分かればLuaで書いてた．</p>
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F06%2Fhmurlutil%2F&amp;via=PotatoHotate">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F08%2Ftide-v5-change%2F&amp;via=PotatoHotate">
           <i class="fa fa-twitter"></i><span>Twitterで共有</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F06%2Fhmurlutil%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F08%2Ftide-v5-change%2F">
           <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
         </a>
       </li>
