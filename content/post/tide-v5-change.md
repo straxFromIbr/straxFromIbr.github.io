@@ -1,6 +1,6 @@
 ---
-title: "fisher/tide@v5の変更点"
-date: 2021-08-12T22:47:22+09:00
+title: "IlanCosman/tide@v5の変更点"
+date: 2021-08-12T23:47:22+09:00
 categories:
 - プログラミング
 - fish
