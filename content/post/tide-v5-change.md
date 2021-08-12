@@ -37,5 +37,5 @@ function _tide_item_conda_env
 end
 
 ```
-ちなみにコレも`fisher install straxFromIbr/invisible-conda-name`でインストールできるのでAnaconda/MiniForgeなど使っている方々はぜひ！(また宣伝)
+ちなみにコレも`fisher install straxFromIbr/tide-conda-item`でインストールできるのでAnaconda/MiniForgeなど使っている方々はぜひ！(また宣伝)
 
