@@ -6,4 +6,4 @@ mkdir ./content/images/$postname
 sed -i "" -e '12s/^/'"thumbnailImage: \/images\/$postname\/"'\n/' ./content/post/$postname.md
 echo '{{< image classes="fancybox clear fig-100 center" src="/images/'$postname'/" title="">}}' >> ./content/post/$postname.md
 cd ./content/post
-vim $postname.md
+vi $postname.md
