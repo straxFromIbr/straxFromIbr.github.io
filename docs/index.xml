@@ -6,7 +6,16 @@
     <description>Recent content on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 12 Aug 2021 23:47:22 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Aug 2021 11:44:02 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PostgreSQLをSQLAlchemyで使用する</title>
+      <link>https://straxfromibr.github.io/2021/08/postgresql-sqlalchemy/</link>
+      <pubDate>Sun, 22 Aug 2021 11:44:02 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/08/postgresql-sqlalchemy/</guid>
+      <description>PostgreSQLをSQLAlchemyから操作する。</description>
+    </item>
+    
     <item>
       <title>IlanCosman/tide@v5の変更点</title>
       <link>https://straxfromibr.github.io/2021/08/tide-v5-change/</link>

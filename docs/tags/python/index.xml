@@ -6,7 +6,16 @@
     <description>Recent content in Python on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 28 Jun 2021 20:53:20 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Aug 2021 11:44:02 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PostgreSQLをSQLAlchemyで使用する</title>
+      <link>https://straxfromibr.github.io/2021/08/postgresql-sqlalchemy/</link>
+      <pubDate>Sun, 22 Aug 2021 11:44:02 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/08/postgresql-sqlalchemy/</guid>
+      <description>PostgreSQLをSQLAlchemyから操作する。</description>
+    </item>
+    
     <item>
       <title>Python環境構築 on RasPi</title>
       <link>https://straxfromibr.github.io/2021/06/raspi_pkginstallation/</link>
