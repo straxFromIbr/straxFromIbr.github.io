@@ -1,5 +1,5 @@
 ---
-title: "[Python] 多重継承した時のメソッドの解決順番"
+title: "[Python] クラスの多重継承"
 date: 2021-08-27T22:19:47+09:00
 categories:
 - プログラミング
@@ -11,7 +11,7 @@ keywords:
 - tech
 # thumbnailImage: /images/python-multi-inher/
 #thumbnailImage: //example.com/image.jpg
-summary: '継承元のクラスでメソッド名が重複した際、検索される順番'
+summary: "Pythonでクラスの多重継承をしたさいの挙動"
 ---
 # サンプルコード
 次のようにFooClassとBarClassの2つを継承するクラスを考える。
