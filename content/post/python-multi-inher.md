@@ -7,7 +7,6 @@ categories:
 tags:
 - プログラミング
 - Python
-- クラス
 keywords:
 - tech
 # thumbnailImage: /images/python-multi-inher/
