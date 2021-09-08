@@ -6,7 +6,16 @@
     <description>Recent content on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 27 Aug 2021 22:19:47 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Sep 2021 21:51:26 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>M1 Mac にTensorFlow v2.5をインストール</title>
+      <link>https://straxfromibr.github.io/2021/09/install-tfmetal/</link>
+      <pubDate>Wed, 08 Sep 2021 21:51:26 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/09/install-tfmetal/</guid>
+      <description>M1 Mac にMetalアクセラレーションのTensorFlow 2.5をインストールする</description>
+    </item>
+    
     <item>
       <title>[Python] クラスの多重継承</title>
       <link>https://straxfromibr.github.io/2021/08/python-multi-inher/</link>
@@ -579,6 +588,42 @@ end
       
       <guid>https://straxfromibr.github.io/2021/06/hugotutorial/</guid>
       <description>hugoでブログの作成とGitHub Pagesへのアップロード</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://straxfromibr.github.io/1/01/yolov5-on-jetson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://straxfromibr.github.io/1/01/yolov5-on-jetson/</guid>
+      <description>&lt;p&gt;G&amp;mdash;
+title: &amp;ldquo;Yolov5 on Jetson&amp;rdquo;
+date: 2021-08-31T11:00:15+09:00
+categories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;category&lt;/li&gt;
+&lt;li&gt;subcategory
+tags:&lt;/li&gt;
+&lt;li&gt;tag1&lt;/li&gt;
+&lt;li&gt;tag2
+keywords:&lt;/li&gt;
+&lt;li&gt;tech
+thumbnailImage: /images/yolov5-on-jetson/
+#thumbnailImage: //example.com/image.jpg&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;torchvisionのインストール&#34;&gt;Torchvisionのインストール&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://qengineering.eu/install-pytorch-on-jetson-nano.html&#34;&gt;https://qengineering.eu/install-pytorch-on-jetson-nano.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PyTorch 1.7.0
+ビルド済みのwheelがGoogle Driveにアップロードされているためそれを使用。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt install libjpeg-dev zlib1g-dev libpython3-dev
+sudo apt install libavcodec-dev libavformat-dev libswscale-dev
+python3 -m pip install -U pillow gdown
+gdown https://drive.google.com/uc?id&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1WhplBjODLjNmYWEvQliCdkt3CqQTsClm
+python3 -m pip install torchvision-0.8.1a0+45f960c-cp36-cp36m-linux_aarch64.whl
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;seabornのインストール&#34;&gt;Seabornのインストール&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt install python3-seaborn
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;pip&lt;/code&gt;ではなく&lt;code&gt;apt&lt;/code&gt;でインストールする。依存している&lt;code&gt;matplitlib&lt;/code&gt;も同時にインストールする。はいらない場合は&lt;code&gt;apt&lt;/code&gt;で&lt;code&gt;python3-matplotlib&lt;/code&gt;パッケージをインストールする。&lt;/p&gt;</description>
     </item>
     
     <item>

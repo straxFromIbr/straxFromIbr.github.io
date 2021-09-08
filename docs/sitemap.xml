@@ -2,31 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://straxfromibr.github.io/categories/</loc>
+    <lastmod>2021-09-08T21:51:26+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/tags/m1/</loc>
+    <lastmod>2021-09-08T21:51:26+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/2021/09/install-tfmetal/</loc>
+    <lastmod>2021-09-08T21:51:26+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/post/</loc>
+    <lastmod>2021-09-08T21:51:26+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/tags/python/</loc>
+    <lastmod>2021-09-08T21:51:26+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/tags/</loc>
+    <lastmod>2021-09-08T21:51:26+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/tags/tensorflow/</loc>
+    <lastmod>2021-09-08T21:51:26+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/categories/tensorflow/</loc>
+    <lastmod>2021-09-08T21:51:26+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/</loc>
+    <lastmod>2021-09-08T21:51:26+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/tags/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</loc>
+    <lastmod>2021-09-08T21:51:26+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/categories/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</loc>
+    <lastmod>2021-09-08T21:51:26+09:00</lastmod>
+  </url><url>
     <loc>https://straxfromibr.github.io/2021/08/python-multi-inher/</loc>
     <lastmod>2021-08-27T22:19:47+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/categories/</loc>
-    <lastmod>2021-08-27T22:19:47+09:00</lastmod>
-  </url><url>
-    <loc>https://straxfromibr.github.io/post/</loc>
-    <lastmod>2021-08-27T22:19:47+09:00</lastmod>
-  </url><url>
-    <loc>https://straxfromibr.github.io/tags/python/</loc>
-    <lastmod>2021-08-27T22:19:47+09:00</lastmod>
-  </url><url>
     <loc>https://straxfromibr.github.io/categories/python/</loc>
-    <lastmod>2021-08-27T22:19:47+09:00</lastmod>
-  </url><url>
-    <loc>https://straxfromibr.github.io/tags/</loc>
     <lastmod>2021-08-27T22:19:47+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</loc>
     <lastmod>2021-08-27T22:19:47+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</loc>
-    <lastmod>2021-08-27T22:19:47+09:00</lastmod>
-  </url><url>
-    <loc>https://straxfromibr.github.io/</loc>
     <lastmod>2021-08-27T22:19:47+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/m1mac/</loc>
@@ -69,9 +87,6 @@
     <lastmod>2021-07-29T21:42:44+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/2021/07/m1-alacritty/</loc>
-    <lastmod>2021-07-29T21:42:44+09:00</lastmod>
-  </url><url>
-    <loc>https://straxfromibr.github.io/tags/m1/</loc>
     <lastmod>2021-07-29T21:42:44+09:00</lastmod>
   </url><url>
     <loc>https://straxfromibr.github.io/tags/mac/</loc>
@@ -245,9 +260,6 @@
     <loc>https://straxfromibr.github.io/2021/06/raspi_pkginstallation/</loc>
     <lastmod>2021-06-28T20:53:20+09:00</lastmod>
   </url><url>
-    <loc>https://straxfromibr.github.io/tags/tensorflow/</loc>
-    <lastmod>2021-06-28T20:53:20+09:00</lastmod>
-  </url><url>
     <loc>https://straxfromibr.github.io/tags/hammerspoon/</loc>
     <lastmod>2021-06-27T23:27:45+09:00</lastmod>
   </url><url>
@@ -292,6 +304,8 @@
   </url><url>
     <loc>https://straxfromibr.github.io/categories/%E6%A7%8B%E7%AF%89/</loc>
     <lastmod>2021-06-23T23:05:56+09:00</lastmod>
+  </url><url>
+    <loc>https://straxfromibr.github.io/1/01/yolov5-on-jetson/</loc>
   </url><url>
     <loc>https://straxfromibr.github.io/archives/</loc>
   </url><url>

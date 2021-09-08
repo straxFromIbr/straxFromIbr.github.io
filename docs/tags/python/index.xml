@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python on メモおきば</title>
+    <title>python on メモおきば</title>
     <link>https://straxfromibr.github.io/tags/python/</link>
-    <description>Recent content in Python on メモおきば</description>
+    <description>Recent content in python on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 27 Aug 2021 22:19:47 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Sep 2021 21:51:26 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>M1 Mac にTensorFlow v2.5をインストール</title>
+      <link>https://straxfromibr.github.io/2021/09/install-tfmetal/</link>
+      <pubDate>Wed, 08 Sep 2021 21:51:26 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/09/install-tfmetal/</guid>
+      <description>M1 Mac にMetalアクセラレーションのTensorFlow 2.5をインストールする</description>
+    </item>
+    
     <item>
       <title>[Python] クラスの多重継承</title>
       <link>https://straxfromibr.github.io/2021/08/python-multi-inher/</link>

@@ -6,13 +6,40 @@
     <description>Recent content in Tags on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 27 Aug 2021 22:19:47 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Sep 2021 21:51:26 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Python</title>
+      <title>m1</title>
+      <link>https://straxfromibr.github.io/tags/m1/</link>
+      <pubDate>Wed, 08 Sep 2021 21:51:26 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/tags/m1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
       <link>https://straxfromibr.github.io/tags/python/</link>
-      <pubDate>Fri, 27 Aug 2021 22:19:47 +0900</pubDate>
+      <pubDate>Wed, 08 Sep 2021 21:51:26 +0900</pubDate>
       
       <guid>https://straxfromibr.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tensorflow</title>
+      <link>https://straxfromibr.github.io/tags/tensorflow/</link>
+      <pubDate>Wed, 08 Sep 2021 21:51:26 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>機械学習</title>
+      <link>https://straxfromibr.github.io/tags/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</link>
+      <pubDate>Wed, 08 Sep 2021 21:51:26 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/tags/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/</guid>
       <description></description>
     </item>
     
@@ -94,15 +121,6 @@
       <pubDate>Thu, 29 Jul 2021 21:42:44 +0900</pubDate>
       
       <guid>https://straxfromibr.github.io/tags/alacritty/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>M1</title>
-      <link>https://straxfromibr.github.io/tags/m1/</link>
-      <pubDate>Thu, 29 Jul 2021 21:42:44 +0900</pubDate>
-      
-      <guid>https://straxfromibr.github.io/tags/m1/</guid>
       <description></description>
     </item>
     
@@ -382,15 +400,6 @@
       <pubDate>Tue, 29 Jun 2021 10:07:59 +0900</pubDate>
       
       <guid>https://straxfromibr.github.io/tags/%E6%B5%B7%E5%A4%96%E3%82%A2%E3%83%8B%E3%83%A1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TensorFlow</title>
-      <link>https://straxfromibr.github.io/tags/tensorflow/</link>
-      <pubDate>Mon, 28 Jun 2021 20:53:20 +0900</pubDate>
-      
-      <guid>https://straxfromibr.github.io/tags/tensorflow/</guid>
       <description></description>
     </item>
     

@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TensorFlow on メモおきば</title>
+    <title>tensorflow on メモおきば</title>
     <link>https://straxfromibr.github.io/tags/tensorflow/</link>
-    <description>Recent content in TensorFlow on メモおきば</description>
+    <description>Recent content in tensorflow on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 28 Jun 2021 20:53:20 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Sep 2021 21:51:26 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>M1 Mac にTensorFlow v2.5をインストール</title>
+      <link>https://straxfromibr.github.io/2021/09/install-tfmetal/</link>
+      <pubDate>Wed, 08 Sep 2021 21:51:26 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/09/install-tfmetal/</guid>
+      <description>M1 Mac にMetalアクセラレーションのTensorFlow 2.5をインストールする</description>
+    </item>
+    
     <item>
       <title>Python環境構築 on RasPi</title>
       <link>https://straxfromibr.github.io/2021/06/raspi_pkginstallation/</link>
