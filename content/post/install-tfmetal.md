@@ -18,7 +18,7 @@ summary: "M1 Mac にMetalアクセラレーションのTensorFlow 2.5をイン�
 
 
 ---
-M1版のTensorFlowの開発状況がふときになって[apple/tensorflow_macos](https://github.com/apple/tensorflow_macos)を覗いたらアーカイブされてMetalがサポートされたTensorFlowがリリースされてたのでインストールしてみた。
+M1版のTensorFlowの開発状況がふときになって[apple/tensorflow_macos](https://github.com/apple/tensorflow_macos)を覗いたらアーカイブされてた。しれっとMetalがサポートされたTensorFlowがリリースされてたのでインストールしてみた。
 
 <!--toc-->
 

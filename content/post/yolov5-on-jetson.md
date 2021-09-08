@@ -2,15 +2,19 @@
 title: "Yolov5 on Jetson"
 date: 2021-08-31T11:00:15+09:00
 categories:
-- category
-- subcategory
+- 機械学習
+- Jetson
 tags:
-- tag1
-- tag2
+- 機械学習
+- jetson
+- pytorch
+- yolov5
 keywords:
 - tech
-thumbnailImage: /images/yolov5-on-jetson/
-#thumbnailImage: //example.com/image.jpg
+
+summary: 'YoloV5をJetson Nanoで動かせるようにする。'
+
+
 ---
 
 # Torchvisionのインストール

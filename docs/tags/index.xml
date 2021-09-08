@@ -44,20 +44,29 @@
     </item>
     
     <item>
-      <title>tag1</title>
-      <link>https://straxfromibr.github.io/tags/tag1/</link>
+      <title>jetson</title>
+      <link>https://straxfromibr.github.io/tags/jetson/</link>
       <pubDate>Tue, 31 Aug 2021 11:00:15 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/tags/tag1/</guid>
+      <guid>https://straxfromibr.github.io/tags/jetson/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tag2</title>
-      <link>https://straxfromibr.github.io/tags/tag2/</link>
+      <title>pytorch</title>
+      <link>https://straxfromibr.github.io/tags/pytorch/</link>
       <pubDate>Tue, 31 Aug 2021 11:00:15 +0900</pubDate>
       
-      <guid>https://straxfromibr.github.io/tags/tag2/</guid>
+      <guid>https://straxfromibr.github.io/tags/pytorch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yolov5</title>
+      <link>https://straxfromibr.github.io/tags/yolov5/</link>
+      <pubDate>Tue, 31 Aug 2021 11:00:15 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/tags/yolov5/</guid>
       <description></description>
     </item>
     
