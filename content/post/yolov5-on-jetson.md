@@ -1,4 +1,4 @@
-G---
+---
 title: "Yolov5 on Jetson"
 date: 2021-08-31T11:00:15+09:00
 categories:

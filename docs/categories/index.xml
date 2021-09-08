@@ -26,6 +26,24 @@
     </item>
     
     <item>
+      <title>category</title>
+      <link>https://straxfromibr.github.io/categories/category/</link>
+      <pubDate>Tue, 31 Aug 2021 11:00:15 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/categories/category/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>subcategory</title>
+      <link>https://straxfromibr.github.io/categories/subcategory/</link>
+      <pubDate>Tue, 31 Aug 2021 11:00:15 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/categories/subcategory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Python</title>
       <link>https://straxfromibr.github.io/categories/python/</link>
       <pubDate>Fri, 27 Aug 2021 22:19:47 +0900</pubDate>
@@ -175,24 +193,6 @@
       <pubDate>Sun, 27 Jun 2021 23:27:45 +0900</pubDate>
       
       <guid>https://straxfromibr.github.io/categories/%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>category</title>
-      <link>https://straxfromibr.github.io/categories/category/</link>
-      <pubDate>Sat, 26 Jun 2021 18:20:50 +0900</pubDate>
-      
-      <guid>https://straxfromibr.github.io/categories/category/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>subcategory</title>
-      <link>https://straxfromibr.github.io/categories/subcategory/</link>
-      <pubDate>Sat, 26 Jun 2021 18:20:50 +0900</pubDate>
-      
-      <guid>https://straxfromibr.github.io/categories/subcategory/</guid>
       <description></description>
     </item>
     
