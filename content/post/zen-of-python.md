@@ -15,6 +15,8 @@ keywords:
 
 summary: "Pythonの真髄ここにあり。"
 ---
+Pythonの標準モジュール`this.py`にはTim Peter氏によるPythonの、プログラマとしての心構えが記されている。
+
 
 # 原文 Tim Peters
 >```
@@ -41,9 +43,9 @@ summary: "Pythonの真髄ここにあり。"
 >If the implementation is easy to explain, it may be a good idea.
 >Namespaces are one honking great idea -- let's do more of those!
 >```
-# 拙訳
+## 拙訳
 
-## Pythonの悟り   
+### Pythonの悟り   
 美しくあることは、醜くあることより優れている。  
 明示的であることは、暗黙的であることより優れている。  
 単純であることは、複雑であることより優れている。  
