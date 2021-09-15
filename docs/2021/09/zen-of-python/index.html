@@ -129,7 +129,7 @@
         </a>
         <h4 class="sidebar-profile-name">PotatoHotate</h4>
         
-          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/09/15 22:52</em></h5>
+          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/09/15 23:09</em></h5>
         
       </div>
     
@@ -301,7 +301,38 @@ Namespaces are one honking great idea -- let&#39;s do more of those!
 もしその実装の説明が難しいのならば、それは悪い発想である。<br>
 もしその実装の説明が簡単なのならば、それは良い発想かもしれない。<br>
 名前空間はとても素晴らしいアイデアである。積極的にやろう！</p>
+<h2 id="thispyの中身"><code>this.py</code>の中身</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">$</span> python3 <span style="color:#f92672">-</span>c <span style="color:#e6db74">&#39;import this; import sys; print(this.__file__, file=sys.stderr)&#39;</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">&gt;&amp;</span><span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">&gt;/</span>dev<span style="color:#f92672">/</span>null <span style="color:#f92672">|</span> xargs <span style="color:#f92672">-</span>J<span style="color:#f92672">%</span> cat <span style="color:#f92672">%</span>
+s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;&#34;Gur Mra bs Clguba, ol Gvz Crgref
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">Ornhgvshy vf orggre guna htyl.
+</span><span style="color:#e6db74">Rkcyvpvg vf orggre guna vzcyvpvg.
+</span><span style="color:#e6db74">Fvzcyr vf orggre guna pbzcyrk.
+</span><span style="color:#e6db74">Pbzcyrk vf orggre guna pbzcyvpngrq.
+</span><span style="color:#e6db74">Syng vf orggre guna arfgrq.
+</span><span style="color:#e6db74">Fcnefr vf orggre guna qrafr.
+</span><span style="color:#e6db74">Ernqnovyvgl pbhagf.
+</span><span style="color:#e6db74">Fcrpvny pnfrf nera&#39;g fcrpvny rabhtu gb oernx gur ehyrf.
+</span><span style="color:#e6db74">Nygubhtu cenpgvpnyvgl orngf chevgl.
+</span><span style="color:#e6db74">Reebef fubhyq arire cnff fvyragyl.
+</span><span style="color:#e6db74">Hayrff rkcyvpvgyl fvyraprq.
+</span><span style="color:#e6db74">Va gur snpr bs nzovthvgl, ershfr gur grzcgngvba gb thrff.
+</span><span style="color:#e6db74">Gurer fubhyq or bar-- naq cersrenoyl bayl bar --boivbhf jnl gb qb vg.
+</span><span style="color:#e6db74">Nygubhtu gung jnl znl abg or boivbhf ng svefg hayrff lbh&#39;er Qhgpu.
+</span><span style="color:#e6db74">Abj vf orggre guna arire.
+</span><span style="color:#e6db74">Nygubhtu arire vf bsgra orggre guna *evtug* abj.
+</span><span style="color:#e6db74">Vs gur vzcyrzragngvba vf uneq gb rkcynva, vg&#39;f n onq vqrn.
+</span><span style="color:#e6db74">Vs gur vzcyrzragngvba vf rnfl gb rkcynva, vg znl or n tbbq vqrn.
+</span><span style="color:#e6db74">Anzrfcnprf ner bar ubaxvat terng vqrn -- yrg&#39;f qb zber bs gubfr!&#34;&#34;&#34;</span>
 
+d <span style="color:#f92672">=</span> {}
+<span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> (<span style="color:#ae81ff">65</span>, <span style="color:#ae81ff">97</span>):
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">26</span>):
+        d[chr(i<span style="color:#f92672">+</span>c)] <span style="color:#f92672">=</span> chr((i<span style="color:#f92672">+</span><span style="color:#ae81ff">13</span>) <span style="color:#f92672">%</span> <span style="color:#ae81ff">26</span> <span style="color:#f92672">+</span> c)
+
+print(<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>join([d<span style="color:#f92672">.</span>get(c, c) <span style="color:#66d9ef">for</span> c <span style="color:#f92672">in</span> s]))
+
+</code></pre></div>
               
             </div>
           </div>
@@ -484,7 +515,7 @@ Namespaces are one honking great idea -- let&#39;s do more of those!
     
     <h4 id="about-card-name">PotatoHotate</h4>
     
-      <div id="about-card-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/09/15 22:52</em></div>
+      <div id="about-card-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/09/15 23:09</em></div>
     
     
     
