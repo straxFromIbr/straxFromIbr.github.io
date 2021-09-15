@@ -19,7 +19,7 @@ Pythonの標準モジュール`this.py`にはTim Peter氏によるPythonの、�
 
 
 # 原文 Tim Peters
->```
+>```text
 >$ python3 -m this
 >The Zen of Python, by Tim Peters
 >
