@@ -6,7 +6,16 @@
     <description>Recent content in python on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 08 Sep 2021 21:51:26 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Sep 2021 22:19:00 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zen of Python ~Pythonの悟り~</title>
+      <link>https://straxfromibr.github.io/2021/09/zen-of-python/</link>
+      <pubDate>Wed, 15 Sep 2021 22:19:00 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/09/zen-of-python/</guid>
+      <description>Pythonの真髄ここにあり。</description>
+    </item>
+    
     <item>
       <title>M1 Mac にTensorFlow v2.5をインストール</title>
       <link>https://straxfromibr.github.io/2021/09/install-tfmetal/</link>

@@ -6,22 +6,49 @@
     <description>Recent content in Tags on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 08 Sep 2021 21:51:26 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Sep 2021 22:19:00 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python</title>
+      <link>https://straxfromibr.github.io/tags/python/</link>
+      <pubDate>Wed, 15 Sep 2021 22:19:00 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>プログラミング</title>
+      <link>https://straxfromibr.github.io/tags/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</link>
+      <pubDate>Wed, 15 Sep 2021 22:19:00 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/tags/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ポエム</title>
+      <link>https://straxfromibr.github.io/tags/%E3%83%9D%E3%82%A8%E3%83%A0/</link>
+      <pubDate>Wed, 15 Sep 2021 22:19:00 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/tags/%E3%83%9D%E3%82%A8%E3%83%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>標準ライブラリ</title>
+      <link>https://straxfromibr.github.io/tags/%E6%A8%99%E6%BA%96%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA/</link>
+      <pubDate>Wed, 15 Sep 2021 22:19:00 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/tags/%E6%A8%99%E6%BA%96%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>m1</title>
       <link>https://straxfromibr.github.io/tags/m1/</link>
       <pubDate>Wed, 08 Sep 2021 21:51:26 +0900</pubDate>
       
       <guid>https://straxfromibr.github.io/tags/m1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://straxfromibr.github.io/tags/python/</link>
-      <pubDate>Wed, 08 Sep 2021 21:51:26 +0900</pubDate>
-      
-      <guid>https://straxfromibr.github.io/tags/python/</guid>
       <description></description>
     </item>
     
@@ -67,15 +94,6 @@
       <pubDate>Tue, 31 Aug 2021 11:00:15 +0900</pubDate>
       
       <guid>https://straxfromibr.github.io/tags/yolov5/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>プログラミング</title>
-      <link>https://straxfromibr.github.io/tags/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</link>
-      <pubDate>Fri, 27 Aug 2021 22:19:47 +0900</pubDate>
-      
-      <guid>https://straxfromibr.github.io/tags/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/</guid>
       <description></description>
     </item>
     
