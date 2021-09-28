@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.87.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="tech">
 <meta name="description" content="Pythonでクラスの多重継承をしたさいの挙動">
@@ -125,7 +125,7 @@
         </a>
         <h4 class="sidebar-profile-name">PotatoHotate</h4>
         
-          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/09/27 22:26</em></h5>
+          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/09/29 00:27</em></h5>
         
       </div>
     
@@ -299,21 +299,21 @@
 <p>次のように<code>FooBarClass</code>と<code>BarFooClass</code>のインスタンス<code>fb</code>,<code>bf</code>を作成し、それぞれのインスタンスから<code>common_method()</code>を呼び出す。
 <code>fb.common_method()</code>は<code>Foo!</code>を出力し、<code>bf.common_method()</code>は<code>Bar!</code>を出力することから継承順にメソッドを検索していることがわかる。</p>
 <p>具体的には<code>.__mro__</code>属性、または<code>.mro()</code>メソッドで名前が検索される順番を取得できる。</p>
-<pre><code>&gt;&gt;&gt; FooBarClass.__mro__
+<pre tabindex="0"><code>&gt;&gt;&gt; FooBarClass.__mro__
 (&lt;class '__main__.FooBarClass'&gt;, &lt;class '__main__.FooClass'&gt;, &lt;class '__main__.BarClass'&gt;, &lt;class 'object'&gt;)
 
 &gt;&gt;&gt; BarFooClass.__mro__
 (&lt;class '__main__.BarFooClass'&gt;, &lt;class '__main__.BarClass'&gt;, &lt;class '__main__.FooClass'&gt;, &lt;class 'object'&gt;)
 </code></pre><h1 id="親メソッドの呼び出し">親メソッドの呼び出し</h1>
 <p><code>FooBarClass</code>の<code>super_bar_method()</code>内部では組み込み関数<code>super()</code>により親クラスを取得しそのメソッド<code>bar_method()</code>を実行している。</p>
-<pre><code>&gt;&gt;&gt; fb.super_bar_method()
+<pre tabindex="0"><code>&gt;&gt;&gt; fb.super_bar_method()
 #&gt;&gt;&gt; super bar
 Bar!
 #&lt;&lt;&lt; super bar
 </code></pre><p>一方コンストラクタ内で親クラスのコンストラクタを呼び出しているが、<code>fb.bar_var</code>とすると<code>AttributeError</code>を送出する。これは上述の<code>mro</code>の順番で一番最初にみつかったメソッドを実行するからだ。</p>
 <h1 id="直接の親クラス">直接の親クラス</h1>
 <p>次のように<code>__base__</code>属性で基底クラスを取得すると、前述の<code>super()</code>関数と異なり一つ目の親クラスのみしか取得できないことがわかる。</p>
-<pre><code>&gt;&gt;&gt; FooBarClass.__base__.foo_method(None)
+<pre tabindex="0"><code>&gt;&gt;&gt; FooBarClass.__base__.foo_method(None)
 Foo!
 &gt;&gt;&gt; FooBarClass.__base__.bar_method(None)
 Traceback (most recent call last):
@@ -321,7 +321,7 @@ Traceback (most recent call last):
 AttributeError: type object 'FooClass' has no attribute 'bar_method'
 </code></pre><p>基底となる全てのクラスを取得したい場合は<code>.__bases__</code>属性を参照する。
 例：</p>
-<pre><code>&gt;&gt;&gt; FooBarClass.__base__
+<pre tabindex="0"><code>&gt;&gt;&gt; FooBarClass.__base__
 &lt;class '__main__.FooClass'&gt;
 &gt;&gt;&gt; BarFooClass.__base__
 &lt;class '__main__.BarClass'&gt;
@@ -509,7 +509,7 @@ AttributeError: type object 'FooClass' has no attribute 'bar_method'
     
     <h4 id="about-card-name">PotatoHotate</h4>
     
-      <div id="about-card-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/09/27 22:26</em></div>
+      <div id="about-card-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/09/29 00:27</em></div>
     
     
     

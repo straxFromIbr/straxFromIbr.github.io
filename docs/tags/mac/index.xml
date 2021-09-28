@@ -63,7 +63,7 @@ Alacrittyを使い始めた。YAMLで設定ファイルを管理できるのと�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;.tmux.conf&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;set-option -g default-shell /opt/homebrew/bin/fish
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;set-option -g default-shell /opt/homebrew/bin/fish
 
 set-option -g default-terminal screen-256color
 set -ga terminal-overrides &amp;quot;,alacritty:Tc&amp;quot;

@@ -14,12 +14,12 @@
       
       <guid>https://straxfromibr.github.io/2021/08/shell-datasplit/</guid>
       <description>&lt;p&gt;次のように&lt;code&gt;concat&lt;/code&gt;ディレクトリにはいってる&lt;code&gt;*.png&lt;/code&gt;を&lt;code&gt;test&lt;/code&gt;,&lt;code&gt;train&lt;/code&gt;ディレクトリに8:2で分割する.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ tree datasets_2108030001 -d
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ tree datasets_2108030001 -d
 datasets_2108030001
 ├── concat
 ├── test
 └── train
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;datasets_2108030001/concat/
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;datasets_2108030001/concat/
 ├── concat_0.png
 ├── concat_1.png
 ~~~省略~~~
@@ -49,7 +49,7 @@ ls | tail -n2000 | xargs -J% cp % ../test/
       <description>&lt;p&gt;fishのオシャレなプロンプトフレームワークである&lt;a href=&#34;https://github.com/IlanCosman/tide&#34;&gt;llanCosman/tide&lt;/a&gt;でMiniForge&lt;a href=&#34;https://straxfromibr.github.io/2021/06/fish_tide/&#34;&gt;コンダ環境の名前をプロンプトに表示&lt;/a&gt;するようにした&amp;hellip; のだがデフォルトの表示も残ってしまいイマイチダサいプロンプトになってたので修正。&lt;/p&gt;
 &lt;p&gt;手っ取り早く適用したい人は&lt;a href=&#34;https://github.com/jorgebucaran/fisher&#34;&gt;jorgebucaran/fisher: A plugin manager for Fish.&lt;/a&gt;をインストールしたあと次のコマンドを実行。&lt;/p&gt;
 &lt;p&gt;結構手軽にプラグインが作成できてびっくりした。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;fisher install straxFromIbr/invisible-conda-name
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fisher install straxFromIbr/invisible-conda-name
 &lt;/code&gt;&lt;/pre&gt;
  
   

@@ -6,7 +6,16 @@
     <description>Recent content on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 27 Sep 2021 21:50:53 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Sep 2021 23:10:42 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>アルカナレヴュー曲の歌詞</title>
+      <link>https://straxfromibr.github.io/2021/09/arcana-revue-songs/</link>
+      <pubDate>Tue, 28 Sep 2021 23:10:42 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/09/arcana-revue-songs/</guid>
+      <description>公開済みのアルカナレヴュー曲の歌詞のメモ</description>
+    </item>
+    
     <item>
       <title>テラフォーミングマーズプレリュード</title>
       <link>https://straxfromibr.github.io/2021/09/tfm-prelude/</link>
@@ -97,12 +106,12 @@ python3 -m pip install torchvision-0.8.1a0+45f960c-cp36-cp36m-linux_aarch64.whl
       
       <guid>https://straxfromibr.github.io/2021/08/shell-datasplit/</guid>
       <description>&lt;p&gt;次のように&lt;code&gt;concat&lt;/code&gt;ディレクトリにはいってる&lt;code&gt;*.png&lt;/code&gt;を&lt;code&gt;test&lt;/code&gt;,&lt;code&gt;train&lt;/code&gt;ディレクトリに8:2で分割する.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$ tree datasets_2108030001 -d
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ tree datasets_2108030001 -d
 datasets_2108030001
 ├── concat
 ├── test
 └── train
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;datasets_2108030001/concat/
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;datasets_2108030001/concat/
 ├── concat_0.png
 ├── concat_1.png
 ~~~省略~~~
@@ -179,7 +188,7 @@ Alacrittyを使い始めた。YAMLで設定ファイルを管理できるのと�
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;.tmux.conf&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;set-option -g default-shell /opt/homebrew/bin/fish
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;set-option -g default-shell /opt/homebrew/bin/fish
 
 set-option -g default-terminal screen-256color
 set -ga terminal-overrides &amp;quot;,alacritty:Tc&amp;quot;
@@ -254,7 +263,7 @@ bind -T copy-mode-vi Y send -X copy-line
       <description>&lt;p&gt;fishのオシャレなプロンプトフレームワークである&lt;a href=&#34;https://github.com/IlanCosman/tide&#34;&gt;llanCosman/tide&lt;/a&gt;でMiniForge&lt;a href=&#34;https://straxfromibr.github.io/2021/06/fish_tide/&#34;&gt;コンダ環境の名前をプロンプトに表示&lt;/a&gt;するようにした&amp;hellip; のだがデフォルトの表示も残ってしまいイマイチダサいプロンプトになってたので修正。&lt;/p&gt;
 &lt;p&gt;手っ取り早く適用したい人は&lt;a href=&#34;https://github.com/jorgebucaran/fisher&#34;&gt;jorgebucaran/fisher: A plugin manager for Fish.&lt;/a&gt;をインストールしたあと次のコマンドを実行。&lt;/p&gt;
 &lt;p&gt;結構手軽にプラグインが作成できてびっくりした。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;fisher install straxFromIbr/invisible-conda-name
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fisher install straxFromIbr/invisible-conda-name
 &lt;/code&gt;&lt;/pre&gt;
  
   

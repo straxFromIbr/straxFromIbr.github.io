@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.87.0 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="tech">
 <meta name="description" content="Fishシェルのプロンプトプラグインtideの設定について">
@@ -130,7 +130,7 @@
         </a>
         <h4 class="sidebar-profile-name">PotatoHotate</h4>
         
-          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/09/27 22:26</em></h5>
+          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/09/29 00:27</em></h5>
         
       </div>
     
@@ -455,10 +455,10 @@ end
 </ul>
 <h2 id="2-背景色の設定">2. 背景色の設定</h2>
 <p>次のコマンドを実行し，<code>SHLVL</code>が表示される部分の背景色を設定します．第2引数は色の名前，もしくは<code>EEEEEE</code>のようにRGB値で指定します．<code>-U</code>オプションはユニバーサル変数を設定するためのものです．fishにおけるユニバーサル変数とはファイルに書き込まれ明示的に削除されない限り永続する変数のことです．<a href="https://fishshell.com/docs/current/tutorial.html#universal-variables">参照</a></p>
-<pre><code>set -U tide_shlvl_br_color yellow
+<pre tabindex="0"><code>set -U tide_shlvl_br_color yellow
 </code></pre><h2 id="3-プロンプトへの登録">3. プロンプトへの登録</h2>
 <p>次のコマンドで<code>tide_right_prompt_items</code>というリスト変数の末尾に作成した<code>shlvl</code>を追加します．<code>-a</code>オプションはリスト変数の末尾に第2引数を追加することを示します．Pythonでのリストオブジェクトの<code>.append()</code>メソッドと同様ですね．</p>
-<pre><code>set -a tide_right_prompt_items shlvl
+<pre tabindex="0"><code>set -a tide_right_prompt_items shlvl
 </code></pre><h2 id="4-動作確認">4. 動作確認</h2>
 <p><code>fish -l</code>と実行してみましょう．プロンプトの右側に<code>@2</code>と表示されているはずです．(以下の写真では<a href="https://www.nerdfonts.com">Nerdfont</a>を使用してターミナルのアイコンを表示しています．)</p>
 
@@ -695,7 +695,7 @@ end
     
     <h4 id="about-card-name">PotatoHotate</h4>
     
-      <div id="about-card-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/09/27 22:26</em></div>
+      <div id="about-card-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/09/29 00:27</em></div>
     
     
     
