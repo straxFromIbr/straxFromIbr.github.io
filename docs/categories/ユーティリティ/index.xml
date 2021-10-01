@@ -6,7 +6,16 @@
     <description>Recent content in ユーティリティ on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 27 Jun 2021 23:27:45 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/categories/%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Oct 2021 09:38:39 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/categories/%E3%83%A6%E3%83%BC%E3%83%86%E3%82%A3%E3%83%AA%E3%83%86%E3%82%A3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>サードパーティ製外部キーボードをMacで使う際の必須設定</title>
+      <link>https://straxfromibr.github.io/2021/10/60perc-kbd-for-mac/</link>
+      <pubDate>Fri, 01 Oct 2021 09:38:39 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/10/60perc-kbd-for-mac/</guid>
+      <description>キーボードを使う際の個人的設定メモ</description>
+    </item>
+    
     <item>
       <title>HammerSpoon小ネタその1</title>
       <link>https://straxfromibr.github.io/2021/06/hmurlutil/</link>
