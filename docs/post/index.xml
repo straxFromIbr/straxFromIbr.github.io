@@ -6,7 +6,16 @@
     <description>Recent content in Posts on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 01 Oct 2021 09:38:39 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Oct 2021 12:58:40 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SystemVで起動するDockerでプロキシを適用する</title>
+      <link>https://straxfromibr.github.io/2021/10/systemv-docker-proxy/</link>
+      <pubDate>Wed, 06 Oct 2021 12:58:40 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/10/systemv-docker-proxy/</guid>
+      <description>Dockerに限らずSystemVで起動するデーモンの環境変数などの設定</description>
+    </item>
+    
     <item>
       <title>サードパーティ製外部キーボードをMacで使う際の必須設定</title>
       <link>https://straxfromibr.github.io/2021/10/60perc-kbd-for-mac/</link>

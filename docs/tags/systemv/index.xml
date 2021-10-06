@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SystemV on メモおきば</title>
+    <link>https://straxfromibr.github.io/tags/systemv/</link>
+    <description>Recent content in SystemV on メモおきば</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 06 Oct 2021 12:58:40 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/systemv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SystemVで起動するDockerでプロキシを適用する</title>
+      <link>https://straxfromibr.github.io/2021/10/systemv-docker-proxy/</link>
+      <pubDate>Wed, 06 Oct 2021 12:58:40 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/10/systemv-docker-proxy/</guid>
+      <description>Dockerに限らずSystemVで起動するデーモンの環境変数などの設定</description>
+    </item>
+    
+  </channel>
+</rss>

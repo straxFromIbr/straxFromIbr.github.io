@@ -6,7 +6,16 @@
     <description>Recent content in プログラミング on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 15 Sep 2021 22:19:00 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Oct 2021 12:58:40 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/categories/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SystemVで起動するDockerでプロキシを適用する</title>
+      <link>https://straxfromibr.github.io/2021/10/systemv-docker-proxy/</link>
+      <pubDate>Wed, 06 Oct 2021 12:58:40 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/10/systemv-docker-proxy/</guid>
+      <description>Dockerに限らずSystemVで起動するデーモンの環境変数などの設定</description>
+    </item>
+    
     <item>
       <title>Zen of Python ~Pythonの悟り~</title>
       <link>https://straxfromibr.github.io/2021/09/zen-of-python/</link>
