@@ -26,7 +26,7 @@ summary: "Dockerに限らずSystemVで起動するデーモンの環境変数な
 
 # 問題点
 プロキシ環境下で次のチュートリアル、
-[https://docs.nvidia.com/cuda/wsl-user-guide/index.html](CUDA on WSL User Guide)
+[CUDA on WSL User Guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)
 に従いWSLにDockerをインストールしたところ、`docker pull`時にタイムアウトが発生した。
 
 恥ずかしながらあまり使ったことがなかった`SystemV`で起動しており、解決に少し時間がかかったのでメモ。
