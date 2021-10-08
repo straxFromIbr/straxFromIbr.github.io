@@ -17,7 +17,7 @@ category = "categories"
 tag = "tags"
 
 [author]
-bio = "メモ置き場です．自転車が趣味．<br> [Twitter@PotatoHotate](https://twitter.com/PotatoHotate) <br> _Latest Build:2021/10/06 18:14_"
+bio = "メモ置き場です．自転車が趣味．<br> [Twitter@PotatoHotate](https://twitter.com/PotatoHotate) <br> _Latest Build:2021/10/08 19:00_"
 location = "茨城県"
 name = "PotatoHotate"
 picture = "https://lh3.googleusercontent.com/pw/AM-JKLVRfHTltiQqXLuDLFDX9zC9z-BXso4zuBXWkUORacnEmudZ0-pphP3SaiZxqxAbkDZuE9CElU6gl575DnfYvzysr53mLrBVkZhasl5QSwV3f2MrUHd2GfPPogC0ul-4gOA1dKPGgC0kHIwam6h2YlSU8Q"
@@ -78,7 +78,7 @@ imageGallery = true
 thumbnailImage = true
 thumbnailImagePosition = "left"
 autoThumbnailImage = true
-favicon = "https://pbs.twimg.com/profile_images/1377448543921709060/F6rVF1vn_400x400.jpg"
+favicon = "https://lh3.googleusercontent.com/pw/AM-JKLVRfHTltiQqXLuDLFDX9zC9z-BXso4zuBXWkUORacnEmudZ0-pphP3SaiZxqxAbkDZuE9CElU6gl575DnfYvzysr53mLrBVkZhasl5QSwV3f2MrUHd2GfPPogC0ul-4gOA1dKPGgC0kHIwam6h2YlSU8Q"
 [[params.customCSS]]
 href = "css/iconbgcolor.css"
 
