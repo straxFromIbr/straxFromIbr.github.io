@@ -1,5 +1,5 @@
 ---
-title: "SystemVで起動するDockerでプロキシを適用する"
+title: "SysV initで起動するDockerでプロキシを適用する"
 date: 2021-10-06T12:58:40+09:00
 categories:
 - プログラミング
@@ -9,18 +9,16 @@ tags:
 - Docker
 - WSL
 - Windows
-- SystemV
 
 keywords:
 - プログラミング
 - Docker
 - WSL
 - Windows
-- SystemV
 - tech
 #thumbnailImage: /images/systemv-docker-proxy/
 #thumbnailImage: //example.com/image.jpg
-summary: "Dockerに限らずSystemVで起動するデーモンの環境変数などの設定"
+summary: "Dockerに限らずSysV initで起動するデーモンの環境変数などの設定"
 
 ---
 
@@ -29,7 +27,7 @@ summary: "Dockerに限らずSystemVで起動するデーモンの環境変数な
 [CUDA on WSL User Guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)
 に従いWSLにDockerをインストールしたところ、`docker pull`時にタイムアウトが発生した。
 
-恥ずかしながらあまり使ったことがなかった`SystemV`で起動しており、解決に少し時間がかかったのでメモ。
+恥ずかしながらあまり使ったことがなかった`service`で起動しており、解決に少し時間がかかったのでメモ。
 
 # 解決策
 
