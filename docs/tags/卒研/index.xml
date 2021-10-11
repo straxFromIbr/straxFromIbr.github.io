@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>卒研 on メモおきば</title>
+    <link>https://straxfromibr.github.io/tags/%E5%8D%92%E7%A0%94/</link>
+    <description>Recent content in 卒研 on メモおきば</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 11 Oct 2021 14:02:08 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/%E5%8D%92%E7%A0%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>研究室のPCの環境構築メモ</title>
+      <link>https://straxfromibr.github.io/2021/10/setup-tensorflow-winwsl/</link>
+      <pubDate>Mon, 11 Oct 2021 14:02:08 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/10/setup-tensorflow-winwsl/</guid>
+      <description>研究室のPCの環境構築メモ</description>
+    </item>
+    
+  </channel>
+</rss>

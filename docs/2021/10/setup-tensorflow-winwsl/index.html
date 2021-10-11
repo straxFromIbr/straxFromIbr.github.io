@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="PotatoHotate">
+<meta name="keywords" content="">
+<meta name="description" content="研究室のPCの環境構築メモ">
+
+
+<meta property="og:description" content="研究室のPCの環境構築メモ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="研究室のPCの環境構築メモ">
+<meta name="twitter:title" content="研究室のPCの環境構築メモ">
+<meta property="og:url" content="https://straxfromibr.github.io/2021/10/setup-tensorflow-winwsl/">
+<meta property="twitter:url" content="https://straxfromibr.github.io/2021/10/setup-tensorflow-winwsl/">
+<meta property="og:site_name" content="メモおきば">
+<meta property="og:description" content="研究室のPCの環境構築メモ">
+<meta name="twitter:description" content="研究室のPCの環境構築メモ">
+<meta property="og:locale" content="ja">
+
+  
+    <meta property="article:published_time" content="2021-10-11T14:02:08">
+  
+  
+    <meta property="article:modified_time" content="2021-10-11T14:02:08">
+  
+  
+  
+    
+      <meta property="article:section" content="卒研">
+    
+      <meta property="article:section" content="環境構築">
+    
+  
+  
+    
+      <meta property="article:tag" content="卒研">
+    
+      <meta property="article:tag" content="環境構築">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@PotatoHotate">
+
+
+  <meta name="twitter:creator" content="@PotatoHotate">
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://lh3.googleusercontent.com/pw/AM-JKLVRfHTltiQqXLuDLFDX9zC9z-BXso4zuBXWkUORacnEmudZ0-pphP3SaiZxqxAbkDZuE9CElU6gl575DnfYvzysr53mLrBVkZhasl5QSwV3f2MrUHd2GfPPogC0ul-4gOA1dKPGgC0kHIwam6h2YlSU8Q">
+  <meta property="twitter:image" content="https://lh3.googleusercontent.com/pw/AM-JKLVRfHTltiQqXLuDLFDX9zC9z-BXso4zuBXWkUORacnEmudZ0-pphP3SaiZxqxAbkDZuE9CElU6gl575DnfYvzysr53mLrBVkZhasl5QSwV3f2MrUHd2GfPPogC0ul-4gOA1dKPGgC0kHIwam6h2YlSU8Q">
+
+
+    <title>研究室のPCの環境構築メモ</title>
+
+    <link rel="icon" href="https://lh3.googleusercontent.com/pw/AM-JKLVRfHTltiQqXLuDLFDX9zC9z-BXso4zuBXWkUORacnEmudZ0-pphP3SaiZxqxAbkDZuE9CElU6gl575DnfYvzysr53mLrBVkZhasl5QSwV3f2MrUHd2GfPPogC0ul-4gOA1dKPGgC0kHIwam6h2YlSU8Q">
+    
+
+    
+
+    <link rel="canonical" href="https://straxfromibr.github.io/2021/10/setup-tensorflow-winwsl/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://straxfromibr.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+      
+        <link rel="stylesheet"  href="https://straxfromibr.github.io/css/iconbgcolor.css">
+      
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://straxfromibr.github.io/">メモおきば</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://straxfromibr.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://lh3.googleusercontent.com/pw/AM-JKLVRfHTltiQqXLuDLFDX9zC9z-BXso4zuBXWkUORacnEmudZ0-pphP3SaiZxqxAbkDZuE9CElU6gl575DnfYvzysr53mLrBVkZhasl5QSwV3f2MrUHd2GfPPogC0ul-4gOA1dKPGgC0kHIwam6h2YlSU8Q" alt="プロフィール画像" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://straxfromibr.github.io/#about">
+          <img class="sidebar-profile-picture" src="https://lh3.googleusercontent.com/pw/AM-JKLVRfHTltiQqXLuDLFDX9zC9z-BXso4zuBXWkUORacnEmudZ0-pphP3SaiZxqxAbkDZuE9CElU6gl575DnfYvzysr53mLrBVkZhasl5QSwV3f2MrUHd2GfPPogC0ul-4gOA1dKPGgC0kHIwam6h2YlSU8Q" alt="プロフィール画像" />
+        </a>
+        <h4 class="sidebar-profile-name">PotatoHotate</h4>
+        
+          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/10/11 14:05</em></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-home'></i>
+      
+      <span class="sidebar-button-desc">ホーム</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/categories">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-bookmark'></i>
+      
+      <span class="sidebar-button-desc">カテゴリー</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/tags">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-tags'></i>
+      
+      <span class="sidebar-button-desc">タグ</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://straxfromibr.github.io/archives">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-archive'></i>
+      
+      <span class="sidebar-button-desc">アーカイブ</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://twitter.com/PotatoHotate" target="_blank" rel="noopener">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-twitter'></i>
+      
+      <span class="sidebar-button-desc">@PotatoHotate</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/straxFromIbr/straxFromIbr.github.io" target="_blank" rel="noopener">
+    
+      <i class='sidebar-button-icon fa fa-lg fa-github'></i>
+      
+      <span class="sidebar-button-desc">straxFromIbr</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      研究室のPCの環境構築メモ
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2021-10-11T14:02:08&#43;09:00">
+        
+  
+  
+  
+  
+    2021年 10月 11日
+  
+
+      </time>
+    
+    
+  
+  
+    <span>カテゴリー</span>
+    
+      <a class="category-link" href="https://straxfromibr.github.io/categories/%e5%8d%92%e7%a0%94">卒研</a>, 
+    
+      <a class="category-link" href="https://straxfromibr.github.io/categories/%e7%92%b0%e5%a2%83%e6%a7%8b%e7%af%89">環境構築</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>オリジナルのドキュメントは
+共有フォルダ(<code>~/Desktop/RX3070</code>)においてある。</p>
+<ul>
+<li><a href="#docker%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">Dockerのセットアップ</a></li>
+<li><a href="#openssh%E3%81%AE%E8%A8%AD%E5%AE%9Awin11%E4%B8%8A">OpenSSHの設定(Win11上)</a></li>
+<li><a href="#%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%81%AEdocker%E3%81%AEjupyter%E3%81%AB%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%8B%E3%82%89%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B">リモートのDockerのJupyterにローカルマシンから接続する</a></li>
+</ul>
+<h2 id="dockerのセットアップ">Dockerのセットアップ</h2>
+<p><a href="https://docs.nvidia.com/cuda/wsl-user-guide/index.html">CUDA on WSL User Guide</a>に従いDockerのインストールまで行う。(主にWSL上の操作)</p>
+<ol>
+<li>Windows 11にアップデート</li>
+<li>WSL2(ubuntu)のインストール</li>
+<li>プロキシの設定1<br>
+WSL2上で次のようにファイルを編集</li>
+</ol>
+<ul>
+<li><code>~/.wgetrc</code></li>
+</ul>
+<pre tabindex="0"><code>http_proxy=http://po.cc.ibaraki-ct.ac.jp:3128
+https_proxy=http://po.cc.ibaraki-ct.ac.jp:3128
+</code></pre><ul>
+<li><code>~/.curlrc</code></li>
+</ul>
+<pre tabindex="0"><code>proxy=po.cc.ibaraki-ct.ac.jp:3128
+</code></pre><ul>
+<li><code>/etc/apt/aptconf</code></li>
+</ul>
+<pre tabindex="0"><code>Acquire::http::Proxy &quot;http://po.cc.ibaraki-ct.ac.jp:3128&quot;;
+Acquire::https::Proxy &quot;http://po.cc.ibaraki-ct.ac.jp:3128&quot;;
+</code></pre><ol start="4">
+<li>CUDAドライバーのインストール</li>
+<li>WSLバックエンドのDockerのインストール</li>
+<li>プロキシの設定2</li>
+</ol>
+<ul>
+<li>WSL2でファイル<code>/etc/default/docker</code>に次を追記</li>
+</ul>
+<pre tabindex="0"><code>export  http_proxy=&quot;http://po.cc.ibaraki-ct.ac.jp:3128&quot;
+export https_proxy=&quot;http://po.cc.ibaraki-ct.ac.jp:3128&quot;
+</code></pre><ol start="7">
+<li>GPUの確認
+<ul>
+<li><code>docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark</code>をエラーなく実行できることを確認</li>
+</ul>
+</li>
+<li>TensorFlowとJupyter Notebookの確認
+<ul>
+<li><code>docker run -it --gpus all -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter</code>を実行</li>
+<li>ブラウザで<a href="http://localhost:8888">http://localhost:8888</a>に接続し<code>import tensorflow</code>が実行できるか確認</li>
+<li>実行したら終了</li>
+</ul>
+</li>
+</ol>
+<h2 id="opensshの設定win11上">OpenSSHの設定(Win11上)</h2>
+<ol>
+<li>スタートメニューで<code>オプション</code>を開き、<code>OpenSSH Server</code>を有効にする。</li>
+<li><code>セキュリティが強化されたWindows Defender ファイアウォール</code>を開き設定
+<ol>
+<li><code>受信の規則/新しい規則</code>を開き、自分のPCのIPアドレスからのアクセスを許可</li>
+<li>自分のPCからpingが到達することを確認</li>
+</ol>
+</li>
+<li>SSHが接続できるか確認</li>
+</ol>
+<h2 id="リモートのdockerのjupyterにローカルマシンから接続する">リモートのDockerのJupyterにローカルマシンから接続する</h2>
+<ol>
+<li>ローカル<br>
+SSH接続をする。このときリモートの8888ポートをローカルの同番号にフォワードする。</li>
+</ol>
+<pre tabindex="0"><code>ssh -L 8888:localhost:8888 r-kodama@172.16.161.107
+</code></pre><ol start="2">
+<li>リモート(WSL2)<br>
+次ののようにしてJupyterのパスワードを設定。出力されるハッシュ値をメモ。</li>
+</ol>
+<pre tabindex="0"><code>docker run --rm -it --gpus all -v /mnt/c/Users/r-kodama/Desktop/RX3070/haga_2021:/home -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter  python -c 'from notebook.auth import passwd;print(passwd())'
+</code></pre><ol start="3">
+<li>リモート(WSL2)<br>
+前手順で取得したハッシュを指定しJupyterを起動</li>
+</ol>
+<pre tabindex="0"><code>docker run -it --gpus all -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter jupyter notebook --allow-root --ip=0.0.0.0 --NotebookApp.password=${ハッシュ}
+</code></pre><p>パスワードをすでに決めた場合は次のようにPowerShellまたはCMDから直接実行できる</p>
+<pre tabindex="0"><code>wsl HTTP_PROXY='http://po.cc.ibaraki-ct.ac.jp:3128' docker run --rm -it --gpus all --env HTTP_PROXY='po.cc.ibaraki-ct.ac.jp:3128' --env HTTPS_PROXY='po.cc.ibaraki-ct.ac.jp:3128' -v /mnt/c/Users/r-kodama/Desktop/RX3070/haga_2021:/home -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter  jupyter notebook --allow-root --ip=0.0.0.0 --NotebookApp.password='sha1:96686e15b7d0:616a406a297c71a3f824aac48a9cae395639a1a2'
+</code></pre><ol start="4">
+<li>ローカル<br>
+Jupyter Notebookに接続する</li>
+</ol>
+<ul>
+<li>ブラウザで<a href="http://localhost:8888">localhost:8888</a>にアクセスし設定したパスワードを入力</li>
+<li>またはVisual Studio CodeのJupyter Extensionを使用してExistingを選択し、URLとして<code>http://localhost:8888</code>を指定する。同様にパスワードを入力</li>
+<li><code>docker exec -it ${コンテナ} /bin/bash</code>でbashの対話環境を開ける。</li>
+</ul>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">タグ</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/%E5%8D%92%E7%A0%94/">卒研</a>
+
+  <a class="tag tag--primary tag--small" href="https://straxfromibr.github.io/tags/%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89/">環境構築</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/10/systemv-docker-proxy/" data-tooltip="SysV initで起動するDockerでプロキシを適用する">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/10/setup-tensorflow-winwsl/&amp;via=PotatoHotate">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/10/setup-tensorflow-winwsl/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 <a href='https://github.com/straxFromIbr/straxFromIbr.github.io'>straxFromIbr</a>. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">次</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://straxfromibr.github.io/2021/10/systemv-docker-proxy/" data-tooltip="SysV initで起動するDockerでプロキシを適用する">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">前</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?url=https://straxfromibr.github.io/2021/10/setup-tensorflow-winwsl/&amp;via=PotatoHotate">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://straxfromibr.github.io/2021/10/setup-tensorflow-winwsl/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+      
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F10%2Fsetup-tensorflow-winwsl%2F&amp;via=PotatoHotate">
+          <i class="fa fa-twitter"></i><span>Twitterで共有</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstraxfromibr.github.io%2F2021%2F10%2Fsetup-tensorflow-winwsl%2F">
+          <i class="fa fa-facebook-official"></i><span>Facebookで共有</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://lh3.googleusercontent.com/pw/AM-JKLVRfHTltiQqXLuDLFDX9zC9z-BXso4zuBXWkUORacnEmudZ0-pphP3SaiZxqxAbkDZuE9CElU6gl575DnfYvzysr53mLrBVkZhasl5QSwV3f2MrUHd2GfPPogC0ul-4gOA1dKPGgC0kHIwam6h2YlSU8Q" alt="プロフィール画像" />
+    
+    <h4 id="about-card-name">PotatoHotate</h4>
+    
+      <div id="about-card-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/10/11 14:05</em></div>
+    
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        茨城県
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    <div id="cover" style="background-image:url('https://res.cloudinary.com/potatohotate/image/upload/c_crop,h_1243,w_2292,x_1150,y_760/v1624454976/blogbase/IMG_20210317_151747_pxxddm.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://straxfromibr.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
