@@ -125,7 +125,7 @@
         </a>
         <h4 class="sidebar-profile-name">PotatoHotate</h4>
         
-          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/10/11 14:05</em></h5>
+          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/10/11 21:50</em></h5>
         
       </div>
     
@@ -324,14 +324,33 @@ SSH接続をする。このときリモートの8888ポートをローカルの�
 <li>リモート(WSL2)<br>
 次ののようにしてJupyterのパスワードを設定。出力されるハッシュ値をメモ。</li>
 </ol>
-<pre tabindex="0"><code>docker run --rm -it --gpus all -v /mnt/c/Users/r-kodama/Desktop/RX3070/haga_2021:/home -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter  python -c 'from notebook.auth import passwd;print(passwd())'
+<pre tabindex="0"><code>docker run --rm -it tensorflow/tensorflow:latest-gpu-py3-jupyter  python -c 'from notebook.auth import passwd;print(passwd())'
 </code></pre><ol start="3">
 <li>リモート(WSL2)<br>
 前手順で取得したハッシュを指定しJupyterを起動</li>
 </ol>
-<pre tabindex="0"><code>docker run -it --gpus all -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter jupyter notebook --allow-root --ip=0.0.0.0 --NotebookApp.password=${ハッシュ}
+<pre tabindex="0"><code>docker run -it \ 
+    --gpus all \
+    -p 8888:8888 \
+    tensorflow/tensorflow:latest-gpu-py3-jupyter \
+        jupyter notebook \
+            --allow-root \
+            --ip=0.0.0.0 \
+            --NotebookApp.password=${ハッシュ}
 </code></pre><p>パスワードをすでに決めた場合は次のようにPowerShellまたはCMDから直接実行できる</p>
-<pre tabindex="0"><code>wsl HTTP_PROXY='http://po.cc.ibaraki-ct.ac.jp:3128' docker run --rm -it --gpus all --env HTTP_PROXY='po.cc.ibaraki-ct.ac.jp:3128' --env HTTPS_PROXY='po.cc.ibaraki-ct.ac.jp:3128' -v /mnt/c/Users/r-kodama/Desktop/RX3070/haga_2021:/home -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter  jupyter notebook --allow-root --ip=0.0.0.0 --NotebookApp.password='sha1:96686e15b7d0:616a406a297c71a3f824aac48a9cae395639a1a2'
+<pre tabindex="0"><code>wsl \
+    docker run --rm -it \
+    --gpus all \
+    --env HTTP_PROXY='po.cc.ibaraki-ct.ac.jp:3128' \
+    --env HTTPS_PROXY='po.cc.ibaraki-ct.ac.jp:3128' \
+    -v /mnt/c/Users/r-kodama/Desktop/RX3070/haga_2021:/home \
+    -p 8888:8888 \
+    tensorflow/tensorflow:latest-gpu-py3-jupyter \
+    jupyter notebook \
+        --allow-root \
+        --ip=0.0.0.0 \
+        --NotebookApp.password='sha1:96686e15b7d0:616a406a297c71a3f824aac48a9cae395639a1a2'
+
 </code></pre><ol start="4">
 <li>ローカル<br>
 Jupyter Notebookに接続する</li>
@@ -339,7 +358,6 @@ Jupyter Notebookに接続する</li>
 <ul>
 <li>ブラウザで<a href="http://localhost:8888">localhost:8888</a>にアクセスし設定したパスワードを入力</li>
 <li>またはVisual Studio CodeのJupyter Extensionを使用してExistingを選択し、URLとして<code>http://localhost:8888</code>を指定する。同様にパスワードを入力</li>
-<li><code>docker exec -it ${コンテナ} /bin/bash</code>でbashの対話環境を開ける。</li>
 </ul>
 
               
@@ -520,7 +538,7 @@ Jupyter Notebookに接続する</li>
     
     <h4 id="about-card-name">PotatoHotate</h4>
     
-      <div id="about-card-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/10/11 14:05</em></div>
+      <div id="about-card-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/10/11 21:50</em></div>
     
     
     

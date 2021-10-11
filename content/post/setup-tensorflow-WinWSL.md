@@ -75,22 +75,40 @@ ssh -L 8888:localhost:8888 r-kodama@172.16.161.107
 2. リモート(WSL2)  
 次ののようにしてJupyterのパスワードを設定。出力されるハッシュ値をメモ。
 ```
-docker run --rm -it --gpus all -v /mnt/c/Users/r-kodama/Desktop/RX3070/haga_2021:/home -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter  python -c 'from notebook.auth import passwd;print(passwd())'
+docker run --rm -it tensorflow/tensorflow:latest-gpu-py3-jupyter  python -c 'from notebook.auth import passwd;print(passwd())'
 ```
 
 3. リモート(WSL2)  
 前手順で取得したハッシュを指定しJupyterを起動
 ```
-docker run -it --gpus all -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter jupyter notebook --allow-root --ip=0.0.0.0 --NotebookApp.password=${ハッシュ}
+docker run -it \ 
+    --gpus all \
+    -p 8888:8888 \
+    tensorflow/tensorflow:latest-gpu-py3-jupyter \
+        jupyter notebook \
+            --allow-root \
+            --ip=0.0.0.0 \
+            --NotebookApp.password=${ハッシュ}
 ```
 パスワードをすでに決めた場合は次のようにPowerShellまたはCMDから直接実行できる
 ```
-wsl HTTP_PROXY='http://po.cc.ibaraki-ct.ac.jp:3128' docker run --rm -it --gpus all --env HTTP_PROXY='po.cc.ibaraki-ct.ac.jp:3128' --env HTTPS_PROXY='po.cc.ibaraki-ct.ac.jp:3128' -v /mnt/c/Users/r-kodama/Desktop/RX3070/haga_2021:/home -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter  jupyter notebook --allow-root --ip=0.0.0.0 --NotebookApp.password='sha1:96686e15b7d0:616a406a297c71a3f824aac48a9cae395639a1a2'
+wsl \
+    docker run --rm -it \
+    --gpus all \
+    --env HTTP_PROXY='po.cc.ibaraki-ct.ac.jp:3128' \
+    --env HTTPS_PROXY='po.cc.ibaraki-ct.ac.jp:3128' \
+    -v /mnt/c/Users/r-kodama/Desktop/RX3070/haga_2021:/home \
+    -p 8888:8888 \
+    tensorflow/tensorflow:latest-gpu-py3-jupyter \
+    jupyter notebook \
+        --allow-root \
+        --ip=0.0.0.0 \
+        --NotebookApp.password='sha1:96686e15b7d0:616a406a297c71a3f824aac48a9cae395639a1a2'
+
 ```
 
 4. ローカル  
 Jupyter Notebookに接続する
 - ブラウザで[localhost:8888](http://localhost:8888)にアクセスし設定したパスワードを入力
 - またはVisual Studio CodeのJupyter Extensionを使用してExistingを選択し、URLとして`http://localhost:8888`を指定する。同様にパスワードを入力
-- `docker exec -it ${コンテナ} /bin/bash`でbashの対話環境を開ける。
 
