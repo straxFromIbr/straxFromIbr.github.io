@@ -22,7 +22,9 @@ summary: "研究室のPCの環境構築メモ"
 1. Windows 11にアップデート
 2. WSL2(ubuntu)のインストール
 3. プロキシの設定1  
+
 WSL2上で次のようにファイルを編集
+
 - `~/.wgetrc`
 
 ```
@@ -52,7 +54,8 @@ export  http_proxy="http://po.cc.ibaraki-ct.ac.jp:3128"
 export https_proxy="http://po.cc.ibaraki-ct.ac.jp:3128"
 ```
 7. GPUの確認
-    - `docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark`をエラーなく実行できることを確認
+`docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark`をエラーなく実行できることを確認
+
 8. TensorFlowとJupyter Notebookの確認
     - `docker run -it --gpus all -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter`を実行
     - ブラウザで[http://localhost:8888](http://localhost:8888)に接続し`import tensorflow`が実行できるか確認
@@ -79,6 +82,7 @@ docker run --rm -it tensorflow/tensorflow:latest-gpu-py3-jupyter  python -c 'fro
 ```
 
 3. リモート(WSL2)  
+
 前手順で取得したハッシュを指定しJupyterを起動
 ```
 docker run -it \ 
@@ -90,10 +94,10 @@ docker run -it \
             --ip=0.0.0.0 \
             --NotebookApp.password=${ハッシュ}
 ```
+
 パスワードをすでに決めた場合は次のようにPowerShellまたはCMDから直接実行できる
 ```
-wsl \
-    docker run --rm -it \
+wsl docker run --rm -it \
     --gpus all \
     --env HTTP_PROXY='po.cc.ibaraki-ct.ac.jp:3128' \
     --env HTTPS_PROXY='po.cc.ibaraki-ct.ac.jp:3128' \
@@ -103,8 +107,7 @@ wsl \
     jupyter notebook \
         --allow-root \
         --ip=0.0.0.0 \
-        --NotebookApp.password='sha1:96686e15b7d0:616a406a297c71a3f824aac48a9cae395639a1a2'
-
+        --NotebookApp.password=${ハッシュ}
 ```
 
 4. ローカル  
