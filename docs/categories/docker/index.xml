@@ -6,7 +6,16 @@
     <description>Recent content in Docker on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 06 Oct 2021 12:58:40 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Oct 2021 21:41:59 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Docker/M1] Dockerコンテナ上にCコンパイラが動く環境をつくる</title>
+      <link>https://straxfromibr.github.io/2021/10/docker-cc/</link>
+      <pubDate>Mon, 18 Oct 2021 21:41:59 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/10/docker-cc/</guid>
+      <description>M1MacでDockerコンテナ上にx86アーキテクチャのCコンパイラが動く環境をつくる</description>
+    </item>
+    
     <item>
       <title>SysV initで起動するDockerでプロキシを適用する</title>
       <link>https://straxfromibr.github.io/2021/10/systemv-docker-proxy/</link>

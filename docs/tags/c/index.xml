@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on メモおきば</title>
+    <link>https://straxfromibr.github.io/tags/c/</link>
+    <description>Recent content in C on メモおきば</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 18 Oct 2021 21:41:59 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Docker/M1] Dockerコンテナ上にCコンパイラが動く環境をつくる</title>
+      <link>https://straxfromibr.github.io/2021/10/docker-cc/</link>
+      <pubDate>Mon, 18 Oct 2021 21:41:59 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/10/docker-cc/</guid>
+      <description>M1MacでDockerコンテナ上にx86アーキテクチャのCコンパイラが動く環境をつくる</description>
+    </item>
+    
+  </channel>
+</rss>
