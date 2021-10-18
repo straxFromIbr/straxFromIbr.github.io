@@ -15,9 +15,10 @@ keywords:
 - bash
 - linux
 - tech
-#thumbnailImage: /images/timecmd-stdout/
-#thumbnailImage: //example.com/image.jpg
-title: "もとのコマンドの結果は破棄し、timeコマンドの計測結果だけを標準出力に流す"
+
+
+summary : "もとのコマンドの結果は破棄し、timeコマンドの計測結果だけを標準出力に流す"
+
 ---
 
 # 解決策：

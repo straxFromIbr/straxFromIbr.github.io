@@ -8,30 +8,18 @@
 <meta name="generator" content="Hugo 0.88.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="PotatoHotate">
 <meta name="keywords" content="プログラミング, シェルスクリプト, bash, linux, tech">
-<meta name="description" content="解決策： (time ${some_command} 1&gt;/dev/null 2&gt;&amp;1) 2&gt;&amp;1 例 test.sh：標準エラーにhello、標準出力にworldを出力する。
-#!/bin/bash echo hello 1&gt;&amp;2 sleep 1 echo world ./test.shの標準出力をNullデバイスにリダイレクトし、エラーを表順出力(つまりNullデバイス)にリダイレクトする。そしてtimeコマンドのエラー出力を標準出力にリダイレクトする。これはNullデバイスを指さない。かっこの位置に注目。
-(time ./test.sh 1&gt;/dev/null 2&gt;&amp;1) 2&gt;&amp;1 | tee result.txt 結果はつぎのようになる。 result.txt
-real	0m1.423s user	0m0.002s sys	0m0.008s ">
+<meta name="description" content="もとのコマンドの結果は破棄し、timeコマンドの計測結果だけを標準出力に流す">
 
 
-<meta property="og:description" content="解決策： (time ${some_command} 1&gt;/dev/null 2&gt;&amp;1) 2&gt;&amp;1 例 test.sh：標準エラーにhello、標準出力にworldを出力する。
-#!/bin/bash echo hello 1&gt;&amp;2 sleep 1 echo world ./test.shの標準出力をNullデバイスにリダイレクトし、エラーを表順出力(つまりNullデバイス)にリダイレクトする。そしてtimeコマンドのエラー出力を標準出力にリダイレクトする。これはNullデバイスを指さない。かっこの位置に注目。
-(time ./test.sh 1&gt;/dev/null 2&gt;&amp;1) 2&gt;&amp;1 | tee result.txt 結果はつぎのようになる。 result.txt
-real	0m1.423s user	0m0.002s sys	0m0.008s ">
+<meta property="og:description" content="もとのコマンドの結果は破棄し、timeコマンドの計測結果だけを標準出力に流す">
 <meta property="og:type" content="article">
-<meta property="og:title" content="もとのコマンドの結果は破棄し、timeコマンドの計測結果だけを標準出力に流す">
-<meta name="twitter:title" content="もとのコマンドの結果は破棄し、timeコマンドの計測結果だけを標準出力に流す">
+<meta property="og:title" content="[Bash] timeコマンドの計測結果だけを標準出力に流す">
+<meta name="twitter:title" content="[Bash] timeコマンドの計測結果だけを標準出力に流す">
 <meta property="og:url" content="https://straxfromibr.github.io/2021/10/timecmd-stdout/">
 <meta property="twitter:url" content="https://straxfromibr.github.io/2021/10/timecmd-stdout/">
 <meta property="og:site_name" content="メモおきば">
-<meta property="og:description" content="解決策： (time ${some_command} 1&gt;/dev/null 2&gt;&amp;1) 2&gt;&amp;1 例 test.sh：標準エラーにhello、標準出力にworldを出力する。
-#!/bin/bash echo hello 1&gt;&amp;2 sleep 1 echo world ./test.shの標準出力をNullデバイスにリダイレクトし、エラーを表順出力(つまりNullデバイス)にリダイレクトする。そしてtimeコマンドのエラー出力を標準出力にリダイレクトする。これはNullデバイスを指さない。かっこの位置に注目。
-(time ./test.sh 1&gt;/dev/null 2&gt;&amp;1) 2&gt;&amp;1 | tee result.txt 結果はつぎのようになる。 result.txt
-real	0m1.423s user	0m0.002s sys	0m0.008s ">
-<meta name="twitter:description" content="解決策： (time ${some_command} 1&gt;/dev/null 2&gt;&amp;1) 2&gt;&amp;1 例 test.sh：標準エラーにhello、標準出力にworldを出力する。
-#!/bin/bash echo hello 1&gt;&amp;2 sleep 1 echo world ./test.shの標準出力をNullデバイスにリダイレクトし、エラーを表順出力(つまりNullデバイス)にリダイレクトする。そしてtimeコマンドのエラー出力を標準出力にリダイレクトする。これはNullデバイスを指さない。かっこの位置に注目。
-(time ./test.sh 1&gt;/dev/null 2&gt;&amp;1) 2&gt;&amp;1 | tee result.txt 結果はつぎのようになる。 result.txt
-real	0m1.423s user	0m0.002s sys	0m0.008s ">
+<meta property="og:description" content="もとのコマンドの結果は破棄し、timeコマンドの計測結果だけを標準出力に流す">
+<meta name="twitter:description" content="もとのコマンドの結果は破棄し、timeコマンドの計測結果だけを標準出力に流す">
 <meta property="og:locale" content="ja">
 
   
@@ -81,7 +69,7 @@ real	0m1.423s user	0m0.002s sys	0m0.008s ">
   <meta property="twitter:image" content="https://lh3.googleusercontent.com/pw/AM-JKLVRfHTltiQqXLuDLFDX9zC9z-BXso4zuBXWkUORacnEmudZ0-pphP3SaiZxqxAbkDZuE9CElU6gl575DnfYvzysr53mLrBVkZhasl5QSwV3f2MrUHd2GfPPogC0ul-4gOA1dKPGgC0kHIwam6h2YlSU8Q">
 
 
-    <title>もとのコマンドの結果は破棄し、timeコマンドの計測結果だけを標準出力に流す</title>
+    <title>[Bash] timeコマンドの計測結果だけを標準出力に流す</title>
 
     <link rel="icon" href="https://lh3.googleusercontent.com/pw/AM-JKLVRfHTltiQqXLuDLFDX9zC9z-BXso4zuBXWkUORacnEmudZ0-pphP3SaiZxqxAbkDZuE9CElU6gl575DnfYvzysr53mLrBVkZhasl5QSwV3f2MrUHd2GfPPogC0ul-4gOA1dKPGgC0kHIwam6h2YlSU8Q">
     
@@ -141,7 +129,7 @@ real	0m1.423s user	0m0.002s sys	0m0.008s ">
         </a>
         <h4 class="sidebar-profile-name">PotatoHotate</h4>
         
-          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/10/18 21:28</em></h5>
+          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/10/18 21:39</em></h5>
         
       </div>
     
@@ -232,7 +220,7 @@ real	0m1.423s user	0m0.002s sys	0m0.008s ">
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      もとのコマンドの結果は破棄し、timeコマンドの計測結果だけを標準出力に流す
+      [Bash] timeコマンドの計測結果だけを標準出力に流す
     </h1>
   
   
@@ -464,7 +452,7 @@ sys	0m0.008s
     
     <h4 id="about-card-name">PotatoHotate</h4>
     
-      <div id="about-card-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/10/18 21:28</em></div>
+      <div id="about-card-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/10/18 21:39</em></div>
     
     
     
