@@ -136,7 +136,7 @@ def cutmix(train_ds_one, train_ds_two):
 ```
 
 データセット作成のコードとともにGistにあげてある。
-[https://gist.github.com/straxFromIbr/d28a6e5ef4ae631378b078d6ed639122]](https://gist.github.com/straxFromIbr/d28a6e5ef4ae631378b078d6ed639122)
+[https://gist.github.com/straxFromIbr/d28a6e5ef4ae631378b078d6ed639122](https://gist.github.com/straxFromIbr/d28a6e5ef4ae631378b078d6ed639122)
 
 
 ![](/images/keras-cutmix/scrot.png)
