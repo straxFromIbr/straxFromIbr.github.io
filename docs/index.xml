@@ -6,7 +6,16 @@
     <description>Recent content on メモおきば</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 18 Oct 2021 21:41:59 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Oct 2021 17:04:41 +0900</lastBuildDate><atom:link href="https://straxfromibr.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KerasでCutMixを実装する</title>
+      <link>https://straxfromibr.github.io/2021/10/keras-cutmix/</link>
+      <pubDate>Sun, 24 Oct 2021 17:04:41 +0900</pubDate>
+      
+      <guid>https://straxfromibr.github.io/2021/10/keras-cutmix/</guid>
+      <description>公式チュートリアルを参考に、画像セグメンテーションでも使えるようにする。</description>
+    </item>
+    
     <item>
       <title>[Docker/M1] Dockerコンテナ上にCコンパイラが動く環境をつくる</title>
       <link>https://straxfromibr.github.io/2021/10/docker-cc/</link>
