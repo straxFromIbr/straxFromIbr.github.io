@@ -125,7 +125,7 @@
         </a>
         <h4 class="sidebar-profile-name">PotatoHotate</h4>
         
-          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/11/13 15:28</em></h5>
+          <h5 class="sidebar-profile-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/11/24 14:00</em></h5>
         
       </div>
     
@@ -250,113 +250,97 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>オリジナルのドキュメントは
-共有フォルダ(<code>~/Desktop/RX3070</code>)においてある。</p>
+              <h2 id="目次">目次</h2>
 <ul>
-<li><a href="#docker%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">Dockerのセットアップ</a></li>
-<li><a href="#openssh%E3%81%AE%E8%A8%AD%E5%AE%9Awin11%E4%B8%8A">OpenSSHの設定(Win11上)</a></li>
-<li><a href="#%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E3%81%AEdocker%E3%81%AEjupyter%E3%81%AB%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%9E%E3%82%B7%E3%83%B3%E3%81%8B%E3%82%89%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B">リモートのDockerのJupyterにローカルマシンから接続する</a></li>
+<li><a href="#%E7%9B%AE%E6%AC%A1">目次</a></li>
+<li><a href="#1-docker%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E5%89%8D%E3%81%AE%E6%BA%96%E5%82%99">1. Dockerのインストール前の準備</a></li>
+<li><a href="#2-docker%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">2. Dockerのインストール</a></li>
+<li><a href="#3-%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E5%BE%8C%E3%81%AE%E6%BA%96%E5%82%99">3. インストール後の準備</a></li>
+<li><a href="#4-tensorflow2%E3%81%A8jupyter-lab%E3%82%92%E4%BD%BF%E3%81%86">4. TensorFlow2とJupyter Labを使う</a></li>
+<li><a href="#5-docker%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%81%AB%E3%83%AA%E3%83%A2%E3%83%BC%E3%83%88%E6%8E%A5%E7%B6%9A%E3%81%99%E3%82%8B">5. Dockerコンテナにリモート接続する</a></li>
 </ul>
-<h2 id="dockerのセットアップ">Dockerのセットアップ</h2>
-<p><a href="https://docs.nvidia.com/cuda/wsl-user-guide/index.html">CUDA on WSL User Guide</a>に従いDockerのインストールまで行う。(主にWSL上の操作)</p>
+<p>ステップ3まではセットアップについて。4以降が使い方</p>
+<h2 id="1-dockerのインストール前の準備">1. Dockerのインストール前の準備</h2>
 <ol>
 <li>Windows 11にアップデート</li>
-<li>WSL2(ubuntu)のインストール</li>
-<li>プロキシの設定1</li>
-</ol>
-<p>WSL2上で次のようにファイルを編集</p>
+<li>WSL2(Ubuntu)をインストール</li>
+<li>プロキシの設定
+WSL2上で次のようにファイルを編集する。
 <ul>
-<li><code>~/.wgetrc</code></li>
-</ul>
-<pre tabindex="0"><code>http_proxy=http://po.cc.ibaraki-ct.ac.jp:3128
-https_proxy=http://po.cc.ibaraki-ct.ac.jp:3128
-</code></pre><ul>
-<li><code>~/.curlrc</code></li>
-</ul>
-<pre tabindex="0"><code>proxy=po.cc.ibaraki-ct.ac.jp:3128
-</code></pre><ul>
-<li><code>/etc/apt/aptconf</code></li>
-</ul>
+<li><code>/etc/apt/aptconf</code>(su権限が必要)
 <pre tabindex="0"><code>Acquire::http::Proxy &quot;http://po.cc.ibaraki-ct.ac.jp:3128&quot;;
 Acquire::https::Proxy &quot;http://po.cc.ibaraki-ct.ac.jp:3128&quot;;
-</code></pre><ol start="4">
+</code></pre></li>
+<li><code>~/.bashrc</code>に次を追記。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export HTTPS_PROXY<span style="color:#f92672">=</span>http://po.cc.ibaraki-ct.ac.jp:3128
+export  HTTP_PROXY<span style="color:#f92672">=</span>http://po.cc.ibaraki-ct.ac.jp:3128
+export https_proxy<span style="color:#f92672">=</span>http://po.cc.ibaraki-ct.ac.jp:3128
+export  http_proxy<span style="color:#f92672">=</span>http://po.cc.ibaraki-ct.ac.jp:3128
+</code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h2 id="2-dockerのインストール">2. Dockerのインストール</h2>
+<p>次のガイドに従う</p>
+<ul>
+<li><a href="https://docs.nvidia.com/cuda/wsl-user-guide/index.html">CUDA on WSL User Guide</a></li>
+<li>おおまかに次の皇帝が含まれる
+<ul>
 <li>CUDAドライバーのインストール</li>
 <li>WSLバックエンドのDockerのインストール</li>
-<li>プロキシの設定2</li>
-</ol>
-<ul>
-<li>WSL2でファイル<code>/etc/default/docker</code>に次を追記</li>
-</ul>
-<pre tabindex="0"><code>export  http_proxy=&quot;http://po.cc.ibaraki-ct.ac.jp:3128&quot;
-export https_proxy=&quot;http://po.cc.ibaraki-ct.ac.jp:3128&quot;
-</code></pre><ol start="7">
-<li>
-<p>GPUの確認
-<code>docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark</code>をエラーなく実行できることを確認</p>
-</li>
-<li>
-<p>TensorFlowとJupyter Notebookの確認</p>
-<ul>
-<li><code>docker run -it --gpus all -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter</code>を実行</li>
-<li>ブラウザで<a href="http://localhost:8888">http://localhost:8888</a>に接続し<code>import tensorflow</code>が実行できるか確認</li>
-<li>実行したら終了</li>
 </ul>
 </li>
-</ol>
-<h2 id="opensshの設定win11上">OpenSSHの設定(Win11上)</h2>
+</ul>
+<h2 id="3-インストール後の準備">3. インストール後の準備</h2>
 <ol>
-<li>スタートメニューで<code>オプション</code>を開き、<code>OpenSSH Server</code>を有効にする。</li>
-<li><code>セキュリティが強化されたWindows Defender ファイアウォール</code>を開き設定
-<ol>
-<li><code>受信の規則/新しい規則</code>を開き、自分のPCのIPアドレスからのアクセスを許可</li>
-<li>自分のPCからpingが到達することを確認</li>
-</ol>
+<li>プロキシ設定
+<ul>
+<li>WSL2でファイル<code>/etc/default/docker</code>に次を追記(su権限必要)</li>
+<li>これでDocker Hubからpullができる。
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">export  http_proxy<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://po.cc.ibaraki-ct.ac.jp:3128&#34;</span>
+export https_proxy<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://po.cc.ibaraki-ct.ac.jp:3128&#34;</span>
+</code></pre></div></li>
+</ul>
 </li>
-<li>SSHが接続できるか確認</li>
+<li>GPUの確認
+<ul>
+<li>次のコマンドを実行
+<pre tabindex="0"><code>docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
+</code></pre></li>
+</ul>
+</li>
 </ol>
-<h2 id="リモートのdockerのjupyterにローカルマシンから接続する">リモートのDockerのJupyterにローカルマシンから接続する</h2>
+<h2 id="4-tensorflow2とjupyter-labを使う">4. TensorFlow2とJupyter Labを使う</h2>
 <ol>
-<li>ローカル<br>
-SSH接続をする。このときリモートの8888ポートをローカルの同番号にフォワードする。</li>
+<li><code>docker-compose.yaml</code>に次の内容を書く。(パスはどこでも良い)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3.3&#34;</span>
+<span style="color:#f92672">services</span>:
+  <span style="color:#f92672">devs</span>:
+    <span style="color:#f92672">ports</span>:
+      - <span style="color:#e6db74">&#34;8888:8888&#34;</span>
+      - <span style="color:#e6db74">&#34;6006:6006&#34;</span>
+    <span style="color:#f92672">volumes</span>:
+      - <span style="color:#e6db74">&#34;.:/home&#34;</span>
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">jupyterlab_tf</span>
+    <span style="color:#f92672">deploy</span>:
+      <span style="color:#f92672">resources</span>:
+        <span style="color:#f92672">reservations</span>:
+          <span style="color:#f92672">devices</span>:
+            - <span style="color:#f92672">capabilities</span>: [<span style="color:#ae81ff">gpu]</span>
+</code></pre></div>(補足：<code>volumes</code>のコロン前(<code>.</code>)がホスト側のパス、後ろ(<code>/home</code>)がコンテナ内のパス)</li>
+<li>上記YAMLファイルがあるパスで次のコマンドを実行。
+<pre tabindex="0"><code>docker-compose up
+</code></pre>Windows側のブラウザで<a href="http://localhost:8888">localhost:8888</a> にアクセス。Dockerコンテナ側の<code>/home</code>からホスト側のファイルにアクセスできる。</li>
 </ol>
+<h2 id="5-dockerコンテナにリモート接続する">5. Dockerコンテナにリモート接続する</h2>
+<ol>
+<li>WindowsにSSH接続する時、8888をポートフォワーディングする。
 <pre tabindex="0"><code>ssh -L 8888:localhost:8888 r-kodama@172.16.161.107
-</code></pre><ol start="2">
-<li>リモート(WSL2)<br>
-次ののようにしてJupyterのパスワードを設定。出力されるハッシュ値をメモ。</li>
+</code></pre></li>
+<li>SSHで接続した後<code>wsl</code>コマンドでWSL2を起動し&hellip;</li>
+<li><code>docker-compose up</code>でDockerコンテナを起動。</li>
+<li>ブラウザで<a href="http://localhost:8888">localhost:8888</a>にアクセス。</li>
 </ol>
-<pre tabindex="0"><code>docker run --rm -it tensorflow/tensorflow:latest-gpu-py3-jupyter  python -c 'from notebook.auth import passwd;print(passwd())'
-</code></pre><ol start="3">
-<li>リモート(WSL2)</li>
-</ol>
-<p>前手順で取得したハッシュを指定しJupyterを起動</p>
-<pre tabindex="0"><code>docker run -it \ 
-    --gpus all \
-    -p 8888:8888 \
-    tensorflow/tensorflow:latest-gpu-py3-jupyter \
-        jupyter notebook \
-            --allow-root \
-            --ip=0.0.0.0 \
-            --NotebookApp.password=${ハッシュ}
-</code></pre><p>パスワードをすでに決めた場合は次のようにPowerShellまたはCMDから直接実行できる</p>
-<pre tabindex="0"><code>wsl docker run --rm -it \
-    --gpus all \
-    --env HTTP_PROXY='po.cc.ibaraki-ct.ac.jp:3128' \
-    --env HTTPS_PROXY='po.cc.ibaraki-ct.ac.jp:3128' \
-    -v /mnt/c/Users/r-kodama/Desktop/RX3070/haga_2021:/home \
-    -p 8888:8888 \
-    tensorflow/tensorflow:latest-gpu-py3-jupyter \
-    jupyter notebook \
-        --allow-root \
-        --ip=0.0.0.0 \
-        --NotebookApp.password=${ハッシュ}
-</code></pre><ol start="4">
-<li>ローカル<br>
-Jupyter Notebookに接続する</li>
-</ol>
-<ul>
-<li>ブラウザで<a href="http://localhost:8888">localhost:8888</a>にアクセスし設定したパスワードを入力</li>
-<li>またはVisual Studio CodeのJupyter Extensionを使用してExistingを選択し、URLとして<code>http://localhost:8888</code>を指定する。同様にパスワードを入力</li>
-</ul>
 
               
             </div>
@@ -536,7 +520,7 @@ Jupyter Notebookに接続する</li>
     
     <h4 id="about-card-name">PotatoHotate</h4>
     
-      <div id="about-card-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/11/13 15:28</em></div>
+      <div id="about-card-bio">メモ置き場です．自転車が趣味．<br> <a href="https://twitter.com/PotatoHotate">Twitter@PotatoHotate</a> <br> <em>Latest Build:2021/11/24 14:00</em></div>
     
     
     

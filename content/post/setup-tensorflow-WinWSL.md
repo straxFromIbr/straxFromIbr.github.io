@@ -9,109 +9,85 @@ tags:
 - 環境構築
 summary: "研究室のPCの環境構築メモ"
 ---
-オリジナルのドキュメントは
-共有フォルダ(`~/Desktop/RX3070`)においてある。
+## 目次
+- [目次](#目次)
+- [1. Dockerのインストール前の準備](#1-dockerのインストール前の準備)
+- [2. Dockerのインストール](#2-dockerのインストール)
+- [3. インストール後の準備](#3-インストール後の準備)
+- [4. TensorFlow2とJupyter Labを使う](#4-tensorflow2とjupyter-labを使う)
+- [5. Dockerコンテナにリモート接続する](#5-dockerコンテナにリモート接続する)
 
+ステップ3まではセットアップについて。4以降が使い方
 
- - [Dockerのセットアップ](#dockerのセットアップ)
- - [OpenSSHの設定(Win11上)](#opensshの設定win11上)
- - [リモートのDockerのJupyterにローカルマシンから接続する](#リモートのdockerのjupyterにローカルマシンから接続する)
-
-## Dockerのセットアップ
-[CUDA on WSL User Guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)に従いDockerのインストールまで行う。(主にWSL上の操作)
+## 1. Dockerのインストール前の準備
 1. Windows 11にアップデート
-2. WSL2(ubuntu)のインストール
-3. プロキシの設定1  
+1. WSL2(Ubuntu)をインストール
+1. プロキシの設定
+    WSL2上で次のようにファイルを編集する。
+    - `/etc/apt/aptconf`(su権限が必要)
+        ```
+        Acquire::http::Proxy "http://po.cc.ibaraki-ct.ac.jp:3128";
+        Acquire::https::Proxy "http://po.cc.ibaraki-ct.ac.jp:3128";
+        ```
+    - `~/.bashrc`に次を追記。
+        ```bash
+        export HTTPS_PROXY=http://po.cc.ibaraki-ct.ac.jp:3128
+        export  HTTP_PROXY=http://po.cc.ibaraki-ct.ac.jp:3128
+        export https_proxy=http://po.cc.ibaraki-ct.ac.jp:3128
+        export  http_proxy=http://po.cc.ibaraki-ct.ac.jp:3128
+        ```
+## 2. Dockerのインストール
+次のガイドに従う
+- [CUDA on WSL User Guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html)
+- おおまかに次の皇帝が含まれる
+    - CUDAドライバーのインストール
+    - WSLバックエンドのDockerのインストール
 
-WSL2上で次のようにファイルを編集
+## 3. インストール後の準備
+1. プロキシ設定
+    - WSL2でファイル`/etc/default/docker`に次を追記(su権限必要)
+    - これでDocker Hubからpullができる。
+        ```bash
+        export  http_proxy="http://po.cc.ibaraki-ct.ac.jp:3128"
+        export https_proxy="http://po.cc.ibaraki-ct.ac.jp:3128"
+        ```
+2. GPUの確認
+    - 次のコマンドを実行
+        ```
+        docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
+        ```
 
-- `~/.wgetrc`
+## 4. TensorFlow2とJupyter Labを使う
+1. `docker-compose.yaml`に次の内容を書く。(パスはどこでも良い)
+    ```yaml
+    version: "3.3"
+    services:
+      devs:
+        ports:
+          - "8888:8888"
+          - "6006:6006"
+        volumes:
+          - ".:/home"
+        image: jupyterlab_tf
+        deploy:
+          resources:
+            reservations:
+              devices:
+                - capabilities: [gpu]
+    ``` 
+    (補足：`volumes`のコロン前(`.`)がホスト側のパス、後ろ(`/home`)がコンテナ内のパス)
+2. 上記YAMLファイルがあるパスで次のコマンドを実行。
+    ```
+    docker-compose up
+    ```
+    Windows側のブラウザで[localhost:8888](http://localhost:8888) にアクセス。Dockerコンテナ側の`/home`からホスト側のファイルにアクセスできる。
 
-```
-http_proxy=http://po.cc.ibaraki-ct.ac.jp:3128
-https_proxy=http://po.cc.ibaraki-ct.ac.jp:3128
-```
-- `~/.curlrc`
 
-```
-proxy=po.cc.ibaraki-ct.ac.jp:3128
-```
-
-- `/etc/apt/aptconf`  
-
-```
-Acquire::http::Proxy "http://po.cc.ibaraki-ct.ac.jp:3128";
-Acquire::https::Proxy "http://po.cc.ibaraki-ct.ac.jp:3128";
-```
-
-4. CUDAドライバーのインストール
-5. WSLバックエンドのDockerのインストール
-6. プロキシの設定2  
-- WSL2でファイル`/etc/default/docker`に次を追記  
-
-```
-export  http_proxy="http://po.cc.ibaraki-ct.ac.jp:3128"
-export https_proxy="http://po.cc.ibaraki-ct.ac.jp:3128"
-```
-7. GPUの確認
-`docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark`をエラーなく実行できることを確認
-
-8. TensorFlowとJupyter Notebookの確認
-    - `docker run -it --gpus all -p 8888:8888 tensorflow/tensorflow:latest-gpu-py3-jupyter`を実行
-    - ブラウザで[http://localhost:8888](http://localhost:8888)に接続し`import tensorflow`が実行できるか確認
-    - 実行したら終了
-
- 
-## OpenSSHの設定(Win11上)
-1. スタートメニューで`オプション`を開き、`OpenSSH Server`を有効にする。
-2. `セキュリティが強化されたWindows Defender ファイアウォール`を開き設定
-    1. `受信の規則/新しい規則`を開き、自分のPCのIPアドレスからのアクセスを許可
-    2. 自分のPCからpingが到達することを確認
-3. SSHが接続できるか確認
-
-## リモートのDockerのJupyterにローカルマシンから接続する  
-1. ローカル  
-SSH接続をする。このときリモートの8888ポートをローカルの同番号にフォワードする。
-```
-ssh -L 8888:localhost:8888 r-kodama@172.16.161.107
-```
-2. リモート(WSL2)  
-次ののようにしてJupyterのパスワードを設定。出力されるハッシュ値をメモ。
-```
-docker run --rm -it tensorflow/tensorflow:latest-gpu-py3-jupyter  python -c 'from notebook.auth import passwd;print(passwd())'
-```
-
-3. リモート(WSL2)  
-
-前手順で取得したハッシュを指定しJupyterを起動
-```
-docker run -it \ 
-    --gpus all \
-    -p 8888:8888 \
-    tensorflow/tensorflow:latest-gpu-py3-jupyter \
-        jupyter notebook \
-            --allow-root \
-            --ip=0.0.0.0 \
-            --NotebookApp.password=${ハッシュ}
-```
-
-パスワードをすでに決めた場合は次のようにPowerShellまたはCMDから直接実行できる
-```
-wsl docker run --rm -it \
-    --gpus all \
-    --env HTTP_PROXY='po.cc.ibaraki-ct.ac.jp:3128' \
-    --env HTTPS_PROXY='po.cc.ibaraki-ct.ac.jp:3128' \
-    -v /mnt/c/Users/r-kodama/Desktop/RX3070/haga_2021:/home \
-    -p 8888:8888 \
-    tensorflow/tensorflow:latest-gpu-py3-jupyter \
-    jupyter notebook \
-        --allow-root \
-        --ip=0.0.0.0 \
-        --NotebookApp.password=${ハッシュ}
-```
-
-4. ローカル  
-Jupyter Notebookに接続する
-- ブラウザで[localhost:8888](http://localhost:8888)にアクセスし設定したパスワードを入力
-- またはVisual Studio CodeのJupyter Extensionを使用してExistingを選択し、URLとして`http://localhost:8888`を指定する。同様にパスワードを入力
-
+## 5. Dockerコンテナにリモート接続する
+1. WindowsにSSH接続する時、8888をポートフォワーディングする。
+    ``` 
+    ssh -L 8888:localhost:8888 r-kodama@172.16.161.107
+    ```
+2. SSHで接続した後`wsl`コマンドでWSL2を起動し...
+3. `docker-compose up`でDockerコンテナを起動。
+4. ブラウザで[localhost:8888](http://localhost:8888)にアクセス。
